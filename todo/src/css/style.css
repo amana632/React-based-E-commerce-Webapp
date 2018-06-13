@@ -1634,7 +1634,7 @@ header {
 	overflow: hidden;
 }
 .burse {
-	background: rgba(0, 0, 0, 0)  no-repeat scroll left 191px;
+	background: rgba(0, 0, 0, 0) no-repeat scroll left 191px;
 	padding-left: 66px;
 }
 .burse h2 {
@@ -1706,7 +1706,7 @@ header {
 	text-decoration: none;
 }
 .right-control {
-	background: rgba(0, 0, 0, 0) url("../images/right-arrow.png") no-repeat scroll right 0;
+	background: rgba(0, 0, 0, 0)  no-repeat scroll right 0;
 	right: 63px;
 	padding: 6px 73px 8px 0px;
 	position: absolute;
@@ -2841,7 +2841,7 @@ select {
 	padding: 150px 0;
 }
 .parollex-bg2 {
-	background: rgba(0, 0, 0, 0)  no-repeat scroll 0 0 / cover;
+	background: rgba(0, 0, 0, 0) no-repeat scroll 0 0 / cover;
 	padding: 50px 0;
 }
 .parollex-bg2 h3 {
@@ -4322,7 +4322,7 @@ footer {
 		z-index: 999;
 	}
 	.burse {
-		background: rgba(0, 0, 0, 0) no-repeat scroll left 152px / 30% auto;
+		background: rgba(0, 0, 0, 0)  no-repeat scroll left 152px / 30% auto;
 		padding-left: 26px;
 	}
 	.pro-text .addtocart {
@@ -4675,7 +4675,7 @@ footer {
 		height: 650px;
 	}
 	.left-control {
-		background: rgba(0, 0, 0, 0) no-repeat scroll left 8px / 40% auto;
+		background: rgba(0, 0, 0, 0)  no-repeat scroll left 8px / 40% auto;
 		padding: 0 0 0px 23px;
 		left: 7px;
 		font-size: 12px;
@@ -4683,7 +4683,7 @@ footer {
 		z-index: 999;
 	}
 	.left-control:hover {
-		background: rgba(0, 0, 0, 0)  no-repeat scroll left -8px / 40% auto;
+		background: rgba(0, 0, 0, 0) no-repeat scroll left -8px / 40% auto;
 	}
 	.right-control {
 		background: rgba(0, 0, 0, 0) url("../images/right-arrow.png") no-repeat scroll right 8px / 40% auto;
@@ -4770,7 +4770,7 @@ footer {
 		width: 100%;
 	}
 	.contact-info {
-		background: #fff  no-repeat scroll center bottom;
+		background: #fff no-repeat scroll center bottom;
 		height: 600px;
 		margin-top: 0;
 	}
@@ -4796,7 +4796,7 @@ footer {
 		z-index: 999;
 	}
 	.burse {
-		background: rgba(0, 0, 0, 0) no-repeat scroll left 152px / 30% auto;
+		background: rgba(0, 0, 0, 0)  no-repeat scroll left 152px / 30% auto;
 		padding-left: 26px;
 	}
 	.caption.brunello h2 {
@@ -5063,7 +5063,7 @@ footer {
 		height: 650px;
 	}
 	.left-control {
-		background: rgba(0, 0, 0, 0)no-repeat scroll left 8px / 40% auto;
+		background: rgba(0, 0, 0, 0) no-repeat scroll left 8px / 40% auto;
 		padding: 0 0 0px 23px;
 		left: 7px;
 		font-size: 12px;
@@ -5182,7 +5182,7 @@ footer {
 		z-index: 999;
 	}
 	.burse {
-		background: rgba(0, 0, 0, 0)  no-repeat scroll left 152px / 30% auto;
+		background: rgba(0, 0, 0, 0) no-repeat scroll left 152px / 30% auto;
 		padding-left: 26px;
 	}
 	.caption.brunello h2 {

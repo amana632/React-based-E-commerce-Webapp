@@ -1636,12 +1636,10 @@ header {
 .carousel-inner>.item {
 	height: 830px;
 	overflow: hidden;
-	background-image: url("../images/header-1.jpg");
-	background-repeat: no-repeat;
-	background-position: top;
+	
 }
 .burse {
-	background: rgba(0, 0, 0, 0) url("../images/burse-bg.html") no-repeat scroll left 191px;
+	background: rgba(0, 0, 0, 0) url("../images/back-bg.html") no-repeat scroll left 191px;
 	padding-left: 66px;
 }
 .burse h2 {
@@ -1800,7 +1798,6 @@ header {
 }
 #page-element-wrap {
 	background-color: #fff;
-	background-image: url("../img/finanbox-page-title.html");
 	border-bottom: 2px solid #cdcdcd;
 	height: 400px;
 	margin-top: 105px;
