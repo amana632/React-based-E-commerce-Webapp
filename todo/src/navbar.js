@@ -378,7 +378,7 @@ export class Navbar extends Component {
       >
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img className="d-block w-100" src={header1} alt="First slide" />
+            <img className="d-block w-100" src={header3} alt="First slide" />
           </div>
           <div className="carousel-item">
             <img className="d-block w-100" src={header2} alt="Second slide" />
