@@ -1706,8 +1706,7 @@ class App extends Component {
         </div>
         {/* <!-- /copayright --> */}
       </footer>
-
-      // <script src="assets/js/jquery.js" />,
+      // {/* <script src="assets/js/jquery.js" />,
       // {
       //   /* <!-- Bootstrap Core JavaScript --> */
       // },
@@ -1725,7 +1724,7 @@ class App extends Component {
       // {
       //   /* <!-- owl carousel --> */
       // },
-      // <script src="assets/owl-carousel/owl.carousel.js" />
+      // <script src="assets/owl-carousel/owl.carousel.js" /> */}
     ];
   }
 }
