@@ -744,9 +744,9 @@ class App extends Component {
               >
                 <img src={banner1} alt="about-img1" />
                 <div className="banner-text">
-                  <h3>British Made Pocket Knife - Oak</h3>
+                  <h3 />
                   <p>
-                    <a href="#">Discover Now</a>
+                    <a href="#" />
                   </p>
                 </div>
               </div>
@@ -761,10 +761,8 @@ class App extends Component {
               >
                 <img src={banner2} alt="about-img1" />
                 <div className="banner-text">
-                  <h3>Chair Kimi No Isu Project</h3>
-                  <p>
-                    <a href="#">Discover Now</a>
-                  </p>
+                  {/* <h3>Chair Kimi No Isu Project</h3> */}
+                  <p>{/* <a href="#">Discover Now</a> */}</p>
                 </div>
               </div>
               {/* <!-- /.banner-outer --> */}
@@ -778,10 +776,8 @@ class App extends Component {
               <div className="banner-img">
                 <img src={banner3} alt="about-img1" />
                 <div className="banner-text">
-                  <h3>Merino Lambswool Scarf Moss</h3>
-                  <p>
-                    <a href="#">Discover Now</a>
-                  </p>
+                  {/* <h3>Merino Lambswool Scarf Moss</h3> */}
+                  <p>{/* <a href="#">Discover Now</a> */}</p>
                 </div>
               </div>
               {/* <!-- /.banner-outer --> */}
