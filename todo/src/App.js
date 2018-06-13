@@ -69,10 +69,8 @@ class App extends Component {
               >
                 <img src={banner1} alt="about-img1" />
                 <div className="banner-text">
-                  <h3>British Made Pocket Knife - Oak</h3>
-                  <p>
-                    <a href="#">Discover Now</a>
-                  </p>
+                  {/* <h3>British Made Pocket Knife - Oak</h3> */}
+                  <p>{/* <a href="#">Discover Now</a> */}</p>
                 </div>
               </div>
               {/* <!-- /.banner-outer --> */}
@@ -86,10 +84,8 @@ class App extends Component {
               >
                 <img src={banner2} alt="about-img1" />
                 <div className="banner-text">
-                  <h3>Chair Kimi No Isu Project</h3>
-                  <p>
-                    <a href="#">Discover Now</a>
-                  </p>
+                  {/* <h3>Chair Kimi No Isu Project</h3> */}
+                  <p>{/* <a href="#">Discover Now</a> */}</p>
                 </div>
               </div>
               {/* <!-- /.banner-outer --> */}
@@ -103,10 +99,8 @@ class App extends Component {
               <div className="banner-img">
                 <img src={banner3} alt="about-img1" />
                 <div className="banner-text">
-                  <h3>Merino Lambswool Scarf Moss</h3>
-                  <p>
-                    <a href="#">Discover Now</a>
-                  </p>
+                  {/* <h3>Merino Lambswool Scarf Moss</h3> */}
+                  <p>{/* <a href="#">Discover Now</a> */}</p>
                 </div>
               </div>
               {/* <!-- /.banner-outer --> */}
@@ -121,10 +115,7 @@ class App extends Component {
         <div className="container">
           <div className="tittle text-center">
             <h2>Trending Products</h2>
-            <p>
-              Mirum est notare quam littera gothica quam nunc putamus parum
-              claram!
-            </p>
+            <p>All trending products at one place !!</p>
           </div>
           <div
             className="row animated wow zoomIn"
@@ -502,13 +493,13 @@ class App extends Component {
           <div className="banner-img">
             <img src={bg_banner} alt="about-img1" />
             <div className="banner-text2">
-              <h4>Products Essentials</h4>
+              {/* <h4>Products Essentials</h4>
               <h3>Bottle With Wooden Cork</h3>
               <p>
                 The Newtown sofa range is the first product Jonas Wagell has
                 designed for Zaozuo, but one of the last to be finalized and
-                launched.
-              </p>
+                launched. */}
+              {/* </p> */}
               <p>
                 <a href="#">
                   Buy now /
@@ -525,13 +516,13 @@ class App extends Component {
           <div className="banner-img">
             <img src={bg_banner2} alt="about-img1" />
             <div className="banner-text2">
-              <h4>Products Essentials</h4>
+              {/* <h4>Products Essentials</h4>
               <h3>Hauteville Plywood Chair</h3>
               <p>
                 The Newtown sofa range is the first product Jonas Wagell has
                 designed for Zaozuo, but one of the last to be finalized and
-                launched.
-              </p>
+                launched. */}
+              {/* </p> */}
               <p>
                 <a href="#">
                   Buy now /
@@ -583,11 +574,11 @@ class App extends Component {
         {/* <!-- Latest News --> */}
         <div className="container">
           <div className="tittle text-center">
-            <h2>Our Blog Posts</h2>
+            {/* <h2>Our Blog Posts</h2>
             <p>
               Mirum est notare quam littera gothica quam nunc putamus parum
               claram!
-            </p>
+            </p> */}
           </div>
           <div
             className="col-sm-4 col-md-4 wow fadeIn"
@@ -675,7 +666,7 @@ class App extends Component {
         <div className="container">
           <h2>Get Discount Info</h2>
           <p>
-            ubscribe to the Outstock mailing list to receive updates on new
+            Subscribe to the Tech__Giant mailing list to receive updates on new
             arrivals, special offers and
             <br /> other discount information.
           </p>
@@ -692,19 +683,25 @@ class App extends Component {
               <div className="f-weghit">
                 <img src={flogo} alt="logo" />
                 <p>
-                  Outstock is a premium Templates theme with advanced admin
-                  module. It’s extremely customizable, easy to use and fully
-                  responsive and retina ready.
+                  Tech__Giant, Inc. , doing business as Tech__Giant
+                  (/ˈæməˌzɒn/), is an American electronic commerce and cloud
+                  computing company based in Seattle, Washington that was
+                  founded by Jeff Bezos on July 5, 1994. The tech giant is the
+                  largest Internet retailer in the world as measured by revenue
+                  and market capitalization, and second largest after Alibaba
+                  Group in terms of total sales. The Tech__Giant.com website
+                  started as an online bookstore and later diversified to sell
+                  video downloads/streaming, MP3 downloads/streaming, audiobook
+                  downloads/streaming, software, video games, electronics.
                 </p>
                 <ul>
                   <li>
                     <i className="icon-location-pin icons" aria-hidden="true" />
-                    <strong>Add:</strong> 1234 Heaven Stress, Beverly Hill,
-                    Melbourne, USA.
+                    <strong>Add:</strong> Popular Heights, Koregaon Park,Pune
                   </li>
                   <li>
                     <i className="icon-envelope-letter icons" />
-                    <strong>Email:</strong> contact@example.com
+                    <strong>Email:</strong> Tech__Giant@gmail.com
                   </li>
                   <li>
                     <i className="icon-call-in icons" />
@@ -770,7 +767,7 @@ class App extends Component {
             <div className="row">
               <div className="col-xs-12 col-sm-6 col-md-6">
                 Copyright &copy;
-                <a href="#">Outstock</a> all rights reserved. Powered by
+                <a href="#">Tech__Giant</a> all rights reserved. Powered by
                 <a href="#">zcube</a>
               </div>
               <div className="text-right col-xs-12 col-sm-6 col-md-6">
