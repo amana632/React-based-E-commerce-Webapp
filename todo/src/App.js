@@ -8,7 +8,7 @@ class App extends Component {
       <div id="preloader">
 		<div id="loading"> </div>
 	</div>
-	<header>
+	/* <header> */
 		<nav id="mainNav" className="navbar navbar-inverse navbar-default navbar-fixed-top">
 			<div className="container">
 				<div className="navbar-header">
@@ -19,11 +19,11 @@ class App extends Component {
 						<span className="icon-bar"></span>
 					</button>
 					<a className="navbar-brand" href="#">
-						<img src="assets/images/logo.png" alt="logo">
+						<img src="assets/images/logo.png" alt="logo"/>
 					</a>
 				</div>
 
-				<!-- Collect the nav links, forms, and other content for toggling -->
+				{/* <!-- Collect the nav links, forms, and other content for toggling --> */}
 				<div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations="fadeIn fadeInLeft fadeInUp fadeInRight">
 					<ul className="nav navbar-nav">
 						<li className="dropdown">
@@ -131,7 +131,8 @@ class App extends Component {
 									</ul>
 								</div>
 								<div className="col-sm-4 col-md-4">
-									<img src="assets/images/Hover-menu-img.jpg" alt="Hover-menu-img"> </div>
+									<img src="assets/images/Hover-menu-img.jpg" alt="Hover-menu-img"/> </div>
+							
 							</div>
 						</li>
 						<li>
@@ -195,19 +196,19 @@ class App extends Component {
 					<ul className="nav navbar-nav navbar-right">
 						<li>
 							<a href="#" data-toggle="modal" data-target=".popup1">
-								<img src="assets/images/top-icon1.png" alt="top-icon1">
+								<img src="assets/images/top-icon1.png" alt="top-icon1"/>
 								<span>Search</span>
 							</a>
 						</li>
 						<li className="dropdown">
 							<a href="#" className="dropbtn">
-								<img src="assets/images/top-icon3.png" alt="top-ico3">
+								<img src="assets/images/top-icon3.png" alt="top-ico3"/>
 								<span>Cart (0)</span>
 							</a>
 							<div className="dropdown-content">
 								<div className="cart-content">
 									<div className="col-sm-4 col-md-4">
-										<img src="assets/images/Products/13.jpg" alt="13">
+										<img src="assets/images/Products/13.jpg" alt="13"/>
 									</div>
 									<div className="col-sm-8 col-md-8">
 										<div className="pro-text">
@@ -219,7 +220,7 @@ class App extends Component {
 								</div>
 								<div className="cart-content">
 									<div className="col-sm-4 col-md-4">
-										<img src="assets/images/Products/11.jpg" alt="13">
+										<img src="assets/images/Products/11.jpg" alt="13"/>
 									</div>
 									<div className="col-sm-8 col-md-8">
 										<div className="pro-text">
@@ -232,12 +233,12 @@ class App extends Component {
 								<div className="total">
 									<div className="col-sm-6 col-md-6 text-left">
 										<span>Shipping :</span>
-										<br>
+										<br/>
 										<strong>Total :</strong>
 									</div>
 									<div className="col-sm-6 col-md-6 text-right">
 										<strong>$0.00</strong>
-										<br>
+										<br/>
 										<strong>$160.00</strong>
 									</div>
 								</div>
@@ -247,16 +248,16 @@ class App extends Component {
 						</li>
 						<li>
 							<a href="#" data-toggle="modal" data-target=".menu-popup">
-								<img src="assets/images/top-icon2.png" alt="top-icon2">
+								<img src="assets/images/top-icon2.png" alt="top-icon2"/>
 							</a>
 						</li>
 					</ul>
-					<!-- /.navbar-collapse -->
+					{/* <!-- /.navbar-collapse --> */}
 				</div>
 			</div>
 		</nav>
-		<!--  /nav  -->
-		<!-- search-popup -->
+		{/* <!--  /nav  --> */}
+		{/* <!-- search-popup --> */}
 		<div className="modal fade bs-example-modal-lg search-bg popup1" tabindex="-1" role="dialog">
 			<div className="modal-dialog modal-lg" role="document">
 				<div className="modal-content search-popup">
@@ -276,8 +277,8 @@ class App extends Component {
 				</div>
 			</div>
 		</div>
-		<!-- /search-popup -->
-		<!--  .menu  -->
+		{/* <!-- /search-popup --> */}
+		{/* <!--  .menu  --> */}
 		<div className="modal fade bs-example-modal-lg search-bg menu-popup" tabindex="-1" role="dialog">
 			<div className="modal-dialog modal-lg" role="document">
 				<div className="modal-content search-popup">
@@ -388,7 +389,7 @@ class App extends Component {
 										</ul>
 									</div>
 									<div className="col-sm-4 col-md-4">
-										<img src="assets/images/Hover-menu-img.jpg" alt="Hover-menu-img"> </div>
+										<img src="assets/images/Hover-menu-img.jpg" alt="Hover-menu-img"/> </div>
 								</div>
 							</li>
 							<li>
@@ -453,14 +454,14 @@ class App extends Component {
 				</div>
 			</div>
 		</div>
-		<!--  /.menu  -->
+		{/* <!--  /.menu  --> */}
 		<div id="home-slider" className="carousel slide carousel-fade" data-ride="carousel">
-			<!-- .home-slider -->
+			{/* <!-- .home-slider --> */}
 			<div className="carousel-inner">
 				<div className="item active" style="background-image: url(assets/images/header-1.jpg);  background-repeat: no-repeat; background-position: top;">
 					<div className="caption">
 						<h2 className="animated wow zoomIn" data-wow-duration=".5s" data-wow-delay=".2s">Handmade
-							<br> Hand Carved Coffee</h2>
+							<br/> Hand Carved Coffee</h2>
 						<p className="animated wow fadeIn" data-wow-duration=".2s" data-wow-delay=".1s">As rich and unique as the coffee beans it is intended for, this little scoop will make your morning ritual a special
 							occasion every day. </p>
 						<a data-scroll className="btn get-start animated fadeInUpBig" href="#">
@@ -471,7 +472,7 @@ class App extends Component {
 				<div className="item" style="background-image: url(assets/images/header-2.jpg);  background-repeat: no-repeat; background-position: top;">
 					<div className="caption">
 						<h2 className="animated wow zoomIn" data-wow-duration=".5s" data-wow-delay=".2s">Handmade
-							<br> Hand Carved Coffee</h2>
+							<br> Hand Carved Coffee</br></h2>
 						<p className="animated wow fadeIn" data-wow-duration=".2s" data-wow-delay=".1s">As rich and unique as the coffee beans it is intended for, this little scoop will make your morning ritual a special
 							occasion every day. </p>
 						<a data-scroll className="btn get-start animated fadeInUpBig" href="#">
@@ -482,7 +483,7 @@ class App extends Component {
 				<div className="item" style="background-image: url(assets/images/header-3.jpg);  background-repeat: no-repeat; background-position: top;">
 					<div className="caption">
 						<h2 className="animated wow zoomIn" data-wow-duration=".5s" data-wow-delay=".2s">Handmade
-							<br> Hand Carved Coffee</h2>
+							<br> Hand Carved Coffee</br></h2>
 						<p className="animated wow fadeIn" data-wow-duration=".2s" data-wow-delay=".1s">As rich and unique as the coffee beans it is intended for, this little scoop will make your morning ritual a special
 							occasion every day. </p>
 						<a data-scroll className="btn get-start animated fadeInUpBig" href="#">
@@ -490,24 +491,24 @@ class App extends Component {
 						</a>
 					</div>
 				</div>
-				<!-- indicators -->
+				 {/* indicators */}
 				<ol className="carousel-indicators">
 					<li data-target="#home-slider" data-slide-to="0" className="active"></li>
 					<li data-target="#home-slider" data-slide-to="1" className=""></li>
 					<li data-target="#home-slider" data-slide-to="2" className=""></li>
 				</ol>
-				<!-- /indicators -->
+				{/* <!-- /indicators --> */}
 			</div>
-			<!-- /.home-slider -->
+			{/* <!-- /.home-slider --> */}
 		</div>
-	</header>
+	// </header>
 	<section className="banner-outer">
-		<!-- .banner-outer -->
+		{/* <!-- .banner-outer --> */}
 		<div className="container">
-			<!-- .banner-bg -->
+			{/* <!-- .banner-bg --> */}
 			<div className="banner-bg">
 				<div className="col-sm-4 col-md-4">
-					<!-- .banner-img -->
+					{/* <!-- .banner-img --> */}
 					<div className="banner-img animated wow zoomIn" data-wow-duration=".5s" data-wow-delay=".2s">
 						<img src="assets/images/banner1.jpg" alt="about-img1" />
 						<div className="banner-text">
@@ -517,10 +518,10 @@ class App extends Component {
 							</p>
 						</div>
 					</div>
-					<!-- /.banner-outer -->
+					{/* <!-- /.banner-outer --> */}
 				</div>
 				<div className="col-sm-4 col-md-4">
-					<!-- .banner-img -->
+					{/* <!-- .banner-img --> */}
 					<div className="banner-img animated wow zoomIn" data-wow-duration=".5s" data-wow-delay=".2s">
 						<img src="assets/images/banner2.jpg" alt="about-img1" />
 						<div className="banner-text">
@@ -530,10 +531,10 @@ class App extends Component {
 							</p>
 						</div>
 					</div>
-					<!-- /.banner-outer -->
+					{/* <!-- /.banner-outer --> */}
 				</div>
 				<div className="col-sm-4 col-md-4 animated wow zoomIn" data-wow-duration=".5s" data-wow-delay=".2s">
-					<!-- .banner-img -->
+					{/* <!-- .banner-img --> */}
 					<div className="banner-img">
 						<img src="assets/images/banner3.jpg" alt="about-img1" />
 						<div className="banner-text">
@@ -543,15 +544,15 @@ class App extends Component {
 							</p>
 						</div>
 					</div>
-					<!-- /.banner-outer -->
+					{/* <!-- /.banner-outer --> */}
 				</div>
 			</div>
-			<!-- /.banner-bg -->
+			{/* <!-- /.banner-bg --> */}
 		</div>
-		<!-- /.banner -->
+		{/* <!-- /.banner --> */}
 	</section>
 	<section className="new-arrivals">
-		<!-- .new-arrivals -->
+		{/* <!-- .new-arrivals --> */}
 		<div className="container">
 			<div className="tittle text-center">
 				<h2>Trending Products</h2>
@@ -559,12 +560,12 @@ class App extends Component {
 			</div>
 			<div className="row animated wow zoomIn" data-wow-duration=".5s" data-wow-delay=".2s">
 				<div className="col-md-3">
-					<!-- .pro-text -->
+					{/* <!-- .pro-text --> */}
 					<div className="pro-text">
-						<!-- .pro-img -->
+						{/* <!-- .pro-img --> */}
 						<div className="pro-img">
 							<img src="assets/images/Products/21.jpg" alt="2" />
-							<!-- .hover-img -->
+							{/* <!-- .hover-img --> */}
 							<div className="hover-img">
 								<ul>
 									<li>
@@ -584,22 +585,22 @@ class App extends Component {
 									</li>
 								</ul>
 							</div>
-							<!-- /.hover-img -->
+							{/* <!-- /.hover-img --> */}
 						</div>
-						<!-- /.pro-img -->
+						{/* <!-- /.pro-img --> */}
 						<a href="#">Wooden container Bowl</a>
 						<a href="#" className="addtocart">+ Add to cart</a>
 						<div className="price">$160.00</div>
 					</div>
-					<!-- /.pro-text -->
+					{/* <!-- /.pro-text --> */}
 				</div>
 				<div className="col-md-3">
-					<!-- .pro-text -->
+					{/* <!-- .pro-text --> */}
 					<div className="pro-text">
-						<!-- .pro-img -->
+						{/* <!-- .pro-img --> */}
 						<div className="pro-img">
 							<img src="assets/images/Products/26.jpg" alt="2" />
-							<!-- .hover-img -->
+							{/* <!-- .hover-img --> */}
 							<div className="hover-img">
 								<ul>
 									<li>
@@ -623,22 +624,22 @@ class App extends Component {
 								<span className="new-text">NEW</span>
 								<span className="pres-text">-15%</span>
 							</div>
-							<!-- /.hover-img -->
+							{/* <!-- /.hover-img --> */}
 						</div>
-						<!-- /.pro-img -->
+						{/* <!-- /.pro-img --> */}
 						<a href="#">Wooden container Bowl</a>
 						<a href="#" className="addtocart">+ Add to cart</a>
 						<div className="price">$160.00</div>
 					</div>
-					<!-- /.pro-text -->
+					{/* <!-- /.pro-text --> */}
 				</div>
 				<div className="col-md-3">
-					<!-- .pro-text -->
+					{/* <!-- .pro-text --> */}
 					<div className="pro-text">
-						<!-- .pro-img -->
+						{/* <!-- .pro-img --> */}
 						<div className="pro-img">
 							<img src="assets/images/Products/24.jpg" alt="2" />
-							<!-- .hover-img -->
+							{/* <!-- .hover-img --> */}
 							<div className="hover-img">
 								<ul>
 									<li>
@@ -658,22 +659,22 @@ class App extends Component {
 									</li>
 								</ul>
 							</div>
-							<!-- /.hover-img -->
+							{/* <!-- /.hover-img --> */}
 						</div>
-						<!-- /.pro-img -->
+						{/* <!-- /.pro-img --> */}
 						<a href="#">Wooden container Bowl</a>
 						<a href="#" className="addtocart">+ Add to cart</a>
 						<div className="price">$160.00</div>
 					</div>
-					<!-- /.pro-text -->
+					{/* <!-- /.pro-text --> */}
 				</div>
 				<div className="col-md-3">
-					<!-- .pro-text -->
+					{/* <!-- .pro-text --> */}
 					<div className="pro-text">
-						<!-- .pro-img -->
+						{/* <!-- .pro-img --> */}
 						<div className="pro-img">
 							<img src="assets/images/Products/17.jpg" alt="2" />
-							<!-- .hover-img -->
+							{/* <!-- .hover-img --> */}
 							<div className="hover-img">
 								<ul>
 									<li>
@@ -697,22 +698,22 @@ class App extends Component {
 								<span className="new-text">NEW</span>
 								<span className="pres-text">-15%</span>
 							</div>
-							<!-- /.hover-img -->
+							{/* <!-- /.hover-img --> */}
 						</div>
-						<!-- /.pro-img -->
+						{/* <!-- /.pro-img --> */}
 						<a href="#">Wooden container Bowl</a>
 						<a href="#" className="addtocart">+ Add to cart</a>
 						<div className="price">$160.00</div>
 					</div>
-					<!-- /.pro-text -->
+					{/* <!-- /.pro-text --> */}
 				</div>
 				<div className="col-md-3">
-					<!-- .pro-text -->
+					{/* <!-- .pro-text --> */}
 					<div className="pro-text">
-						<!-- .pro-img -->
+						{/* <!-- .pro-img --> */}
 						<div className="pro-img">
 							<img src="assets/images/Products/22.jpg" alt="2" />
-							<!-- .hover-img -->
+							{/* <!-- .hover-img --> */}
 							<div className="hover-img">
 								<ul>
 									<li>
@@ -736,22 +737,22 @@ class App extends Component {
 								<span className="new-text">NEW</span>
 								<span className="pres-text">-15%</span>
 							</div>
-							<!-- /.hover-img -->
+							{/* <!-- /.hover-img --> */}
 						</div>
-						<!-- /.pro-img -->
+						{/* <!-- /.pro-img --> */}
 						<a href="#">Wooden container Bowl</a>
 						<a href="#" className="addtocart">+ Add to cart</a>
 						<div className="price">$160.00</div>
 					</div>
-					<!-- /.pro-text -->
+					{/* <!-- /.pro-text --> */}
 				</div>
 				<div className="col-md-3">
-					<!-- .pro-text -->
+					{/* <!-- .pro-text --> */}
 					<div className="pro-text">
-						<!-- .pro-img -->
+						{/* <!-- .pro-img --> */}
 						<div className="pro-img">
 							<img src="assets/images/Products/7.jpg" alt="2" />
-							<!-- .hover-img -->
+							{/* <!-- .hover-img --> */}
 							<div className="hover-img">
 								<ul>
 									<li>
@@ -771,22 +772,22 @@ class App extends Component {
 									</li>
 								</ul>
 							</div>
-							<!-- /.hover-img -->
+							{/* <!-- /.hover-img --> */}
 						</div>
-						<!-- /.pro-img -->
+						{/* <!-- /.pro-img --> */}
 						<a href="#">Wooden container Bowl</a>
 						<a href="#" className="addtocart">+ Add to cart</a>
 						<div className="price">$160.00</div>
 					</div>
-					<!-- /.pro-text -->
+					{/* <!-- /.pro-text --> */}
 				</div>
 				<div className="col-md-3">
-					<!-- .pro-text -->
+					{/* <!-- .pro-text --> */}
 					<div className="pro-text">
-						<!-- .pro-img -->
+						{/* <!-- .pro-img --> */}
 						<div className="pro-img">
 							<img src="assets/images/Products/19.jpg" alt="2" />
-							<!-- .hover-img -->
+							{/* <!-- .hover-img --> */}
 							<div className="hover-img">
 								<ul>
 									<li>
@@ -810,22 +811,22 @@ class App extends Component {
 								<span className="new-text">NEW</span>
 								<span className="pres-text">-15%</span>
 							</div>
-							<!-- /.hover-img -->
+							{/* <!-- /.hover-img --> */}
 						</div>
-						<!-- /.pro-img -->
+						{/* <!-- /.pro-img --> */}
 						<a href="#">Wooden container Bowl</a>
 						<a href="#" className="addtocart">+ Add to cart</a>
 						<div className="price">$160.00</div>
 					</div>
-					<!-- /.pro-text -->
+					{/* <!-- /.pro-text --> */}
 				</div>
 				<div className="col-md-3">
-					<!-- .pro-text -->
+					{/* <!-- .pro-text --> */}
 					<div className="pro-text">
-						<!-- .pro-img -->
+						{/* <!-- .pro-img --> */}
 						<div className="pro-img">
 							<img src="assets/images/Products/6.jpg" alt="2" />
-							<!-- .hover-img -->
+							{/* <!-- .hover-img --> */}
 							<div className="hover-img">
 								<ul>
 									<li>
@@ -848,26 +849,26 @@ class App extends Component {
 							<div className="discount tage">
 								<span className="discount-text">-15%</span>
 							</div>
-							<!-- /.hover-img -->
+							{/* <!-- /.hover-img --> */}
 						</div>
-						<!-- /.pro-img -->
+						{/* <!-- /.pro-img --> */}
 						<a href="#">Wooden container Bowl</a>
 						<a href="#" className="addtocart">+ Add to cart</a>
 						<div className="price">$160.00</div>
 					</div>
-					<!-- /.pro-text -->
+					{/* <!-- /.pro-text --> */}
 				</div>
 				<div className="col-md-12 text-center">
 					<a href="#" className="lbtn">load more</a>
 				</div>
 			</div>
 		</div>
-		<!-- /.new-arrivals -->
+		{/* <!-- /.new-arrivals --> */}
 	</section>
 	<section className="banner-outer">
-		<!-- .banner-outer -->
+		{/* <!-- .banner-outer --> */}
 		<div className="col-sm-6 col-md-6">
-			<!-- .banner-img -->
+			{/* <!-- .banner-img --> */}
 			<div className="banner-img">
 				<img src="assets/images/bg-banner.jpg" alt="about-img1" />
 				<div className="banner-text2">
@@ -882,11 +883,11 @@ class App extends Component {
 					</p>
 				</div>
 			</div>
-			<!-- /.banner-outer -->
+			{/* <!-- /.banner-outer --> */}
 		</div>
 
 		<div className="col-sm-6 col-md-6">
-			<!-- .banner-img -->
+			{/* <!-- .banner-img --> */}
 			<div className="banner-img">
 				<img src="assets/images/bg-banner2.jpg" alt="about-img1" />
 				<div className="banner-text2">
@@ -901,12 +902,12 @@ class App extends Component {
 					</p>
 				</div>
 			</div>
-			<!-- /.banner-outer -->
+			{/* <!-- /.banner-outer --> */}
 		</div>
-		<!-- /.banner -->
+		{/* <!-- /.banner --> */}
 	</section>
 	<section className="new-arrivals">
-		<!-- .new-arrivals -->
+		{/* <!-- .new-arrivals --> */}
 		<div className="container">
 			<div className="tittle text-center">
 				<h2>Sale Off</h2>
@@ -914,12 +915,12 @@ class App extends Component {
 			</div>
 			<div className="row animated wow zoomIn" data-wow-duration=".5s" data-wow-delay=".2s">
 				<div className="col-5">
-					<!-- .pro-text -->
+					{/* <!-- .pro-text --> */}
 					<div className="pro-text">
-						<!-- .pro-img -->
+						{/* <!-- .pro-img --> */}
 						<div className="pro-img">
 							<img src="assets/images/Products/21.jpg" alt="2" />
-							<!-- .hover-img -->
+							{/* <!-- .hover-img --> */}
 							<div className="hover-img">
 								<ul>
 									<li>
@@ -943,24 +944,24 @@ class App extends Component {
 								<span className="new-text">NEW</span>
 								<span className="pres-text">-15%</span>
 							</div>
-							<!-- /.hover-img -->
+							{/* <!-- /.hover-img --> */}
 						</div>
-						<!-- /.pro-img -->
+						{/* <!-- /.pro-img --> */}
 						<a href="#">Wooden container Bowl</a>
 						<a href="#" className="addtocart">+ Add to cart</a>
 						<div className="price">$160.00
 							<span>200</span>
 						</div>
 					</div>
-					<!-- /.pro-text -->
+					{/* <!-- /.pro-text --> */}
 				</div>
 				<div className="col-5">
-					<!-- .pro-text -->
+					{/* <!-- .pro-text --> */}
 					<div className="pro-text">
-						<!-- .pro-img -->
+						{/* <!-- .pro-img --> */}
 						<div className="pro-img">
 							<img src="assets/images/Products/26.jpg" alt="2" />
-							<!-- .hover-img -->
+							{/* <!-- .hover-img --> */}
 							<div className="hover-img">
 								<ul>
 									<li>
@@ -983,24 +984,24 @@ class App extends Component {
 							<div className="discount tage">
 								<span className="discount-text">-15%</span>
 							</div>
-							<!-- /.hover-img -->
+							{/* <!-- /.hover-img --> */}
 						</div>
-						<!-- /.pro-img -->
+						{/* <!-- /.pro-img --> */}
 						<a href="#">Wooden container Bowl</a>
 						<a href="#" className="addtocart">+ Add to cart</a>
 						<div className="price">$160.00
 							<span></span>
 						</div>
 					</div>
-					<!-- /.pro-text -->
+					{/* <!-- /.pro-text --> */}
 				</div>
 				<div className="col-5">
-					<!-- .pro-text -->
+					{/* <!-- .pro-text --> */}
 					<div className="pro-text">
-						<!-- .pro-img -->
+						{/* <!-- .pro-img --> */}
 						<div className="pro-img">
 							<img src="assets/images/Products/24.jpg" alt="2" />
-							<!-- .hover-img -->
+							{/* <!-- .hover-img --> */}
 							<div className="hover-img">
 								<ul>
 									<li>
@@ -1025,24 +1026,24 @@ class App extends Component {
 								<span className="pres-text">-15%</span>
 							</div>
 
-							<!-- /.hover-img -->
+							{/* <!-- /.hover-img --> */}
 						</div>
-						<!-- /.pro-img -->
+						{/* <!-- /.pro-img --> */}
 						<a href="#">Wooden container Bowl</a>
 						<a href="#" className="addtocart">+ Add to cart</a>
 						<div className="price">$160.00
 							<span>200</span>
 						</div>
 					</div>
-					<!-- /.pro-text -->
+					{/* <!-- /.pro-text --> */}
 				</div>
 				<div className="col-5">
-					<!-- .pro-text -->
+					{/* <!-- .pro-text --> */}
 					<div className="pro-text">
-						<!-- .pro-img -->
+						{/* <!-- .pro-img --> */}
 						<div className="pro-img">
 							<img src="assets/images/Products/17.jpg" alt="2" />
-							<!-- .hover-img -->
+							{/* <!-- .hover-img --> */}
 							<div className="hover-img">
 								<ul>
 									<li>
@@ -1065,22 +1066,22 @@ class App extends Component {
 							<div className="discount tage">
 								<span className="discount-text">-15%</span>
 							</div>
-							<!-- /.hover-img -->
+							{/* <!-- /.hover-img --> */}
 						</div>
-						<!-- /.pro-img -->
+						{/* <!-- /.pro-img --> */}
 						<a href="#">Wooden container Bowl</a>
 						<a href="#" className="addtocart">+ Add to cart</a>
 						<div className="price">$160.00</div>
 					</div>
-					<!-- /.pro-text -->
+					{/* <!-- /.pro-text --> */}
 				</div>
 				<div className="col-5">
-					<!-- .pro-text -->
+					{/* <!-- .pro-text --> */}
 					<div className="pro-text">
-						<!-- .pro-img -->
+						{/* <!-- .pro-img --> */}
 						<div className="pro-img">
 							<img src="assets/images/Products/22.jpg" alt="2" />
-							<!-- .hover-img -->
+							{/* <!-- .hover-img --> */}
 							<div className="hover-img">
 								<ul>
 									<li>
@@ -1104,19 +1105,19 @@ class App extends Component {
 								<span className="new-text">NEW</span>
 								<span className="pres-text">-15%</span>
 							</div>
-							<!-- /.hover-img -->
+							{/* <!-- /.hover-img --> */}
 						</div>
-						<!-- /.pro-img -->
+						{/* <!-- /.pro-img --> */}
 						<a href="#">Wooden container Bowl</a>
 						<a href="#" className="addtocart">+ Add to cart</a>
 						<div className="price">$160.00</div>
 					</div>
-					<!-- /.pro-text -->
+					{/* <!-- /.pro-text --> */}
 				</div>
 
 			</div>
 		</div>
-		<!-- /.new-arrivals -->
+		{/* <!-- /.new-arrivals --> */}
 	</section>
 	<section className="client-icon">
 		<div className="container">
@@ -1151,7 +1152,7 @@ class App extends Component {
 	</section>
 
 	<section className="section-padding">
-		<!-- Latest News -->
+		{/* <!-- Latest News --> */}
 		<div className="container">
 			<div className="tittle text-center">
 				<h2>Our Blog Posts</h2>
@@ -1203,26 +1204,26 @@ class App extends Component {
 				</div>
 			</div>
 		</div>
-		<!-- /Latest News -->
+		{/* <!-- /Latest News --> */}
 	</section>
 	<section className="subscribe text-center">
-		<!-- .subscribe -->
+		{/* <!-- .subscribe --> */}
 		<div className="container">
 			<h2>Get Discount Info</h2>
 			<p>ubscribe to the Outstock mailing list to receive updates on new arrivals, special offers and
-				<br> other discount information.</p>
-			<input type="text" placeholder="Subscribe to our newsletter...">
-			<input type="button" value="Subscribe">
+				<br/> other discount information.</p>
+			<input type="text" placeholder="Subscribe to our newsletter..."></input>
+			<input type="button" value="Subscribe"></input>
 		</div>
-		<!-- /.subscribe -->
+		{/* <!-- /.subscribe --> */}
 	</section>
 	<footer>
 		<div className="container">
 			<div className="row">
 				<div className="col-xs-12 col-sm-6 col-md-6">
-					<!-- f-weghit -->
+					{/* <!-- f-weghit --> */}
 					<div className="f-weghit">
-						<img src="assets/images/flogo.png" alt="logo">
+						<img src="assets/images/flogo.png" alt="logo"/>
 						<p>Outstock is a premium Templates theme with advanced admin module. It’s extremely customizable, easy to use and fully
 							responsive and retina ready.</p>
 						<ul>
@@ -1237,10 +1238,10 @@ class App extends Component {
 								<strong>Phone Number:</strong> (800) 123 456 789</li>
 						</ul>
 					</div>
-					<!-- /f-weghit -->
+					{/* <!-- /f-weghit --> */}
 				</div>
 				<div className="col-xs-12 col-sm-3 col-md-3">
-					<!-- f-weghit2 -->
+					{/* <!-- f-weghit2 --> */}
 					<div className="f-weghit2">
 						<h4>Information</h4>
 						<ul>
@@ -1261,10 +1262,10 @@ class App extends Component {
 							</li>
 						</ul>
 					</div>
-					<!-- /f-weghit2 -->
+					{/* <!-- /f-weghit2 --> */}
 				</div>
 				<div className="col-xs-12 col-sm-3 col-md-3">
-					<!-- f-weghit2 -->
+					{/* <!-- f-weghit2 --> */}
 					<div className="f-weghit2">
 						<h4>Customer Service</h4>
 						<ul>
@@ -1285,12 +1286,12 @@ class App extends Component {
 							</li>
 						</ul>
 					</div>
-					<!-- /f-weghit2 -->
+					{/* <!-- /f-weghit2 --> */}
 				</div>
 
 			</div>
 		</div>
-		<!-- copayright -->
+		{/* <!-- copayright --> */}
 		<div className="copayright cwhite">
 			<div className="container">
 				<div className="row">
@@ -1338,10 +1339,10 @@ class App extends Component {
 				</div>
 			</div>
 		</div>
-		<!-- /copayright -->
+		{/* <!-- /copayright --> */}
 	</footer>
-	<!--  /main  -->
-	<!-- Get Our Email Letter popup -->
+	{/* <!--  /main  --> */}
+	{/* <!-- Get Our Email Letter popup --> */}
 	<div className="modal fade modal-popup" id="modal1" data-open-onload="true" data-open-delay="1500" tabindex="-1" role="dialog">
 		<div className="modal-dialog modal-lg" role="document">
 			<div className="modal-content" style="background-image:url('images/modal-background.jpg'); background-size:cover">
@@ -1359,7 +1360,7 @@ class App extends Component {
 								<p className="font22 text-center">Subscribe to the Outstock mailing list to receive updates on new arrivals, special offers and other discount information.</p>
 								<form name="main">
 									<div className="form-group">
-										<input type="text" className="form-control" placeholder="Enter your Email id"> </div>
+										<input type="text" className="form-control" placeholder="Enter your Email id"> </input></div>
 									<div className="form-group">
 										<button className="btn btn-black" type="button">Subscribe!</button>
 									</div>
@@ -1377,8 +1378,8 @@ class App extends Component {
 			</div>
 		</div>
 	</div>
-	<!-- /Get Our Email Letter popup -->
-	<!--  quick popup  -->
+	{/* <!-- /Get Our Email Letter popup --> */}
+	{/* <!--  quick popup  --> */}
 	<div className="modal fade bwidth" id="quickModal" tabindex="-1" role="dialog">
 		<div className="modal-dialog" role="document">
 			<div className="modal-content">
@@ -1391,57 +1392,57 @@ class App extends Component {
 					<div className="row">
 						<div className="col-md-12">
 							<div className="row">
-								<!-- left side -->
+								{/* <!-- left side --> */}
 								<div className="col-sm-6 col-md-6">
-									<!-- product gallery -->
+									{/* <!-- product gallery --> */}
 									<div id="home-slider3" className="carousel fadein carousel-fade" data-ride="carousel">
-										<!-- .home-slider -->
+										{/* <!-- .home-slider --> */}
 										<div className="carousel-inner">
 											<div className="item active">
 												<div className="caption">
-													<img src="assets/images/Products/1.jpg" alt="qoute-icon">
+													<img src="assets/images/Products/1.jpg" alt="qoute-icon"/>
 												</div>
 											</div>
 											<div className="item">
 												<div className="caption">
-													<img src="assets/images/Products/11.jpg" alt="qoute-icon">
+													<img src="assets/images/Products/11.jpg" alt="qoute-icon"/>
 												</div>
 											</div>
 											<div className="item">
 												<div className="caption">
-													<img src="assets/images/Products/8.jpg" alt="qoute-icon">
+													<img src="assets/images/Products/8.jpg" alt="qoute-icon"/>
 												</div>
 											</div>
 											<div className="item">
 												<div className="caption">
-													<img src="assets/images/Products/16.jpg" alt="qoute-icon">
+													<img src="assets/images/Products/16.jpg" alt="qoute-icon"/>
 												</div>
 											</div>
 											<ul className="carousel-indicators">
 												<li data-target="#home-slider3" data-slide-to="0" className="active">
-													<img src="assets/images/Products/1.jpg" alt="qoute-icon">
+													<img src="assets/images/Products/1.jpg" alt="qoute-icon"/>
 												</li>
 												<li data-target="#home-slider3" data-slide-to="1" className="">
-													<img src="assets/images/Products/11.jpg" alt="qoute-icon">
+													<img src="assets/images/Products/11.jpg" alt="qoute-icon"/>
 												</li>
 												<li data-target="#home-slider3" data-slide-to="2" className="">
-													<img src="assets/images/Products/8.jpg" alt="qoute-icon">
+													<img src="assets/images/Products/8.jpg" alt="qoute-icon"/>
 												</li>
 												<li data-target="#home-slider3" data-slide-to="3" className="">
-													<img src="assets/images/Products/16.jpg" alt="qoute-icon">
+													<img src="assets/images/Products/16.jpg" alt="qoute-icon"/>
 												</li>
 											</ul>
 										</div>
-										<!-- /.home-slider -->
+										{/* <!-- /.home-slider --> */}
 									</div>
-									<!-- / product gallery -->
+									{/* <!-- / product gallery --> */}
 								</div>
-								<!-- left side -->
-								<!-- right side -->
+								{/* <!-- left side --> */}
+								{/* <!-- right side --> */}
 								<div className="col-sm-6 col-md-6">
-									<!-- .pro-text -->
+									{/* <!-- .pro-text --> */}
 									<div className="pro-text product-detail">
-										<!-- /.pro-img -->
+										{/* <!-- /.pro-img --> */}
 										<a href="#">
 											<h4>Wooden Container Bowl</h4>
 										</a>
@@ -1505,7 +1506,7 @@ class App extends Component {
 										</div>
 										<form>
 											<div className="numbers-row">
-												<input name="french-hens" id="french-hens" value="3" type="text">
+												<input name="french-hens" id="french-hens" value="3" type="text"></input>
 												<div className="inc button">+</div>
 												<div className="dec button">-</div>
 											</div>
@@ -1552,29 +1553,29 @@ class App extends Component {
 										</div>
 
 									</div>
-									<!-- /.pro-text -->
+									{/* <!-- /.pro-text --> */}
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- /.modal-content -->
+			{/* <!-- /.modal-content --> */}
 		</div>
-		<!-- /.modal-dialog -->
+		{/* <!-- /.modal-dialog --> */}
 	</div>
-	<!-- /.modal -->
-	<!--  / quick popup  -->
+	{/* <!-- /.modal --> */}
+	{/* <!--  / quick popup  --> */}
 	<script src="assets/js/jquery.js"></script>
-	<!-- Bootstrap Core JavaScript -->
+	{/* <!-- Bootstrap Core JavaScript --> */}
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/bootstrap-dropdownhover.min.js"></script>
-	<!-- Plugin JavaScript -->
+	{/* <!-- Plugin JavaScript --> */}
 	<script src="assets/js/jquery.easing.min.js"></script>
 	<script src="assets/js/wow.min.js"></script>
-	<!--  Custom Theme JavaScript  -->
+	{/* <!--  Custom Theme JavaScript  --> */}
 	<script src="assets/js/custom.js"></script>
-	<!-- owl carousel -->
+	{/* <!-- owl carousel --> */}
 	<script src="assets/owl-carousel/owl.carousel.js"></script>
     ]);
   }
