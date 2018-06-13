@@ -9,8 +9,43 @@ import "./font/css/font-awesome.min.css";
 import "./simple-line-icon/css/simple-line-icons.css";
 import "./css/style.css";
 import "./css/slider.css";
+import "./css/ourcss.css";
 import logo from "./images/logo.png";
+import hover from "./images/Hover-menu-img.jpg";
+import icon1 from "./images/top-icon1.png";
+import icon3 from "./images/top-icon3.png";
+import thirteen from "./images/Products/13.jpg";
+import eleven from "./images/Products/11.jpg";
+import icon2 from "./images/top-icon2.png";
+import hover1 from "./images/Hover-menu-img.jpg";
+import banner1 from "./images/banner1.jpg";
+import banner2 from "./images/banner2.jpg";
+import banner3 from "./images/banner3.jpg";
+import twenty_one from "./images/Products/21.jpg";
+import tsix from "./images/Products/26.jpg";
+import tfour from "./images/Products/24.jpg";
+import seventeen from "./images/Products/17.jpg";
+import ttwo from "./images/Products/22.jpg";
+import seven from "./images/Products/7.jpg";
+import nineteen from "./images/Products/19.jpg";
+import six from "./images/Products/6.jpg";
+import bg_banner from "./images/bg-banner.jpg";
+import bg_banner2 from "./images/bg-banner2.jpg";
+import tone from "./images/Products/21.jpg";
+import clogo1 from "./images/client-logo1.png";
+import clogo2 from "./images/client-logo2.png";
+import clogo3 from "./images/client-logo3.png";
+import clogo4 from "./images/client-logo4.png";
+import clogo5 from "./images/client-logo5.png";
 
+import blogimg1 from "./images/blog-img1.jpg";
+import blogimg2 from "./images/blog-img2.jpg";
+
+import blogimg3 from "./images/blog-img03.jpg";
+
+import flogo from "./images/flogo.png";
+import header1 from "./images/header-1.jpg";
+import header2 from "./images/header-2.jpg";
 class App extends Component {
   render() {
     return [
@@ -168,10 +203,7 @@ class App extends Component {
                       </ul>
                     </div>
                     <div className="col-sm-4 col-md-4">
-                      <img
-                        src="assets/images/Hover-menu-img.jpg"
-                        alt="Hover-menu-img"
-                      />{" "}
+                      <img src={hover} alt="Hover-menu-img" />{" "}
                     </div>
                   </div>
                 </li>
@@ -261,19 +293,19 @@ class App extends Component {
               <ul className="nav navbar-nav navbar-right">
                 <li>
                   <a href="#" data-toggle="modal" data-target=".popup1">
-                    <img src="assets/images/top-icon1.png" alt="top-icon1" />
+                    <img src={icon1} alt="top-icon1" />
                     <span>Search</span>
                   </a>
                 </li>
                 <li className="dropdown">
                   <a href="#" className="dropbtn">
-                    <img src="assets/images/top-icon3.png" alt="top-ico3" />
+                    <img src={icon3} alt="top-ico3" />
                     <span>Cart (0)</span>
                   </a>
                   <div className="dropdown-content">
                     <div className="cart-content">
                       <div className="col-sm-4 col-md-4">
-                        <img src="assets/images/Products/13.jpg" alt="13" />
+                        <img src={thirteen} alt="13" />
                       </div>
                       <div className="col-sm-8 col-md-8">
                         <div className="pro-text">
@@ -285,7 +317,7 @@ class App extends Component {
                     </div>
                     <div className="cart-content">
                       <div className="col-sm-4 col-md-4">
-                        <img src="assets/images/Products/11.jpg" alt="13" />
+                        <img src={eleven} alt="13" />
                       </div>
                       <div className="col-sm-8 col-md-8">
                         <div className="pro-text">
@@ -317,7 +349,7 @@ class App extends Component {
                 </li>
                 <li>
                   <a href="#" data-toggle="modal" data-target=".menu-popup">
-                    <img src="assets/images/top-icon2.png" alt="top-icon2" />
+                    <img src={icon2} alt="top-icon2" />
                   </a>
                 </li>
               </ul>
@@ -489,10 +521,7 @@ class App extends Component {
                         </ul>
                       </div>
                       <div className="col-sm-4 col-md-4">
-                        <img
-                          src="assets/images/Hover-menu-img.jpg"
-                          alt="Hover-menu-img"
-                        />{" "}
+                        <img src={hover1} alt="Hover-menu-img" />{" "}
                       </div>
                     </div>
                   </li>
@@ -593,7 +622,8 @@ class App extends Component {
           <div className="carousel-inner">
             <div
               className="item active"
-              // style="background-image: url(assets/images/header-1.jpg);  background-repeat: no-repeat; background-position: top;"
+              id="class1"
+              // style="background-image: url{header1};  background-repeat: no-repeat; background-position: top;"
             >
               <div className="caption">
                 <h2
@@ -624,8 +654,9 @@ class App extends Component {
             </div>
             <div
               className="item"
-              // style="background-image: url(assets/images/header-2.jpg);  background-repeat: no-repeat; background-position: top;"
+              //style="background-image: url(assets/images/header-2.jpg);  background-repeat: no-repeat; background-position: top;"
             >
+              <img src={header2} />
               <div className="caption">
                 <h2
                   className="animated wow zoomIn"
@@ -711,7 +742,7 @@ class App extends Component {
                 data-wow-duration=".5s"
                 data-wow-delay=".2s"
               >
-                <img src="assets/images/banner1.jpg" alt="about-img1" />
+                <img src={banner1} alt="about-img1" />
                 <div className="banner-text">
                   <h3>British Made Pocket Knife - Oak</h3>
                   <p>
@@ -728,7 +759,7 @@ class App extends Component {
                 data-wow-duration=".5s"
                 data-wow-delay=".2s"
               >
-                <img src="assets/images/banner2.jpg" alt="about-img1" />
+                <img src={banner2} alt="about-img1" />
                 <div className="banner-text">
                   <h3>Chair Kimi No Isu Project</h3>
                   <p>
@@ -745,7 +776,7 @@ class App extends Component {
             >
               {/* <!-- .banner-img --> */}
               <div className="banner-img">
-                <img src="assets/images/banner3.jpg" alt="about-img1" />
+                <img src={banner3} alt="about-img1" />
                 <div className="banner-text">
                   <h3>Merino Lambswool Scarf Moss</h3>
                   <p>
@@ -780,7 +811,7 @@ class App extends Component {
               <div className="pro-text">
                 {/* <!-- .pro-img --> */}
                 <div className="pro-img">
-                  <img src="assets/images/Products/21.jpg" alt="2" />
+                  <img src={twenty_one} alt="2" />
                   {/* <!-- .hover-img --> */}
                   <div className="hover-img">
                     <ul>
@@ -822,95 +853,7 @@ class App extends Component {
               <div className="pro-text">
                 {/* <!-- .pro-img --> */}
                 <div className="pro-img">
-                  <img src="assets/images/Products/26.jpg" alt="2" />
-                  {/* <!-- .hover-img --> */}
-                  <div className="hover-img">
-                    <ul>
-                      <li>
-                        <a href="#">
-                          <i className="fa fa-heart-o" aria-hidden="true" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fa fa-sliders" aria-hidden="true" />
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          data-toggle="modal"
-                          data-target="#quickModal"
-                          data-whatever="@mdo"
-                        >
-                          <i className="fa fa-search" aria-hidden="true" />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="new tage">
-                    <span className="new-text">NEW</span>
-                    <span className="pres-text">-15%</span>
-                  </div>
-                  {/* <!-- /.hover-img --> */}
-                </div>
-                {/* <!-- /.pro-img --> */}
-                <a href="#">Wooden container Bowl</a>
-                <a href="#" className="addtocart">
-                  + Add to cart
-                </a>
-                <div className="price">$160.00</div>
-              </div>
-              {/* <!-- /.pro-text --> */}
-            </div>
-            <div className="col-md-3">
-              {/* <!-- .pro-text --> */}
-              <div className="pro-text">
-                {/* <!-- .pro-img --> */}
-                <div className="pro-img">
-                  <img src="assets/images/Products/24.jpg" alt="2" />
-                  {/* <!-- .hover-img --> */}
-                  <div className="hover-img">
-                    <ul>
-                      <li>
-                        <a href="#">
-                          <i className="fa fa-heart-o" aria-hidden="true" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fa fa-sliders" aria-hidden="true" />
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          data-toggle="modal"
-                          data-target="#quickModal"
-                          data-whatever="@mdo"
-                        >
-                          <i className="fa fa-search" aria-hidden="true" />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  {/* <!-- /.hover-img --> */}
-                </div>
-                {/* <!-- /.pro-img --> */}
-                <a href="#">Wooden container Bowl</a>
-                <a href="#" className="addtocart">
-                  + Add to cart
-                </a>
-                <div className="price">$160.00</div>
-              </div>
-              {/* <!-- /.pro-text --> */}
-            </div>
-            <div className="col-md-3">
-              {/* <!-- .pro-text --> */}
-              <div className="pro-text">
-                {/* <!-- .pro-img --> */}
-                <div className="pro-img">
-                  <img src="assets/images/Products/17.jpg" alt="2" />
+                  <img src={tsix} alt="2" />
                   {/* <!-- .hover-img --> */}
                   <div className="hover-img">
                     <ul>
@@ -956,7 +899,49 @@ class App extends Component {
               <div className="pro-text">
                 {/* <!-- .pro-img --> */}
                 <div className="pro-img">
-                  <img src="assets/images/Products/22.jpg" alt="2" />
+                  <img src={tfour} alt="2" />
+                  {/* <!-- .hover-img --> */}
+                  <div className="hover-img">
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <i className="fa fa-heart-o" aria-hidden="true" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i className="fa fa-sliders" aria-hidden="true" />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          data-toggle="modal"
+                          data-target="#quickModal"
+                          data-whatever="@mdo"
+                        >
+                          <i className="fa fa-search" aria-hidden="true" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  {/* <!-- /.hover-img --> */}
+                </div>
+                {/* <!-- /.pro-img --> */}
+                <a href="#">Wooden container Bowl</a>
+                <a href="#" className="addtocart">
+                  + Add to cart
+                </a>
+                <div className="price">$160.00</div>
+              </div>
+              {/* <!-- /.pro-text --> */}
+            </div>
+            <div className="col-md-3">
+              {/* <!-- .pro-text --> */}
+              <div className="pro-text">
+                {/* <!-- .pro-img --> */}
+                <div className="pro-img">
+                  <img src={seventeen} alt="2" />
                   {/* <!-- .hover-img --> */}
                   <div className="hover-img">
                     <ul>
@@ -1002,49 +987,7 @@ class App extends Component {
               <div className="pro-text">
                 {/* <!-- .pro-img --> */}
                 <div className="pro-img">
-                  <img src="assets/images/Products/7.jpg" alt="2" />
-                  {/* <!-- .hover-img --> */}
-                  <div className="hover-img">
-                    <ul>
-                      <li>
-                        <a href="#">
-                          <i className="fa fa-heart-o" aria-hidden="true" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fa fa-sliders" aria-hidden="true" />
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          data-toggle="modal"
-                          data-target="#quickModal"
-                          data-whatever="@mdo"
-                        >
-                          <i className="fa fa-search" aria-hidden="true" />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  {/* <!-- /.hover-img --> */}
-                </div>
-                {/* <!-- /.pro-img --> */}
-                <a href="#">Wooden container Bowl</a>
-                <a href="#" className="addtocart">
-                  + Add to cart
-                </a>
-                <div className="price">$160.00</div>
-              </div>
-              {/* <!-- /.pro-text --> */}
-            </div>
-            <div className="col-md-3">
-              {/* <!-- .pro-text --> */}
-              <div className="pro-text">
-                {/* <!-- .pro-img --> */}
-                <div className="pro-img">
-                  <img src="assets/images/Products/19.jpg" alt="2" />
+                  <img src={ttwo} alt="2" />
                   {/* <!-- .hover-img --> */}
                   <div className="hover-img">
                     <ul>
@@ -1090,7 +1033,95 @@ class App extends Component {
               <div className="pro-text">
                 {/* <!-- .pro-img --> */}
                 <div className="pro-img">
-                  <img src="assets/images/Products/6.jpg" alt="2" />
+                  <img src={seven} alt="2" />
+                  {/* <!-- .hover-img --> */}
+                  <div className="hover-img">
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <i className="fa fa-heart-o" aria-hidden="true" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i className="fa fa-sliders" aria-hidden="true" />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          data-toggle="modal"
+                          data-target="#quickModal"
+                          data-whatever="@mdo"
+                        >
+                          <i className="fa fa-search" aria-hidden="true" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  {/* <!-- /.hover-img --> */}
+                </div>
+                {/* <!-- /.pro-img --> */}
+                <a href="#">Wooden container Bowl</a>
+                <a href="#" className="addtocart">
+                  + Add to cart
+                </a>
+                <div className="price">$160.00</div>
+              </div>
+              {/* <!-- /.pro-text --> */}
+            </div>
+            <div className="col-md-3">
+              {/* <!-- .pro-text --> */}
+              <div className="pro-text">
+                {/* <!-- .pro-img --> */}
+                <div className="pro-img">
+                  <img src={nineteen} alt="2" />
+                  {/* <!-- .hover-img --> */}
+                  <div className="hover-img">
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <i className="fa fa-heart-o" aria-hidden="true" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i className="fa fa-sliders" aria-hidden="true" />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          data-toggle="modal"
+                          data-target="#quickModal"
+                          data-whatever="@mdo"
+                        >
+                          <i className="fa fa-search" aria-hidden="true" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="new tage">
+                    <span className="new-text">NEW</span>
+                    <span className="pres-text">-15%</span>
+                  </div>
+                  {/* <!-- /.hover-img --> */}
+                </div>
+                {/* <!-- /.pro-img --> */}
+                <a href="#">Wooden container Bowl</a>
+                <a href="#" className="addtocart">
+                  + Add to cart
+                </a>
+                <div className="price">$160.00</div>
+              </div>
+              {/* <!-- /.pro-text --> */}
+            </div>
+            <div className="col-md-3">
+              {/* <!-- .pro-text --> */}
+              <div className="pro-text">
+                {/* <!-- .pro-img --> */}
+                <div className="pro-img">
+                  <img src={six} alt="2" />
                   {/* <!-- .hover-img --> */}
                   <div className="hover-img">
                     <ul>
@@ -1144,7 +1175,7 @@ class App extends Component {
         <div className="col-sm-6 col-md-6">
           {/* <!-- .banner-img --> */}
           <div className="banner-img">
-            <img src="assets/images/bg-banner.jpg" alt="about-img1" />
+            <img src={bg_banner} alt="about-img1" />
             <div className="banner-text2">
               <h4>Products Essentials</h4>
               <h3>Bottle With Wooden Cork</h3>
@@ -1167,7 +1198,7 @@ class App extends Component {
         <div className="col-sm-6 col-md-6">
           {/* <!-- .banner-img --> */}
           <div className="banner-img">
-            <img src="assets/images/bg-banner2.jpg" alt="about-img1" />
+            <img src={bg_banner2} alt="about-img1" />
             <div className="banner-text2">
               <h4>Products Essentials</h4>
               <h3>Hauteville Plywood Chair</h3>
@@ -1208,7 +1239,7 @@ class App extends Component {
               <div className="pro-text">
                 {/* <!-- .pro-img --> */}
                 <div className="pro-img">
-                  <img src="assets/images/Products/21.jpg" alt="2" />
+                  <img src={tone} alt="2" />
                   {/* <!-- .hover-img --> */}
                   <div className="hover-img">
                     <ul>
@@ -1257,7 +1288,7 @@ class App extends Component {
               <div className="pro-text">
                 {/* <!-- .pro-img --> */}
                 <div className="pro-img">
-                  <img src="assets/images/Products/26.jpg" alt="2" />
+                  <img src={tsix} alt="2" />
                   {/* <!-- .hover-img --> */}
                   <div className="hover-img">
                     <ul>
@@ -1305,7 +1336,7 @@ class App extends Component {
               <div className="pro-text">
                 {/* <!-- .pro-img --> */}
                 <div className="pro-img">
-                  <img src="assets/images/Products/24.jpg" alt="2" />
+                  <img src={tfour} alt="2" />
                   {/* <!-- .hover-img --> */}
                   <div className="hover-img">
                     <ul>
@@ -1355,7 +1386,7 @@ class App extends Component {
               <div className="pro-text">
                 {/* <!-- .pro-img --> */}
                 <div className="pro-img">
-                  <img src="assets/images/Products/17.jpg" alt="2" />
+                  <img src={seventeen} alt="2" />
                   {/* <!-- .hover-img --> */}
                   <div className="hover-img">
                     <ul>
@@ -1400,7 +1431,7 @@ class App extends Component {
               <div className="pro-text">
                 {/* <!-- .pro-img --> */}
                 <div className="pro-img">
-                  <img src="assets/images/Products/22.jpg" alt="2" />
+                  <img src={ttwo} alt="2" />
                   {/* <!-- .hover-img --> */}
                   <div className="hover-img">
                     <ul>
@@ -1450,27 +1481,27 @@ class App extends Component {
           <ul>
             <li>
               <a href="#">
-                <img src="assets/images/client-logo1.png" alt="client-logo1" />
+                <img src={clogo1} alt="client-logo1" />
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="assets/images/client-logo2.png" alt="client-logo2" />
+                <img src={clogo2} alt="client-logo2" />
               </a>
             </li>
             <li>
               <a href="#" className="active">
-                <img src="assets/images/client-logo3.png" alt="client-logo3" />
+                <img src={clogo3} alt="client-logo3" />
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="assets/images/client-logo4.png" alt="client-logo4" />
+                <img src={clogo4} alt="client-logo4" />
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="assets/images/client-logo5.png" alt="client-logo4" />
+                <img src={clogo5} alt="client-logo4" />
               </a>
             </li>
           </ul>
@@ -1494,7 +1525,7 @@ class App extends Component {
           >
             <div className="news-box">
               <div className="news-img">
-                <img src="assets/images/blog-img1.jpg" alt="news-img1" />
+                <img src={blogimg1} alt="news-img1" />
               </div>
               <div className="news-text">
                 <a href="#">Anteposuerit litterarum formas.</a>
@@ -1520,7 +1551,7 @@ class App extends Component {
           >
             <div className="news-box">
               <div className="news-img">
-                <img src="assets/images/blog-img2.jpg" alt="news-img1" />
+                <img src={blogimg2} alt="news-img1" />
               </div>
               <div className="news-text">
                 <a href="#">Anteposuerit litterarum formas.</a>
@@ -1546,7 +1577,7 @@ class App extends Component {
           >
             <div className="news-box">
               <div className="news-img">
-                <img src="assets/images/blog-img3.jpg" alt="news-img1" />
+                <img src={blogimg3} alt="news-img1" />
               </div>
               <div className="news-text">
                 <a href="#">Anteposuerit litterarum formas.</a>
@@ -1588,7 +1619,7 @@ class App extends Component {
             <div className="col-xs-12 col-sm-6 col-md-6">
               {/* <!-- f-weghit --> */}
               <div className="f-weghit">
-                <img src="assets/images/flogo.png" alt="logo" />
+                <img src={flogo} alt="logo" />
                 <p>
                   Outstock is a premium Templates theme with advanced admin
                   module. It’s extremely customizable, easy to use and fully
@@ -1712,25 +1743,6 @@ class App extends Component {
         </div>
         {/* <!-- /copayright --> */}
       </footer>
-      // {/* <script src="assets/js/jquery.js" />,
-      // {
-      //   /* <!-- Bootstrap Core JavaScript --> */
-      // },
-      // <script src="assets/js/bootstrap.min.js" />,
-      // <script src="assets/js/bootstrap-dropdownhover.min.js" />,
-      // {
-      //   /* <!-- Plugin JavaScript --> */
-      // },
-      // <script src="assets/js/jquery.easing.min.js" />,
-      // <script src="assets/js/wow.min.js" />,
-      // {
-      //   /* <!--  Custom Theme JavaScript  --> */
-      // },
-      // <script src="assets/js/custom.js" />,
-      // {
-      //   /* <!-- owl carousel --> */
-      // },
-      // <script src="assets/owl-carousel/owl.carousel.js" /> */}
     ];
   }
 }
