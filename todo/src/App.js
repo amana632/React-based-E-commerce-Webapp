@@ -1,13 +1,18 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import "./css/bootstrap.min.css";
+import "./css/animate.min.css";
+import "./css/baguetteBox.css";
+import "./css/bootstrap-dropdownhover.min.css";
+import "./font/css/font-awesome.min.css";
+import "./simple-line-icon/css/simple-line-icons.css";
+import "./css/style.css";
+import "./css/slider.css";
 
 class App extends Component {
   render() {
     return [
-      <div id="preloader">
-        <div id="loading"> </div>
-      </div>,
       <header>
         <nav
           id="mainNav"
