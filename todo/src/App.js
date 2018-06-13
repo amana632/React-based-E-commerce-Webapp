@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+
 import "./App.css";
 import "./css/bootstrap.min.css";
 import "./css/animate.min.css";
@@ -9,6 +9,7 @@ import "./font/css/font-awesome.min.css";
 import "./simple-line-icon/css/simple-line-icons.css";
 import "./css/style.css";
 import "./css/slider.css";
+import logo from "./images/logo.png";
 
 class App extends Component {
   render() {
@@ -32,7 +33,7 @@ class App extends Component {
                 <span className="icon-bar" />
               </button>
               <a className="navbar-brand" href="#">
-                <img src="assets/images/logo.png" alt="logo" />
+                <img src={logo} alt="logo" />
               </a>
             </div>
 
