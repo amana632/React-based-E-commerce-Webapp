@@ -622,9 +622,9 @@ class App extends Component {
           <div className="carousel-inner">
             <div
               className="item active"
-              id="class1"
               // style="background-image: url{header1};  background-repeat: no-repeat; background-position: top;"
             >
+              <img src={header1} />
               <div className="caption">
                 <h2
                   className="animated wow zoomIn"
