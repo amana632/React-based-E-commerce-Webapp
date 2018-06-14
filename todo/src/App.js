@@ -66,7 +66,7 @@ function reqListener() {
   imgurl = z[randomNO].imageUrlStr.split(";");
   imgurl = imgurl[1];
   document.getElementById("one").src = imgurl;
-  let onet = z[randomNO].description.slice(0, 80);
+  let onet = z[randomNO].title.slice(0, 80);
   let onec = z[randomNO].mrp;
   document.getElementById("onetext").innerText = onet;
   document.getElementById("onecost").innerText = onec;
@@ -89,7 +89,7 @@ function reqListener2() {
   imgurl2 = z[randomNO].imageUrlStr.split(";");
   imgurl2 = imgurl2[1];
   document.getElementById("two").src = imgurl2;
-  let onet = z[randomNO].description.slice(0, 80);
+  let onet = z[randomNO].title.slice(0, 80);
   let onec = z[randomNO].mrp;
   document.getElementById("twotext").innerText = onet;
   document.getElementById("twocost").innerText = onec;
@@ -111,7 +111,7 @@ function reqListener3() {
   imgurl3 = z[randomNO].imageUrlStr.split(";");
   imgurl3 = imgurl3[1];
   document.getElementById("three").src = imgurl3;
-  let onet = z[randomNO].description.slice(0, 80);
+  let onet = z[randomNO].title.slice(0, 80);
   let onec = z[randomNO].mrp;
   document.getElementById("threetext").innerText = onet;
   document.getElementById("threecost").innerText = onec;
@@ -133,7 +133,7 @@ function reqListener4() {
   imgurl4 = z[randomNO].imageUrlStr.split(";");
   imgurl4 = imgurl4[1];
   document.getElementById("four").src = imgurl4;
-  let onet = z[randomNO].description.slice(0, 80);
+  let onet = z[randomNO].title.slice(0, 80);
   let onec = z[randomNO].mrp;
   document.getElementById("fourtext").innerText = onet;
   document.getElementById("fourcost").innerText = onec;
@@ -155,7 +155,7 @@ function reqListener5() {
   imgurl5 = z[randomNO].imageUrlStr.split(";");
   imgurl5 = imgurl5[1];
   document.getElementById("five").src = imgurl5;
-  let onet = z[randomNO].description.slice(0, 80);
+  let onet = z[randomNO].title.slice(0, 80);
   let onec = z[randomNO].mrp;
   document.getElementById("fivetext").innerText = onet;
   document.getElementById("fivecost").innerText = onec;
@@ -177,7 +177,7 @@ function reqListener6() {
   imgurl6 = z[randomNO].imageUrlStr.split(";");
   imgurl6 = imgurl6[1];
   document.getElementById("six").src = imgurl6;
-  let onet = z[randomNO].description.slice(0, 80);
+  let onet = z[randomNO].title.slice(0, 80);
   let onec = z[randomNO].mrp;
   document.getElementById("sixtext").innerText = onet;
   document.getElementById("sixcost").innerText = onec;
@@ -199,7 +199,7 @@ function reqListener7() {
   imgurl7 = z[randomNO].imageUrlStr.split(";");
   imgurl7 = imgurl7[1];
   document.getElementById("seven").src = imgurl7;
-  let onet = z[randomNO].description.slice(0, 80);
+  let onet = z[randomNO].title.slice(0, 80);
   let onec = z[randomNO].mrp;
   document.getElementById("seventext").innerText = onet;
   document.getElementById("sevencost").innerText = onec;
@@ -221,7 +221,7 @@ function reqListener8() {
   imgurl8 = z[randomNO].imageUrlStr.split(";");
   imgurl8 = imgurl8[1];
   document.getElementById("eight").src = imgurl8;
-  let onet = z[randomNO].description.slice(0, 80);
+  let onet = z[randomNO].title.slice(0, 80);
   let onec = z[randomNO].mrp;
   document.getElementById("eighttext").innerText = onet;
   document.getElementById("eightcost").innerText = onec;
@@ -351,49 +351,45 @@ class App extends Component {
               {/* <!-- /.pro-text --> */}
             </div>
             <div className="col-md-3">
-              {/* <!-- .pro-text -->
+              {/* <!-- .pro-text --> */}
               <div className="pro-text">
                 {/* <!-- .pro-img --> */}
-              <div className="pro-img">
-                <img id="two" src={imgurl2} alt="2" />
-                {/* <!-- .hover-img --> */}
-                <div className="hover-img">
-                  <ul>
-                    <li>
-                      <a href="#">
-                        <i className="fa fa-heart-o" aria-hidden="true" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="fa fa-sliders" aria-hidden="true" />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="modal"
-                        data-target="#quickModal"
-                        data-whatever="@mdo"
-                      >
-                        <i className="fa fa-search" aria-hidden="true" />
-                      </a>
-                    </li>
-                  </ul>
+                <div className="pro-img">
+                  <img src={imgurl2} alt="2" id="two" />
+                  {/* <!-- .hover-img --> */}
+                  <div className="hover-img">
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <i className="fa fa-heart-o" aria-hidden="true" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i className="fa fa-sliders" aria-hidden="true" />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          data-toggle="modal"
+                          data-target="#quickModal"
+                          data-whatever="@mdo"
+                        >
+                          <i className="fa fa-search" aria-hidden="true" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  {/* <!-- /.hover-img --> */}
                 </div>
-                <div className="new tage">
-                  <span className="new-text">NEW</span>
-                  <span className="pres-text">-15%</span>
-                </div>
-                {/* <!-- /.hover-img --> */}
+                {/* <!-- /.pro-img --> */}
+                <a href="#" id="twotext" />
+                <a href="#" className="addtocart">
+                  + Add to cart
+                </a>
+                <div className="price" id="twocost" />
               </div>
-              {/* <!-- /.pro-img --> */}
-              <a href="#" id="twotext" />
-              <a href="#" className="addtocart">
-                + Add to cart
-              </a>
-              <div className="price" id="twocost" />
-
               {/* <!-- /.pro-text --> */}
             </div>
             <div className="col-md-3">
