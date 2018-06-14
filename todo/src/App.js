@@ -89,6 +89,10 @@ function reqListener2() {
   imgurl2 = z[randomNO].imageUrlStr.split(";");
   imgurl2 = imgurl2[1];
   document.getElementById("two").src = imgurl2;
+  let onet = z[randomNO].description.split(",")[0];
+  let onec = z[randomNO].mrp;
+  document.getElementById("twotext").innerText = onet;
+  document.getElementById("twocost").innerText = onec;
 }
 
 var o = new XMLHttpRequest();
@@ -107,6 +111,10 @@ function reqListener3() {
   imgurl3 = z[randomNO].imageUrlStr.split(";");
   imgurl3 = imgurl3[1];
   document.getElementById("three").src = imgurl3;
+  let onet = z[randomNO].description.split(",")[0];
+  let onec = z[randomNO].mrp;
+  document.getElementById("threetext").innerText = onet;
+  document.getElementById("threecost").innerText = onec;
 }
 
 var o = new XMLHttpRequest();
@@ -125,6 +133,10 @@ function reqListener4() {
   imgurl4 = z[randomNO].imageUrlStr.split(";");
   imgurl4 = imgurl4[1];
   document.getElementById("four").src = imgurl4;
+  let onet = z[randomNO].description.split(",")[0];
+  let onec = z[randomNO].mrp;
+  document.getElementById("fourtext").innerText = onet;
+  document.getElementById("fourcost").innerText = onec;
 }
 
 var o = new XMLHttpRequest();
@@ -143,6 +155,10 @@ function reqListener5() {
   imgurl5 = z[randomNO].imageUrlStr.split(";");
   imgurl5 = imgurl5[1];
   document.getElementById("five").src = imgurl5;
+  let onet = z[randomNO].description.split(",")[0];
+  let onec = z[randomNO].mrp;
+  document.getElementById("fivetext").innerText = onet;
+  document.getElementById("fivecost").innerText = onec;
 }
 
 var o = new XMLHttpRequest();
@@ -161,6 +177,10 @@ function reqListener6() {
   imgurl6 = z[randomNO].imageUrlStr.split(";");
   imgurl6 = imgurl6[1];
   document.getElementById("six").src = imgurl6;
+  let onet = z[randomNO].description.split(",")[0];
+  let onec = z[randomNO].mrp;
+  document.getElementById("sixtext").innerText = onet;
+  document.getElementById("sixcost").innerText = onec;
 }
 
 var o = new XMLHttpRequest();
@@ -179,6 +199,10 @@ function reqListener7() {
   imgurl7 = z[randomNO].imageUrlStr.split(";");
   imgurl7 = imgurl7[1];
   document.getElementById("seven").src = imgurl7;
+  let onet = z[randomNO].description.split(",")[0];
+  let onec = z[randomNO].mrp;
+  document.getElementById("seventext").innerText = onet;
+  document.getElementById("sevencost").innerText = onec;
 }
 
 var o = new XMLHttpRequest();
@@ -197,6 +221,10 @@ function reqListener8() {
   imgurl8 = z[randomNO].imageUrlStr.split(";");
   imgurl8 = imgurl8[1];
   document.getElementById("eight").src = imgurl8;
+  let onet = z[randomNO].description.split(",")[0];
+  let onec = z[randomNO].mrp;
+  document.getElementById("eighttext").innerText = onet;
+  document.getElementById("eightcost").innerText = onec;
 }
 
 var o = new XMLHttpRequest();
@@ -361,10 +389,10 @@ class App extends Component {
               </div>
               {/* <!-- /.pro-img --> */}
               <a href="#" id="twotext" />
-              <a href="#" className="addtocart" id="twocost">
+              <a href="#" className="addtocart">
                 + Add to cart
               </a>
-              <div className="price">$160.00</div>
+              <div className="price" id="twocost" />
 
               {/* <!-- /.pro-text --> */}
             </div>
@@ -448,11 +476,11 @@ class App extends Component {
                   {/* <!-- /.hover-img --> */}
                 </div>
                 {/* <!-- /.pro-img --> */}
-                <a href="#" />
+                <a href="#" id="fourtext" />
                 <a href="#" className="addtocart">
                   + Add to cart
                 </a>
-                <div className="price" />
+                <div className="price" id="fourcost" />
               </div>
               {/* <!-- /.pro-text --> */}
             </div>
@@ -494,11 +522,11 @@ class App extends Component {
                   {/* <!-- /.hover-img --> */}
                 </div>
                 {/* <!-- /.pro-img --> */}
-                <a href="#">Wooden container Bowl</a>
+                <a href="#" id="fivetext" />
                 <a href="#" className="addtocart">
                   + Add to cart
                 </a>
-                <div className="price">$160.00</div>
+                <div className="price" id="fivecost" />
               </div>
               {/* <!-- /.pro-text --> */}
             </div>
@@ -536,11 +564,11 @@ class App extends Component {
                   {/* <!-- /.hover-img --> */}
                 </div>
                 {/* <!-- /.pro-img --> */}
-                <a href="#">Wooden container Bowl</a>
+                <a href="#" id="sixtext" />
                 <a href="#" className="addtocart">
                   + Add to cart
                 </a>
-                <div className="price">$160.00</div>
+                <div className="price" id="sixcost" />
               </div>
               {/* <!-- /.pro-text --> */}
             </div>
@@ -582,11 +610,11 @@ class App extends Component {
                   {/* <!-- /.hover-img --> */}
                 </div>
                 {/* <!-- /.pro-img --> */}
-                <a href="#">Wooden container Bowl</a>
+                <a href="#" id="seventext" />
                 <a href="#" className="addtocart">
                   + Add to cart
                 </a>
-                <div className="price">$160.00</div>
+                <div className="price" id="sevencost" />
               </div>
               {/* <!-- /.pro-text --> */}
             </div>
@@ -627,11 +655,11 @@ class App extends Component {
                   {/* <!-- /.hover-img --> */}
                 </div>
                 {/* <!-- /.pro-img --> */}
-                <a href="#">Wooden container Bowl</a>
+                <a href="#" id="eighttext" />
                 <a href="#" className="addtocart">
                   + Add to cart
                 </a>
-                <div className="price">$160.00</div>
+                <div className="price" id="eightcost" />
               </div>
               {/* <!-- /.pro-text --> */}
             </div>
