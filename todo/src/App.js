@@ -55,6 +55,9 @@ import header2 from "./images/header-2.jpg";
 import { Navbar } from "./navbar";
 import { Scart } from "./scart";
 import { Second } from "./second";
+import { SignIn } from "./login";
+import { SignUp } from "./signup";
+
 // import { Aman } from "./carousel";
 //requests
 
@@ -101,6 +104,7 @@ function reqListener2() {
   document.getElementById("two").src = imgurl2;
   let onet = z[randomNO].title.slice(0, 80);
   let onec = z[randomNO].mrp;
+  console.log(onec, onet);
   document.getElementById("twotext").innerText = onet;
   document.getElementById("twocost").innerText = onec;
 }
@@ -251,7 +255,11 @@ class App extends Component {
       <Router>
         <div>
           <li>
-            <Link to={"/second.js"}>Second</Link>
+            <Link to={"/second"}>Second</Link>
+
+            <Link to={"/login"}>Login</Link>
+
+            <Link to={"/signup"}>SignUp</Link>
           </li>
 
           <Link to={"/scart"}>
@@ -263,7 +271,13 @@ class App extends Component {
           </Link>
 
           <Switch>
-            <Route exact path="/second.js" component={Second} />
+            <Route exact path="/second" component={Second} />
+          </Switch>
+          <Switch>
+            <Route exact path="/signup" component={SignUp} />
+          </Switch>
+          <Switch>
+            <Route exact path="/login" component={SignIn} />
           </Switch>
           <Switch>
             <Route exact path="/scart" component={Scart} />
@@ -271,6 +285,7 @@ class App extends Component {
         </div>
       </Router>,
       <Navbar />,
+      // <SignIn />,
 
       <section className="banner-outer">
         {/* <!-- .banner-outer --> */}

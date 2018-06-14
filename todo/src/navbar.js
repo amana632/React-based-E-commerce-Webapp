@@ -20,6 +20,7 @@ import icon3 from "./images/Products/13.jpg";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Scart } from "./scart";
 var myelement;
+
 function funcbarcode() {
   myelement =
     "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
@@ -27,328 +28,328 @@ function funcbarcode() {
 }
 function funccpuholder() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_CPUHolders&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 
 function funccardreader() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_CardReaders&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funccleaningkit() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Cleaningkits&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funccombos() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_ComputerAccessoriesCombos&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funchdenclosures() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_HardDriveEnclosures&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funclaptopcombo() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_LaptopAccessoriesCombos&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcskindecals() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_LaptopSkins-Decals&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcmonitor() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Monitor-TVCovers&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcmonitorarms() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_MonitorArms&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcpentab() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_PenTablets&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcprintercovers() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_PrinterCovers&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcusbgadgets() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_USBGadgets&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcperimonitors() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_ComputerPeripherals_Monitors&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcpprojectors() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_ComputerPeripherals_PortableProjectors&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcpscanners() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_ComputerPeripherals_PortableScanners&count=100&offset=0";
   localStorage.setItem("linktohit", myelement);
 }
 function funcpocketprinters() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_ComputerPeripherals_Printers/Scanners_PocketPrinters&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcprinterfilaments() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_ComputerPeripherals_Printers/Scanners_PrinterFilaments&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funclprintermultif() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_ComputerPeripherals_Printers/Scanners_Printers_MultiF&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcprintersingle() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_ComputerPeripherals_Printers/Scanners_Printers_Single&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcreceiptprinters() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_ComputerPeripherals_Printers/Scanners_ReceiptPrinters&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcperiscanners() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_ComputerPeripherals_Scanners&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcdeskall() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_DesktopPCs_AllInOnePCs&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function functowerpc() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_DesktopPCs_TowerPCs&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcllabatteries() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_LaptopAccessories_Batteries&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funclacleaning() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_LaptopAccessories_CleaningKits&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funclacooling() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_LaptopAccessories_CoolingPads/CoolingStands&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funclaheadphones() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_LaptopAccessories_Headphones&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funclaotg() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_LaptopAccessories_OTGAdapters&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funclapowerbank() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_LaptopAccessories_PowerBanks&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funclaworldwide() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_LaptopAccessories_WorldwideAdaptors&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funclaptop() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_Laptops&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcncaccesspoints() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_NetworkingandCables_AccessPoints&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcncantenna() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_NetworkingandCables_AntennaAmplifiers&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcnccables() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_NetworkingandCables_Cables&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcncdatacards() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_NetworkingandCables_DataCards&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcnclanadapters() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_NetworkingandCables_LANAdapters&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcncinterfacecards() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_NetworkingandCables_NetworkInterfaceCards&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcncservers() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_NetworkingandCables_NetworkServers&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcncrouterantenna() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_NetworkingandCables_RouterAntennas-Boosters&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcncrouters() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_NetworkingandCables_Routers&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcncswitches() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_NetworkingandCables_Switches&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcncwirelessusb() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_NetworkingandCables_WirelessUSBAdapters&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcsoftbusiness() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_Software_BusinessProductivity&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcsofteducation() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_Software_EducationalMedia_Physical&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcsoftmulti() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_Software_Multimedia&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcsoftmultiphysical() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_Software_Multimedia_Physical&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcsoftofficephy() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_Software_OfficeTools_Physical&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcsoftofficekeycards() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_Software_OfficeTools_PhysicalKeyCards&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcofficetools() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_Software_OfficeTools_Physical_PerpetualLicense&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcos() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_Software_OperatingSystem&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcosdigital() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_Software_OperatingSystem_Digital&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcoscphy() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_Software_OperatingSystem_Physical&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcsecurityanti() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_Software_SecuritySoftware_AntiVirus&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcsecuritydigi() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_Software_SecuritySoftware_Digital&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcsecurityinternet() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_Software_SecuritySoftware_InternetSecurity&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcsecuritytotal() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_Software_SecuritySoftware_TotalSecurity&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcutidigi() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_Software_Utilities_Digital&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcutiphy() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_Software_Utilities_Physical&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcstext() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_Storage_ExternalHDD&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcstinternal() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_Storage_InternalHDD&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcstpd() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_Storage_Pendrives&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcsuppink() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_Supplies_Inks&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function funcsupptoners() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_Supplies_Toners&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function functabcable() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_TabletAccessories_Cables&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 function functabmem() {
   myelement =
-    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+    "http://101.53.137.41/api/?cat=Computers_TabletAccessories_MemoryCards&count=100&offset=0;";
   localStorage.setItem("linktohit", myelement);
 }
 
@@ -385,7 +386,7 @@ export class Navbar extends Component {
                   id="cpuholder"
                   onClick={funccpuholder}
                 >
-                  > CPU Holder
+                  CPU Holder
                 </a>
                 <a
                   className="dropdown-item"
