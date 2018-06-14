@@ -2,6 +2,33 @@ import React, { Component } from "react";
 import header1 from "./images/header-1.jpg";
 import header2 from "./images/header-2.jpg";
 import header3 from "./images/header-3.jpg";
+import "./App.css";
+import "./css/bootstrap.min.css";
+import "./css/animate.min.css";
+import "./css/baguetteBox.css";
+import "./css/bootstrap-dropdownhover.min.css";
+import "./font/css/font-awesome.min.css";
+import "./simple-line-icon/css/simple-line-icons.css";
+import "./css/style.css";
+import "./css/slider.css";
+import "./css/ourcss.css";
+import icon1 from "./images/top-icon3.png";
+import icon2 from "./images/Products/11.jpg";
+import icon3 from "./images/Products/13.jpg";
+
+function reqListener() {
+  var a;
+  let z = JSON.parse(this.responseText);
+  console.log(z);
+}
+
+var o = new XMLHttpRequest();
+o.addEventListener("load", reqListener);
+o.open(
+  "GET",
+  "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_CPUHolders&count=100&offset=0;"
+);
+o.send();
 
 export class Navbar extends Component {
   render() {
@@ -366,6 +393,55 @@ export class Navbar extends Component {
                 <a className="dropdown-item" href="#">
                   Memory Cards
                 </a>
+              </div>
+            </li>
+            <li className="nav-item dropdown">
+              <a href="#" className="nav-link dropdown-toggle">
+                <img src={icon1} alt="top-ico3" /> <span>Cart (0)</span>{" "}
+              </a>
+              <div className="dropdown-content">
+                <div className="cart-content">
+                  <div className="col-sm-4 col-md-4">
+                    <img src={icon3} alt="13" />
+                  </div>
+                  <div className="col-sm-8 col-md-8">
+                    <div className="pro-text">
+                      {" "}
+                      <a href="#">Pellentesque Habitant</a>
+                      <div className="close">x</div> <strong>$160.00</strong>{" "}
+                    </div>
+                  </div>
+                </div>
+                <div className="cart-content">
+                  <div className="col-sm-4 col-md-4">
+                    <img src={icon2} alt="13" />
+                  </div>
+                  <div className="col-sm-8 col-md-8">
+                    <div className="pro-text">
+                      {" "}
+                      <a href="#">Pellentesque Habitant</a>
+                      <div className="close">x</div> <strong>$160.00</strong>{" "}
+                    </div>
+                  </div>
+                </div>
+                <div className="total">
+                  <div className="col-sm-6 col-md-6 text-left">
+                    {" "}
+                    <span>Shipping :</span>
+                    <br /> <strong>Total :</strong>{" "}
+                  </div>
+                  <div className="col-sm-6 col-md-6 text-right">
+                    {" "}
+                    <strong>$0.00</strong>
+                    <br /> <strong>$160.00</strong>{" "}
+                  </div>
+                </div>{" "}
+                <a href="./scart.js" className="cart-btn">
+                  VIEW CART{" "}
+                </a>{" "}
+                <a href="checkout.html" className="cart-btn">
+                  CHECKOUT
+                </a>{" "}
               </div>
             </li>
           </ul>

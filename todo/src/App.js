@@ -48,6 +48,73 @@ import header1 from "./images/header-1.jpg";
 import header2 from "./images/header-2.jpg";
 import { Navbar } from "./navbar";
 // import { Aman } from "./carousel";
+//requests
+var imgurl;
+var imgurl2;
+var imgurl3;
+function reqListener() {
+  var a;
+  localStorage.setItem("key1", this.responseText);
+  //console.log(localStorage.getItem("key1"));
+  var randomNO = Math.floor(Math.random() * 1 + 1);
+  var z = JSON.parse(localStorage.getItem("key1"));
+
+  console.log(z);
+  imgurl = z[randomNO].imageUrlStr.split(";");
+  imgurl = imgurl[1];
+  console.log(imgurl);
+  document.getElementById("one").src = imgurl;
+}
+
+var o = new XMLHttpRequest();
+o.addEventListener("load", reqListener);
+o.open(
+  "GET",
+  "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;"
+);
+o.send();
+// two
+function reqListener() {
+  var a;
+  localStorage.setItem("key2", this.responseText);
+  console.log(localStorage.getItem("key2"));
+  var randomNO = Math.floor(Math.random() * 3 + 1);
+  var z = JSON.parse(localStorage.getItem("key2"));
+  console.log(z);
+  imgurl2 = z[randomNO].imageUrlStr.split(";");
+  imgurl2 = imgurl2[1];
+  console.log(imgurl2);
+  document.getElementById("two").src = imgurl2;
+}
+
+var o = new XMLHttpRequest();
+o.addEventListener("load", reqListener);
+o.open(
+  "GET",
+  "http://101.53.137.41/api/?cat=Computers_ComputerPeripherals_Printers/Scanners_PrinterFilaments&count=100&offset=0;"
+);
+o.send();
+//three
+function reqListener() {
+  var a;
+  localStorage.setItem("key3", this.responseText);
+  console.log(localStorage.getItem("key3"));
+  var randomNO = Math.floor(Math.random() * 3 + 1);
+  var z = JSON.parse(localStorage.getItem("key3"));
+  console.log(z);
+  imgurl3 = z[randomNO].imageUrlStr.split(";");
+  imgurl3 = imgurl3[1];
+  console.log(imgurl3);
+  document.getElementById("three").src = imgurl3;
+}
+
+var o = new XMLHttpRequest();
+o.addEventListener("load", reqListener);
+o.open(
+  "GET",
+  "http://101.53.137.41/api/?cat=Computers_DesktopPCs_AllInOnePCs&count=100&offset=0;"
+);
+o.send();
 
 class App extends Component {
   render() {
@@ -127,7 +194,7 @@ class App extends Component {
               <div className="pro-text">
                 {/* <!-- .pro-img --> */}
                 <div className="pro-img">
-                  <img src={twenty_one} alt="2" />
+                  <img id="one" src={imgurl} alt="2" />
                   {/* <!-- .hover-img --> */}
                   <div className="hover-img">
                     <ul>
@@ -165,49 +232,49 @@ class App extends Component {
               {/* <!-- /.pro-text --> */}
             </div>
             <div className="col-md-3">
-              {/* <!-- .pro-text --> */}
+              {/* <!-- .pro-text -->
               <div className="pro-text">
                 {/* <!-- .pro-img --> */}
-                <div className="pro-img">
-                  <img src={tsix} alt="2" />
-                  {/* <!-- .hover-img --> */}
-                  <div className="hover-img">
-                    <ul>
-                      <li>
-                        <a href="#">
-                          <i className="fa fa-heart-o" aria-hidden="true" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fa fa-sliders" aria-hidden="true" />
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          data-toggle="modal"
-                          data-target="#quickModal"
-                          data-whatever="@mdo"
-                        >
-                          <i className="fa fa-search" aria-hidden="true" />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="new tage">
-                    <span className="new-text">NEW</span>
-                    <span className="pres-text">-15%</span>
-                  </div>
-                  {/* <!-- /.hover-img --> */}
+              <div className="pro-img">
+                <img id="two" src={imgurl2} alt="2" />
+                {/* <!-- .hover-img --> */}
+                <div className="hover-img">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <i className="fa fa-heart-o" aria-hidden="true" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i className="fa fa-sliders" aria-hidden="true" />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        data-toggle="modal"
+                        data-target="#quickModal"
+                        data-whatever="@mdo"
+                      >
+                        <i className="fa fa-search" aria-hidden="true" />
+                      </a>
+                    </li>
+                  </ul>
                 </div>
-                {/* <!-- /.pro-img --> */}
-                <a href="#">Wooden container Bowl</a>
-                <a href="#" className="addtocart">
-                  + Add to cart
-                </a>
-                <div className="price">$160.00</div>
+                <div className="new tage">
+                  <span className="new-text">NEW</span>
+                  <span className="pres-text">-15%</span>
+                </div>
+                {/* <!-- /.hover-img --> */}
               </div>
+              {/* <!-- /.pro-img --> */}
+              <a href="#">Wooden container Bowl</a>
+              <a href="#" className="addtocart">
+                + Add to cart
+              </a>
+              <div className="price">$160.00</div>
+
               {/* <!-- /.pro-text --> */}
             </div>
             <div className="col-md-3">
@@ -215,7 +282,7 @@ class App extends Component {
               <div className="pro-text">
                 {/* <!-- .pro-img --> */}
                 <div className="pro-img">
-                  <img src={tfour} alt="2" />
+                  <img src={imgurl3} alt="2" id="three" />
                   {/* <!-- .hover-img --> */}
                   <div className="hover-img">
                     <ul>
