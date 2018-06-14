@@ -59,20 +59,27 @@ function reqListener1() {
   var randomNO = Math.floor(Math.random() * 1 + 1);
   var z = JSON.parse(localStorage.getItem("key1"));
 
-  console.log(z);
+  //console.log(z);
   imgurl = z[randomNO].imageUrlStr.split(";");
   imgurl = imgurl[1];
   console.log(imgurl);
   document.getElementById("one").src = imgurl;
 }
 
+<<<<<<< HEAD
 var o = new XMLHttpRequest();
 o.addEventListener("load", reqListener1);
 o.open(
+=======
+var o2 = new XMLHttpRequest();
+o2.addEventListener("load", reqListener);
+o2.open(
+>>>>>>> f52e7cd54aac03c832a21ec4b2c5d01a4845f6ae
   "GET",
   "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;"
 );
-o.send();
+o2.send();
+
 // two
 function reqListener2() {
   var a;
