@@ -72,9 +72,9 @@ function reqListener() {
   document.getElementById("onecost").innerText = onec;
 }
 
-var o2 = new XMLHttpRequest();
-o2.addEventListener("load", reqListener);
-o2.open(
+var o = new XMLHttpRequest();
+o.addEventListener("load", reqListener1);
+o.open(
   "GET",
   "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;"
 );
