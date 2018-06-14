@@ -54,9 +54,10 @@ import header1 from "./images/header-1.jpg";
 import header2 from "./images/header-2.jpg";
 import { Navbar } from "./navbar";
 import { Scart } from "./scart";
-import { Second } from "./grid-side bar.js";
+import { Second } from "./second";
 // import { Aman } from "./carousel";
 //requests
+
 var imgurl;
 var imgurl2;
 var imgurl3;
@@ -249,25 +250,26 @@ class App extends Component {
     return [
       <Router>
         <div>
-          <ul>
-            {/* <li>
-              <Link to={"/"}>Home</Link>
-            </li> */}
-            <li>
-              <Link to={"/scart"}>
-                <button> VIEW CART </button>
-              </Link>
-            </li>
-          </ul>
-          <hr />
+          <li>
+            <Link to={"/second.js"}>Second</Link>
+          </li>
+
+          <Link to={"/scart"}>
+            <nav class="navbar navbar-light bg-light">
+              <button class="btn btn-light" type="SUCCESS">
+                !! VIEW YOUR CART!!
+              </button>
+            </nav>
+          </Link>
 
           <Switch>
-            {/* <Route exact path="/" component={Home} /> */}
+            <Route exact path="/second.js" component={Second} />
+          </Switch>
+          <Switch>
             <Route exact path="/scart" component={Scart} />
           </Switch>
         </div>
       </Router>,
-      // <Aman />,
       <Navbar />,
 
       <section className="banner-outer">

@@ -17,7 +17,49 @@ import "./css/ourcss.css";
 import icon1 from "./images/top-icon3.png";
 import icon2 from "./images/Products/11.jpg";
 import icon3 from "./images/Products/13.jpg";
-
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Scart } from "./scart";
+var myelement;
+function funcbarcode() {
+  myelement =
+    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+  localStorage.setItem("linktohit", myelement);
+}
+function funccpuholder() {
+  myelement =
+    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+  localStorage.setItem("linktohit", myelement);
+}
+function funcbarcode() {
+  myelement =
+    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+  localStorage.setItem("linktohit", myelement);
+}
+function funccardreader() {
+  myelement =
+    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+  localStorage.setItem("linktohit", myelement);
+}
+function funccleaningkit() {
+  myelement =
+    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+  localStorage.setItem("linktohit", myelement);
+}
+function funcbarcode() {
+  myelement =
+    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+  localStorage.setItem("linktohit", myelement);
+}
+function funcbarcode() {
+  myelement =
+    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+  localStorage.setItem("linktohit", myelement);
+}
+function funcbarcode() {
+  myelement =
+    "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;";
+  localStorage.setItem("linktohit", myelement);
+}
 export class Navbar extends Component {
   render() {
     return [
@@ -43,50 +85,88 @@ export class Navbar extends Component {
                 className="dropdown-menu"
                 aria-labelledby="navbarDropdownMenuLink"
               >
-                <a
-                  className="dropdown-item"
-                  href="https://www.facebook.com/npm"
-                >
+                <a className="dropdown-item" id="barcode" onClick={funcbarcode}>
                   Barcode_scanner
                 </a>
                 <a
                   className="dropdown-item"
-                  href="../public/grid-side bar.html"
+                  id="cpuholder"
+                  onClick={funccpuholder}
                 >
-                  CPU Holder
+                  > CPU Holder
                 </a>
-                <a className="dropdown-item" href="#">
+                <a
+                  className="dropdown-item"
+                  id="cardreader"
+                  onClick={funccardreader}
+                >
                   Card Reader
                 </a>
-                <a className="dropdown-item" href="#">
+                <a
+                  className="dropdown-item"
+                  id="cleaningkit"
+                  onClick={funccleaningkit}
+                >
                   Cleaning Kit
                 </a>
 
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" id="combos" onClick={funccombos}>
                   Combos
                 </a>
-                <a className="dropdown-item" href="#">
+                <a
+                  className="dropdown-item"
+                  id="hdenclosues"
+                  onClick={funchdenclosures}
+                >
                   HD Enclosures
                 </a>
-                <a className="dropdown-item" href="#">
+                <a
+                  className="dropdown-item"
+                  id="laptopaccesssoriescombo"
+                  onClick={funclaptopcombo}
+                >
                   Laptop Accessories Combos
                 </a>
-                <a className="dropdown-item" href="#">
+                <a
+                  className="dropdown-item"
+                  id="skindecals"
+                  onClick={funcskindecals}
+                >
                   Laptop Skin Decals
                 </a>
-                <a className="dropdown-item" href="#">
+                <a
+                  className="dropdown-item"
+                  id="monitortvcover"
+                  onClick={funcmonitor}
+                >
                   Monitor TV Cover
                 </a>
-                <a className="dropdown-item" href="#">
+                <a
+                  className="dropdown-item"
+                  id="monitorarms"
+                  onClick={funcmonitorarms}
+                >
                   Monitor Arms
                 </a>
-                <a className="dropdown-item" href="#">
+                <a
+                  className="dropdown-item"
+                  id="pentablets"
+                  onClick={funcpentab}
+                >
                   Pen Tablets
                 </a>
-                <a className="dropdown-item" href="#">
+                <a
+                  className="dropdown-item"
+                  id="printercovers"
+                  onClick={funcprintercovers}
+                >
                   Printer Covers
                 </a>
-                <a className="dropdown-item" href="#">
+                <a
+                  className="dropdown-item"
+                  id="usbgadgets"
+                  onClick={funcusbgadgets}
+                >
                   USB Gadgets
                 </a>
               </div>
@@ -430,15 +510,26 @@ export class Navbar extends Component {
                     <br /> <strong>$160.00</strong>{" "}
                   </div>
                 </div>{" "}
-                <button
-                  className="cart-btn"
-                  onClick={() =>
-                    (window.location =
-                      "file:///home/amana632/Desktop/ecommfin/React-based-E-commerce-Webapp/todo/src/second.html")
-                  }
-                >
-                  VIEW CART{" "}
-                </button>{" "}
+                <Router>
+                  <div>
+                    <ul>
+                      {/* <li>
+              <Link to={"/"}>Home</Link>
+            </li> */}
+                      <li>
+                        <Link to={"/scart"}>
+                          <button className="cart-btn"> VIEW CART </button>
+                        </Link>
+                      </li>
+                    </ul>
+                    <hr />
+
+                    <Switch>
+                      {/* <Route exact path="/" component={Home} /> */}
+                      <Route exact path="/scart" component={Scart} />
+                    </Switch>
+                  </div>
+                </Router>,
                 <a href="checkout.html" className="cart-btn">
                   CHECKOUT
                 </a>

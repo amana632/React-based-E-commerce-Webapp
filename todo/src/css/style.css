@@ -2578,6 +2578,7 @@ select {
 .pro-img {
 	margin-bottom: 10px;
 	position: relative;
+	height: 400px;
 }
 .pro-img-text {
 	bottom: 50px;
