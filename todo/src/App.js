@@ -1,4 +1,10 @@
+// import React, { Component } from "react";
+// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+// import Home from "./Home";
+// import Login from "./Login";
+
 import React, { Component } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import "./App.css";
 import "./css/bootstrap.min.css";
@@ -47,6 +53,8 @@ import flogo from "./images/flogo.png";
 import header1 from "./images/header-1.jpg";
 import header2 from "./images/header-2.jpg";
 import { Navbar } from "./navbar";
+import { Scart } from "./scart";
+import { Second } from "./grid-side bar.js";
 // import { Aman } from "./carousel";
 //requests
 var imgurl;
@@ -68,6 +76,7 @@ function reqListener() {
   document.getElementById("one").src = imgurl;
   let onet = z[randomNO].title.slice(0, 80);
   let onec = z[randomNO].mrp;
+  console.log(onec, onet);
   document.getElementById("onetext").innerText = onet;
   document.getElementById("onecost").innerText = onec;
 }
@@ -238,6 +247,26 @@ o.send();
 class App extends Component {
   render() {
     return [
+      <Router>
+        <div>
+          <ul>
+            {/* <li>
+              <Link to={"/"}>Home</Link>
+            </li> */}
+            <li>
+              <Link to={"/scart"}>
+                <button> VIEW CART </button>
+              </Link>
+            </li>
+          </ul>
+          <hr />
+
+          <Switch>
+            {/* <Route exact path="/" component={Home} /> */}
+            <Route exact path="/scart" component={Scart} />
+          </Switch>
+        </div>
+      </Router>,
       // <Aman />,
       <Navbar />,
 
@@ -993,6 +1022,8 @@ class App extends Component {
         </div>
         {/* <!-- /copayright --> */}
       </footer>
+      // <Scart />
+      // <Second />
     ];
   }
 }

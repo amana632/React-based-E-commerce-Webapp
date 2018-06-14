@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
+
 import header1 from "./images/header-1.jpg";
 import header2 from "./images/header-2.jpg";
 import header3 from "./images/header-3.jpg";
@@ -15,20 +17,6 @@ import "./css/ourcss.css";
 import icon1 from "./images/top-icon3.png";
 import icon2 from "./images/Products/11.jpg";
 import icon3 from "./images/Products/13.jpg";
-
-function reqListener() {
-  var a;
-  let z = JSON.parse(this.responseText);
-  console.log(z);
-}
-
-var o = new XMLHttpRequest();
-o.addEventListener("load", reqListener);
-o.open(
-  "GET",
-  "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_CPUHolders&count=100&offset=0;"
-);
-o.send();
 
 export class Navbar extends Component {
   render() {
@@ -55,10 +43,16 @@ export class Navbar extends Component {
                 className="dropdown-menu"
                 aria-labelledby="navbarDropdownMenuLink"
               >
-                <a className="dropdown-item" href="#">
+                <a
+                  className="dropdown-item"
+                  href="https://www.facebook.com/npm"
+                >
                   Barcode_scanner
                 </a>
-                <a className="dropdown-item" href="#">
+                <a
+                  className="dropdown-item"
+                  href="../public/grid-side bar.html"
+                >
                   CPU Holder
                 </a>
                 <a className="dropdown-item" href="#">
@@ -436,12 +430,18 @@ export class Navbar extends Component {
                     <br /> <strong>$160.00</strong>{" "}
                   </div>
                 </div>{" "}
-                <a href="./scart.js" className="cart-btn">
+                <button
+                  className="cart-btn"
+                  onClick={() =>
+                    (window.location =
+                      "file:///home/amana632/Desktop/ecommfin/React-based-E-commerce-Webapp/todo/src/second.html")
+                  }
+                >
                   VIEW CART{" "}
-                </a>{" "}
+                </button>{" "}
                 <a href="checkout.html" className="cart-btn">
                   CHECKOUT
-                </a>{" "}
+                </a>
               </div>
             </li>
           </ul>
