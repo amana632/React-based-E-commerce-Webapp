@@ -73,12 +73,12 @@ function reqListener() {
 }
 
 var o = new XMLHttpRequest();
-o.addEventListener("load", reqListener1);
+o.addEventListener("load", reqListener);
 o.open(
   "GET",
   "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;"
 );
-o2.send();
+o.send();
 
 // two
 function reqListener2() {
@@ -360,8 +360,8 @@ class App extends Component {
                 {/* <!-- /.hover-img --> */}
               </div>
               {/* <!-- /.pro-img --> */}
-              <a href="#">Wooden container Bowl</a>
-              <a href="#" className="addtocart">
+              <a href="#" id="twotext" />
+              <a href="#" className="addtocart" id="twocost">
                 + Add to cart
               </a>
               <div className="price">$160.00</div>
@@ -402,11 +402,11 @@ class App extends Component {
                   {/* <!-- /.hover-img --> */}
                 </div>
                 {/* <!-- /.pro-img --> */}
-                <a href="#">Wooden container Bowl</a>
+                <a href="#" id="threetext" />
                 <a href="#" className="addtocart">
                   + Add to cart
                 </a>
-                <div className="price">$160.00</div>
+                <div className="price" id="threecost" />
               </div>
               {/* <!-- /.pro-text --> */}
             </div>
@@ -448,11 +448,11 @@ class App extends Component {
                   {/* <!-- /.hover-img --> */}
                 </div>
                 {/* <!-- /.pro-img --> */}
-                <a href="#">Wooden container Bowl</a>
+                <a href="#" />
                 <a href="#" className="addtocart">
                   + Add to cart
                 </a>
-                <div className="price">$160.00</div>
+                <div className="price" />
               </div>
               {/* <!-- /.pro-text --> */}
             </div>
