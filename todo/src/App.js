@@ -52,7 +52,7 @@ import { Navbar } from "./navbar";
 var imgurl;
 var imgurl2;
 var imgurl3;
-function reqListener() {
+function reqListener1() {
   var a;
   localStorage.setItem("key1", this.responseText);
   //console.log(localStorage.getItem("key1"));
@@ -67,14 +67,14 @@ function reqListener() {
 }
 
 var o = new XMLHttpRequest();
-o.addEventListener("load", reqListener);
+o.addEventListener("load", reqListener1);
 o.open(
   "GET",
   "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;"
 );
 o.send();
 // two
-function reqListener() {
+function reqListener2() {
   var a;
   localStorage.setItem("key2", this.responseText);
   console.log(localStorage.getItem("key2"));
@@ -88,14 +88,14 @@ function reqListener() {
 }
 
 var o = new XMLHttpRequest();
-o.addEventListener("load", reqListener);
+o.addEventListener("load", reqListener2);
 o.open(
   "GET",
   "http://101.53.137.41/api/?cat=Computers_ComputerPeripherals_Printers/Scanners_PrinterFilaments&count=100&offset=0;"
 );
 o.send();
 //three
-function reqListener() {
+function reqListener3() {
   var a;
   localStorage.setItem("key3", this.responseText);
   console.log(localStorage.getItem("key3"));
@@ -109,7 +109,7 @@ function reqListener() {
 }
 
 var o = new XMLHttpRequest();
-o.addEventListener("load", reqListener);
+o.addEventListener("load", reqListener3);
 o.open(
   "GET",
   "http://101.53.137.41/api/?cat=Computers_DesktopPCs_AllInOnePCs&count=100&offset=0;"
