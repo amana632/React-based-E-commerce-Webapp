@@ -52,18 +52,24 @@ import { Navbar } from "./navbar";
 var imgurl;
 var imgurl2;
 var imgurl3;
+var imgurl4;
+var imgurl5;
+var imgurl6;
+var imgurl7;
+var imgurl8;
+
 function reqListener() {
   var a;
   localStorage.setItem("key1", this.responseText);
-  //console.log(localStorage.getItem("key1"));
   var randomNO = Math.floor(Math.random() * 1 + 1);
   var z = JSON.parse(localStorage.getItem("key1"));
-
-  //console.log(z);
   imgurl = z[randomNO].imageUrlStr.split(";");
   imgurl = imgurl[1];
-  console.log(imgurl);
   document.getElementById("one").src = imgurl;
+  let onet = z[randomNO].description.split(",")[0];
+  let onec = z[randomNO].mrp;
+  document.getElementById("onetext").innerText = onet;
+  document.getElementById("onecost").innerText = onec;
 }
 
 var o2 = new XMLHttpRequest();
@@ -78,13 +84,10 @@ o2.send();
 function reqListener2() {
   var a;
   localStorage.setItem("key2", this.responseText);
-  console.log(localStorage.getItem("key2"));
   var randomNO = Math.floor(Math.random() * 3 + 1);
   var z = JSON.parse(localStorage.getItem("key2"));
-  console.log(z);
   imgurl2 = z[randomNO].imageUrlStr.split(";");
   imgurl2 = imgurl2[1];
-  console.log(imgurl2);
   document.getElementById("two").src = imgurl2;
 }
 
@@ -92,20 +95,17 @@ var o = new XMLHttpRequest();
 o.addEventListener("load", reqListener2);
 o.open(
   "GET",
-  "http://101.53.137.41/api/?cat=Computers_ComputerPeripherals_Printers/Scanners_PrinterFilaments&count=100&offset=0;"
+  "http://101.53.137.41/api/?cat=Computers_ComputerPeripherals_PortableProjectors&count=100&offset=0;"
 );
 o.send();
 //three
 function reqListener3() {
   var a;
   localStorage.setItem("key3", this.responseText);
-  console.log(localStorage.getItem("key3"));
   var randomNO = Math.floor(Math.random() * 3 + 1);
   var z = JSON.parse(localStorage.getItem("key3"));
-  console.log(z);
   imgurl3 = z[randomNO].imageUrlStr.split(";");
   imgurl3 = imgurl3[1];
-  console.log(imgurl3);
   document.getElementById("three").src = imgurl3;
 }
 
@@ -114,6 +114,96 @@ o.addEventListener("load", reqListener3);
 o.open(
   "GET",
   "http://101.53.137.41/api/?cat=Computers_DesktopPCs_AllInOnePCs&count=100&offset=0;"
+);
+o.send();
+//four
+function reqListener4() {
+  var a;
+  localStorage.setItem("key4", this.responseText);
+  var randomNO = Math.floor(Math.random() * 3 + 1);
+  var z = JSON.parse(localStorage.getItem("key4"));
+  imgurl4 = z[randomNO].imageUrlStr.split(";");
+  imgurl4 = imgurl4[1];
+  document.getElementById("four").src = imgurl4;
+}
+
+var o = new XMLHttpRequest();
+o.addEventListener("load", reqListener4);
+o.open(
+  "GET",
+  "http://101.53.137.41/api/?cat=Computers_LaptopAccessories_Headphones&count=100&offset=0;"
+);
+o.send();
+//five
+function reqListener5() {
+  var a;
+  localStorage.setItem("key5", this.responseText);
+  var randomNO = Math.floor(Math.random() * 3 + 1);
+  var z = JSON.parse(localStorage.getItem("key5"));
+  imgurl5 = z[randomNO].imageUrlStr.split(";");
+  imgurl5 = imgurl5[1];
+  document.getElementById("five").src = imgurl5;
+}
+
+var o = new XMLHttpRequest();
+o.addEventListener("load", reqListener5);
+o.open(
+  "GET",
+  "http://101.53.137.41/api/?cat=Computers_NetworkingandCables_RouterAntennas-Boosters&count=100&offset=0;;"
+);
+o.send();
+//six
+function reqListener6() {
+  var a;
+  localStorage.setItem("key6", this.responseText);
+  var randomNO = Math.floor(Math.random() * 3 + 1);
+  var z = JSON.parse(localStorage.getItem("key6"));
+  imgurl6 = z[randomNO].imageUrlStr.split(";");
+  imgurl6 = imgurl6[1];
+  document.getElementById("six").src = imgurl6;
+}
+
+var o = new XMLHttpRequest();
+o.addEventListener("load", reqListener6);
+o.open(
+  "GET",
+  "http://101.53.137.41/api/?cat=Computers_Software_SecuritySoftware_AntiVirus&count=100&offset=0;"
+);
+o.send();
+//seven
+function reqListener7() {
+  var a;
+  localStorage.setItem("key7", this.responseText);
+  var randomNO = Math.floor(Math.random() * 3 + 1);
+  var z = JSON.parse(localStorage.getItem("key7"));
+  imgurl7 = z[randomNO].imageUrlStr.split(";");
+  imgurl7 = imgurl7[1];
+  document.getElementById("seven").src = imgurl7;
+}
+
+var o = new XMLHttpRequest();
+o.addEventListener("load", reqListener7);
+o.open(
+  "GET",
+  "http://101.53.137.41/api/?cat=Computers_Storage_ExternalHDD&count=100&offset=0;"
+);
+o.send();
+//eight
+function reqListener8() {
+  var a;
+  localStorage.setItem("key8", this.responseText);
+  var randomNO = Math.floor(Math.random() * 3 + 1);
+  var z = JSON.parse(localStorage.getItem("key8"));
+  imgurl8 = z[randomNO].imageUrlStr.split(";");
+  imgurl8 = imgurl8[1];
+  document.getElementById("eight").src = imgurl8;
+}
+
+var o = new XMLHttpRequest();
+o.addEventListener("load", reqListener8);
+o.open(
+  "GET",
+  "http://101.53.137.41/api/?cat=Computers_Supplies_Inks&count=100&offset=0;"
 );
 o.send();
 
@@ -224,11 +314,11 @@ class App extends Component {
                   {/* <!-- /.hover-img --> */}
                 </div>
                 {/* <!-- /.pro-img --> */}
-                <a href="#">Wooden container Bowl</a>
+                <a href="#" id="onetext" />
                 <a href="#" className="addtocart">
                   + Add to cart
                 </a>
-                <div className="price">$160.00</div>
+                <div className="price" id="onecost" />
               </div>
               {/* <!-- /.pro-text --> */}
             </div>
@@ -325,7 +415,7 @@ class App extends Component {
               <div className="pro-text">
                 {/* <!-- .pro-img --> */}
                 <div className="pro-img">
-                  <img src={seventeen} alt="2" />
+                  <img src={imgurl4} alt="2" id="four" />
                   {/* <!-- .hover-img --> */}
                   <div className="hover-img">
                     <ul>
@@ -371,7 +461,7 @@ class App extends Component {
               <div className="pro-text">
                 {/* <!-- .pro-img --> */}
                 <div className="pro-img">
-                  <img src={ttwo} alt="2" />
+                  <img src={imgurl5} alt="2" id="five" />
                   {/* <!-- .hover-img --> */}
                   <div className="hover-img">
                     <ul>
@@ -417,7 +507,7 @@ class App extends Component {
               <div className="pro-text">
                 {/* <!-- .pro-img --> */}
                 <div className="pro-img">
-                  <img src={seven} alt="2" />
+                  <img src={imgurl6} alt="2" id="six" />
                   {/* <!-- .hover-img --> */}
                   <div className="hover-img">
                     <ul>
@@ -459,7 +549,7 @@ class App extends Component {
               <div className="pro-text">
                 {/* <!-- .pro-img --> */}
                 <div className="pro-img">
-                  <img src={nineteen} alt="2" />
+                  <img src={imgurl7} alt="2" id="seven" />
                   {/* <!-- .hover-img --> */}
                   <div className="hover-img">
                     <ul>
@@ -505,7 +595,7 @@ class App extends Component {
               <div className="pro-text">
                 {/* <!-- .pro-img --> */}
                 <div className="pro-img">
-                  <img src={six} alt="2" />
+                  <img src={imgurl8} alt="2" id="eight" />
                   {/* <!-- .hover-img --> */}
                   <div className="hover-img">
                     <ul>
