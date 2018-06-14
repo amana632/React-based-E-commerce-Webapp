@@ -59,22 +59,23 @@ function reqListener() {
   var randomNO = Math.floor(Math.random() * 1 + 1);
   var z = JSON.parse(localStorage.getItem("key1"));
 
-  console.log(z);
+  //console.log(z);
   imgurl = z[randomNO].imageUrlStr.split(";");
   imgurl = imgurl[1];
   console.log(imgurl);
   document.getElementById("one").src = imgurl;
 }
 
-var o = new XMLHttpRequest();
-o.addEventListener("load", reqListener);
-o.open(
+var o2 = new XMLHttpRequest();
+o2.addEventListener("load", reqListener);
+o2.open(
   "GET",
   "http://101.53.137.41/api/?cat=Computers_ComputerAccessories_Barcodescanners&count=100&offset=0;"
 );
-o.send();
+o2.send();
+
 // two
-function reqListener() {
+function reqListener2() {
   var a;
   localStorage.setItem("key2", this.responseText);
   console.log(localStorage.getItem("key2"));
@@ -88,14 +89,14 @@ function reqListener() {
 }
 
 var o = new XMLHttpRequest();
-o.addEventListener("load", reqListener);
+o.addEventListener("load", reqListener2);
 o.open(
   "GET",
   "http://101.53.137.41/api/?cat=Computers_ComputerPeripherals_Printers/Scanners_PrinterFilaments&count=100&offset=0;"
 );
 o.send();
 //three
-function reqListener() {
+function reqListener3() {
   var a;
   localStorage.setItem("key3", this.responseText);
   console.log(localStorage.getItem("key3"));
@@ -109,7 +110,7 @@ function reqListener() {
 }
 
 var o = new XMLHttpRequest();
-o.addEventListener("load", reqListener);
+o.addEventListener("load", reqListener3);
 o.open(
   "GET",
   "http://101.53.137.41/api/?cat=Computers_DesktopPCs_AllInOnePCs&count=100&offset=0;"
