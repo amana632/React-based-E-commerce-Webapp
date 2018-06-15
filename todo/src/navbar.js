@@ -19,10 +19,14 @@ import icon2 from "./images/Products/11.jpg";
 import icon3 from "./images/Products/13.jpg";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Scart } from "./scart";
+import { second } from "./second";
 var myelement;
 var toshowcounter = localStorage.setItem("counter", 0);
-
-toshowcounter = localStorage.getItem("counter");
+function funci() {
+  toshowcounter = localStorage.getItem("counter");
+  toshowcounter = parseInt(toshowcounter) + 1;
+  localStorage.setItem("counter", toshowcounter);
+}
 
 function funcbarcode() {
   myelement =

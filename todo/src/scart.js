@@ -62,6 +62,7 @@ import flogo from "./images/flogo.png";
 import header1 from "./images/header-1.jpg";
 import header2 from "./images/header-2.jpg";
 import { Navbar } from "./navbar";
+var m = JSON.parse(localStorage.getItem("mycart"));
 
 export class Scart extends Component {
   render() {
@@ -517,52 +518,41 @@ export class Scart extends Component {
                 <th>Total Price</th>
                 <th />
               </tr>
-              <tr>
+              <tr id="mydiv">
                 <td>
-                  <img src="assets/images/cart-img1.jpg" alt="13" />
+                  <img src={m[0][0]} alt="13" />
                 </td>
-                <td>Name product #01</td>
+                <td>{m[0][2]}</td>
                 <td>
                   Lorem Ipsum is simply dummy text of the printing<br /> and
                   typesetting industry.
                 </td>
                 <td>
-                  <strong>$160.00</strong>
+                  <strong>{m[0][1]}</strong>
                 </td>
                 <td>
-                  <input type="number" name="quantity" min="1" max="500" />
+                  <input
+                    type="number"
+                    id="onein"
+                    placeholder="quantity"
+                    min="1"
+                    max="500"
+                  />
                 </td>
                 <td>
-                  <strong>$160.00</strong>
+                  <strong>{m[0][1]}*tot</strong>
                 </td>
                 <td>
-                  <span className="red">
-                    <i className="fa fa-times" aria-hidden="true" />
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="assets/images/cart-img2.jpg" alt="13" />
-                </td>
-                <td>Name product #02</td>
-                <td>
-                  Lorem Ipsum is simply dummy text of the printing<br /> and
-                  typesetting industry.
-                </td>
-                <td>
-                  <strong>$180.00</strong>
-                </td>
-                <td>
-                  <input type="number" name="quantity" min="1" max="500" />
-                </td>
-                <td>
-                  <strong>$180.00</strong>
-                </td>
-                <td>
-                  <span>
-                    <i className="fa fa-times" aria-hidden="true" />
-                  </span>
+                  <button
+                    style={{ backgroundColor: "#ff2323" }}
+                    onClick={() => {
+                      document.getElementById("mydiv").innerHTML = (
+                        <span>"you removed it"</span>
+                      );
+                    }}
+                  >
+                    REMOVE
+                  </button>
                 </td>
               </tr>
             </table>

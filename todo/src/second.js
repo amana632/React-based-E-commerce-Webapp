@@ -43,49 +43,8 @@ var csevent;
 var ceightc;
 var ceightt;
 var toshowcounter = localStorage.setItem("counter", 0);
-function funci() {
-  toshowcounter = localStorage.getItem("counter");
-  toshowcounter = parseInt(toshowcounter) + 1;
-  localStorage.setItem("counter", toshowcounter);
-}
-// function funcaddtoCart1() {
-//   localStorage.setItem(
-//     "counter",
-//     parseInt(localStorage.getItem("counter")) + 1
-//   );
-//   console.log(localStorage.getItem("counter"));
-// }
-// function funcaddtoCart2() {
-//   localStorage.setItem(
-//     "counter",
-//     parseInt(localStorage.getItem("counter")) + 1
-//   );
-//   console.log(myCartCounter);
-// }
-// function funcaddtoCart3() {
-//   myCartCounter += 1;
-//   console.log(myCartCounter);
-// }
-// function funcaddtoCart4() {
-//   myCartCounter += 1;
-//   console.log(myCartCounter);
-// }
-// function funcaddtoCart5() {
-//   myCartCounter += 1;
-//   console.log(myCartCounter);
-// }
-// function funcaddtoCart6() {
-//   myCartCounter += 1;
-//   console.log(myCartCounter);
-// }
-// function funcaddtoCart7() {
-//   myCartCounter += 1;
-//   console.log(myCartCounter);
-// }
-// function funcaddtoCart8() {
-//   myCartCounter += 1;
-//   console.log(myCartCounter);
-// }
+// localStorage.setItem("mycart", JSON.stringify([]));
+
 var links = localStorage.getItem("linktohit");
 
 function reqListenerq() {
@@ -663,9 +622,27 @@ export class Second extends Component {
                 </div>
                 {/* <!-- /.pro-img --> */}
                 <a id="onetext"> {conet}</a>
-                <a href="#" className="addtocart" id="addone" onClick={funci()}>
+                <button
+                  className="addtocart"
+                  id="addone"
+                  onClick={() => {
+                    toshowcounter = localStorage.getItem("counter");
+                    toshowcounter = parseInt(toshowcounter) + 1;
+                    localStorage.setItem("counter", toshowcounter);
+                    var existingEntries = JSON.parse(
+                      localStorage.getItem("mycart")
+                    );
+                    var entry = [imgurlc, conec, conet];
+                    localStorage.setItem("entry", JSON.stringify(entry));
+                    existingEntries.push(entry);
+                    localStorage.setItem(
+                      "mycart",
+                      JSON.stringify(existingEntries)
+                    );
+                  }}
+                >
                   + Add to cart
-                </a>
+                </button>
                 <div className="price" id="onecost">
                   {conec}
                 </div>
@@ -709,7 +686,26 @@ export class Second extends Component {
                 <a href="#" id="twotext">
                   {ctwot}
                 </a>
-                <a href="#" className="addtocart" id="addtwo">
+                <a
+                  href="#"
+                  className="addtocart"
+                  id="addtwo"
+                  onClick={() => {
+                    toshowcounter = localStorage.getItem("counter");
+                    toshowcounter = parseInt(toshowcounter) + 1;
+                    localStorage.setItem("counter", toshowcounter);
+                    var existingEntries = JSON.parse(
+                      localStorage.getItem("mycart")
+                    );
+                    var entry = [imgurl2c, ctwoc, ctwot];
+                    localStorage.setItem("entry", JSON.stringify(entry));
+                    existingEntries.push(entry);
+                    localStorage.setItem(
+                      "mycart",
+                      JSON.stringify(existingEntries)
+                    );
+                  }}
+                >
                   + Add to cart
                 </a>
                 <div className="price" id="twocost">
@@ -755,9 +751,27 @@ export class Second extends Component {
                 <a href="#" id="threetext">
                   {cthreet}
                 </a>
-                <a href="#" className="addtocart" id="addthree">
+                <button
+                  className="addtocart"
+                  id="addone"
+                  onClick={() => {
+                    toshowcounter = localStorage.getItem("counter");
+                    toshowcounter = parseInt(toshowcounter) + 1;
+                    localStorage.setItem("counter", toshowcounter);
+                    var existingEntries = JSON.parse(
+                      localStorage.getItem("mycart")
+                    );
+                    var entry = [imgurl3c, cthreec, cthreet];
+                    localStorage.setItem("entry", JSON.stringify(entry));
+                    existingEntries.push(entry);
+                    localStorage.setItem(
+                      "mycart",
+                      JSON.stringify(existingEntries)
+                    );
+                  }}
+                >
                   + Add to cart
-                </a>
+                </button>
                 <div className="price" id="threecost">
                   {cthreec}
                 </div>
@@ -805,9 +819,27 @@ export class Second extends Component {
                 <a href="#" id="fourtext">
                   {cfourt}
                 </a>
-                <a href="#" className="addtocart" id="addfour">
+                <button
+                  className="addtocart"
+                  id="addone"
+                  onClick={() => {
+                    toshowcounter = localStorage.getItem("counter");
+                    toshowcounter = parseInt(toshowcounter) + 1;
+                    localStorage.setItem("counter", toshowcounter);
+                    var existingEntries = JSON.parse(
+                      localStorage.getItem("mycart")
+                    );
+                    var entry = [imgurl4c, cfourc, cfourt];
+                    localStorage.setItem("entry", JSON.stringify(entry));
+                    existingEntries.push(entry);
+                    localStorage.setItem(
+                      "mycart",
+                      JSON.stringify(existingEntries)
+                    );
+                  }}
+                >
                   + Add to cart
-                </a>
+                </button>
                 <div className="price" id="fourcost">
                   {cfourc}
                 </div>
@@ -855,9 +887,27 @@ export class Second extends Component {
                 <a href="#" id="fivetext">
                   {cfivet}
                 </a>
-                <a href="#" className="addtocart" id="addfive">
+                <button
+                  className="addtocart"
+                  id="addone"
+                  onClick={() => {
+                    toshowcounter = localStorage.getItem("counter");
+                    toshowcounter = parseInt(toshowcounter) + 1;
+                    localStorage.setItem("counter", toshowcounter);
+                    var existingEntries = JSON.parse(
+                      localStorage.getItem("mycart")
+                    );
+                    var entry = [imgurl5c, cfivec, cfivet];
+                    localStorage.setItem("entry", JSON.stringify(entry));
+                    existingEntries.push(entry);
+                    localStorage.setItem(
+                      "mycart",
+                      JSON.stringify(existingEntries)
+                    );
+                  }}
+                >
                   + Add to cart
-                </a>
+                </button>
                 <div className="price" id="fivecost">
                   {cfivec}
                 </div>
@@ -901,9 +951,27 @@ export class Second extends Component {
                 <a href="#" id="sixtext">
                   {csixt}
                 </a>
-                <a href="#" className="addtocart" id="addsix">
+                <button
+                  className="addtocart"
+                  id="addone"
+                  onClick={() => {
+                    toshowcounter = localStorage.getItem("counter");
+                    toshowcounter = parseInt(toshowcounter) + 1;
+                    localStorage.setItem("counter", toshowcounter);
+                    var existingEntries = JSON.parse(
+                      localStorage.getItem("mycart")
+                    );
+                    var entry = [imgurl6c, csixc, csixt];
+                    localStorage.setItem("entry", JSON.stringify(entry));
+                    existingEntries.push(entry);
+                    localStorage.setItem(
+                      "mycart",
+                      JSON.stringify(existingEntries)
+                    );
+                  }}
+                >
                   + Add to cart
-                </a>
+                </button>
                 <div className="price" id="sixcost">
                   {csixc}
                 </div>
@@ -951,9 +1019,27 @@ export class Second extends Component {
                 <a href="#" id="seventext">
                   {csevent}
                 </a>
-                <a href="#" className="addtocart" id="addseven">
+                <button
+                  className="addtocart"
+                  id="addone"
+                  onClick={() => {
+                    toshowcounter = localStorage.getItem("counter");
+                    toshowcounter = parseInt(toshowcounter) + 1;
+                    localStorage.setItem("counter", toshowcounter);
+                    var existingEntries = JSON.parse(
+                      localStorage.getItem("mycart")
+                    );
+                    var entry = [imgurl7c, csevenc, csevent];
+                    localStorage.setItem("entry", JSON.stringify(entry));
+                    existingEntries.push(entry);
+                    localStorage.setItem(
+                      "mycart",
+                      JSON.stringify(existingEntries)
+                    );
+                  }}
+                >
                   + Add to cart
-                </a>
+                </button>
                 <div className="price" id="sevencost">
                   {csevenc}
                 </div>
@@ -1000,9 +1086,27 @@ export class Second extends Component {
                 <a href="#" id="eighttext">
                   {ceightt}
                 </a>
-                <a href="#" className="addtocart" id="addeight">
+                <button
+                  className="addtocart"
+                  id="addone"
+                  onClick={() => {
+                    toshowcounter = localStorage.getItem("counter");
+                    toshowcounter = parseInt(toshowcounter) + 1;
+                    localStorage.setItem("counter", toshowcounter);
+                    var existingEntries = JSON.parse(
+                      localStorage.getItem("mycart")
+                    );
+                    var entry = [imgurl8c, ceightc, ceightt];
+                    localStorage.setItem("entry", JSON.stringify(entry));
+                    existingEntries.push(entry);
+                    localStorage.setItem(
+                      "mycart",
+                      JSON.stringify(existingEntries)
+                    );
+                  }}
+                >
                   + Add to cart
-                </a>
+                </button>
                 <div className="price" id="eightcost">
                   {ceightc}
                 </div>

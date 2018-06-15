@@ -55,12 +55,14 @@ import header2 from "./images/header-2.jpg";
 import { Navbar } from "./navbar";
 import { Scart } from "./scart";
 import { Second } from "./second";
-import { SignIn } from "./login";
-import { SignUp } from "./signup";
-import { Example } from "./Modal";
-
 // import { Aman } from "./carousel";
 //requests
+var toshowcounter = localStorage.setItem("counter", 0);
+function funci() {
+  toshowcounter = localStorage.getItem("counter");
+  toshowcounter = parseInt(toshowcounter) + 1;
+  localStorage.setItem("counter", toshowcounter);
+}
 
 var imgurl;
 var imgurl2;
@@ -70,6 +72,38 @@ var imgurl5;
 var imgurl6;
 var imgurl7;
 var imgurl8;
+var arr = [
+  "str1",
+  "str2",
+  "str3",
+  "str4",
+  "str5",
+  "str6",
+  "str7",
+  "str8",
+  "str9",
+  "str10",
+  "str11",
+  "str12",
+  "str13",
+  "str14",
+  "str15",
+  "str16",
+  "str17",
+  "str18",
+  "str19",
+  "str20",
+  "str21",
+  "str22",
+  "str23",
+  "str24"
+];
+var i = 0;
+for (i = 0; i < 24; i++) {
+  if (localStorage.getItem(arr[i])) {
+    localStorage.setItem(arr[i], 0);
+  }
+}
 
 function reqListener() {
   var a;
@@ -105,7 +139,6 @@ function reqListener2() {
   document.getElementById("two").src = imgurl2;
   let onet = z[randomNO].title.slice(0, 80);
   let onec = z[randomNO].mrp;
-  console.log(onec, onet);
   document.getElementById("twotext").innerText = onet;
   document.getElementById("twocost").innerText = onec;
 }
@@ -256,29 +289,19 @@ class App extends Component {
       <Router>
         <div>
           <li>
-            <Link to={"/second"}>Second</Link>
-
-            <Link to={"/login"}>Login</Link>
-
-            <Link to={"/signup"}>SignUp</Link>
+            <Link to={"/second.js"}>Second</Link>
           </li>
 
           <Link to={"/scart"}>
-            <nav className="navbar navbar-light bg-light">
-              <button className="btn btn-light" type="SUCCESS">
+            <nav class="navbar navbar-light bg-light">
+              <button class="btn btn-light" type="SUCCESS">
                 !! VIEW YOUR CART!!
               </button>
             </nav>
           </Link>
 
           <Switch>
-            <Route exact path="/second" component={Second} />
-          </Switch>
-          <Switch>
-            <Route exact path="/signup" component={SignUp} />
-          </Switch>
-          <Switch>
-            <Route exact path="/login" component={SignIn} />
+            <Route exact path="/second.js" component={Second} />
           </Switch>
           <Switch>
             <Route exact path="/scart" component={Scart} />
@@ -286,8 +309,6 @@ class App extends Component {
         </div>
       </Router>,
       <Navbar />,
-
-      // <SignIn />,
 
       <section className="banner-outer">
         {/* <!-- .banner-outer --> */}
@@ -390,13 +411,12 @@ class App extends Component {
                   {/* <!-- /.hover-img --> */}
                 </div>
                 {/* <!-- /.pro-img --> */}
-                <a href="#" id="onetext" />
-                <Example />,
+                `<a href="#" id="onetext" />
                 <a href="#" className="addtocart">
                   + Add to cart
                 </a>
                 <div className="price" id="onecost" />
-              </div>
+              </div>`
               {/* <!-- /.pro-text --> */}
             </div>
             <div className="col-md-3">
@@ -434,7 +454,6 @@ class App extends Component {
                 </div>
                 {/* <!-- /.pro-img --> */}
                 <a href="#" id="twotext" />
-                <Example />,
                 <a href="#" className="addtocart">
                   + Add to cart
                 </a>
@@ -477,7 +496,6 @@ class App extends Component {
                 </div>
                 {/* <!-- /.pro-img --> */}
                 <a href="#" id="threetext" />
-                <Example />,
                 <a href="#" className="addtocart">
                   + Add to cart
                 </a>
@@ -524,7 +542,6 @@ class App extends Component {
                 </div>
                 {/* <!-- /.pro-img --> */}
                 <a href="#" id="fourtext" />
-                <Example />,
                 <a href="#" className="addtocart">
                   + Add to cart
                 </a>
@@ -571,7 +588,6 @@ class App extends Component {
                 </div>
                 {/* <!-- /.pro-img --> */}
                 <a href="#" id="fivetext" />
-                <Example />,
                 <a href="#" className="addtocart">
                   + Add to cart
                 </a>
@@ -583,11 +599,7 @@ class App extends Component {
               {/* <!-- .pro-text --> */}
               <div className="pro-text">
                 {/* <!-- .pro-img --> */}
-                <div
-                  className="pro-img"
-                  data-toggle="modal"
-                  data-target="#qusickModal"
-                >
+                <div className="pro-img">
                   <img src={imgurl6} alt="2" id="six" />
                   {/* <!-- .hover-img --> */}
                   <div className="hover-img">
@@ -618,13 +630,11 @@ class App extends Component {
                 </div>
                 {/* <!-- /.pro-img --> */}
                 <a href="#" id="sixtext" />
-                <Example />,
                 <a href="#" className="addtocart">
                   + Add to cart
                 </a>
                 <div className="price" id="sixcost" />
               </div>
-
               {/* <!-- /.pro-text --> */}
             </div>
             <div className="col-md-3">
@@ -666,7 +676,6 @@ class App extends Component {
                 </div>
                 {/* <!-- /.pro-img --> */}
                 <a href="#" id="seventext" />
-                <Example />,
                 <a href="#" className="addtocart">
                   + Add to cart
                 </a>
@@ -712,7 +721,6 @@ class App extends Component {
                 </div>
                 {/* <!-- /.pro-img --> */}
                 <a href="#" id="eighttext" />
-                <Example />,
                 <a href="#" className="addtocart">
                   + Add to cart
                 </a>
@@ -1054,7 +1062,6 @@ class App extends Component {
         </div>
         {/* <!-- /copayright --> */}
       </footer>
-
       // <Scart />
       // <Second />
     ];
