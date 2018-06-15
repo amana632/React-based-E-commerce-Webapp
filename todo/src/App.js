@@ -57,6 +57,7 @@ import { Scart } from "./scart";
 import { Second } from "./second";
 import { SignIn } from "./login";
 import { SignUp } from "./signup";
+import { Example } from "./Modal";
 
 // import { Aman } from "./carousel";
 //requests
@@ -263,8 +264,8 @@ class App extends Component {
           </li>
 
           <Link to={"/scart"}>
-            <nav class="navbar navbar-light bg-light">
-              <button class="btn btn-light" type="SUCCESS">
+            <nav className="navbar navbar-light bg-light">
+              <button className="btn btn-light" type="SUCCESS">
                 !! VIEW YOUR CART!!
               </button>
             </nav>
@@ -285,6 +286,7 @@ class App extends Component {
         </div>
       </Router>,
       <Navbar />,
+
       // <SignIn />,
 
       <section className="banner-outer">
@@ -389,6 +391,7 @@ class App extends Component {
                 </div>
                 {/* <!-- /.pro-img --> */}
                 <a href="#" id="onetext" />
+                <Example />,
                 <a href="#" className="addtocart">
                   + Add to cart
                 </a>
@@ -431,6 +434,7 @@ class App extends Component {
                 </div>
                 {/* <!-- /.pro-img --> */}
                 <a href="#" id="twotext" />
+                <Example />,
                 <a href="#" className="addtocart">
                   + Add to cart
                 </a>
@@ -473,6 +477,7 @@ class App extends Component {
                 </div>
                 {/* <!-- /.pro-img --> */}
                 <a href="#" id="threetext" />
+                <Example />,
                 <a href="#" className="addtocart">
                   + Add to cart
                 </a>
@@ -519,6 +524,7 @@ class App extends Component {
                 </div>
                 {/* <!-- /.pro-img --> */}
                 <a href="#" id="fourtext" />
+                <Example />,
                 <a href="#" className="addtocart">
                   + Add to cart
                 </a>
@@ -565,6 +571,7 @@ class App extends Component {
                 </div>
                 {/* <!-- /.pro-img --> */}
                 <a href="#" id="fivetext" />
+                <Example />,
                 <a href="#" className="addtocart">
                   + Add to cart
                 </a>
@@ -576,7 +583,11 @@ class App extends Component {
               {/* <!-- .pro-text --> */}
               <div className="pro-text">
                 {/* <!-- .pro-img --> */}
-                <div className="pro-img">
+                <div
+                  className="pro-img"
+                  data-toggle="modal"
+                  data-target="#qusickModal"
+                >
                   <img src={imgurl6} alt="2" id="six" />
                   {/* <!-- .hover-img --> */}
                   <div className="hover-img">
@@ -607,11 +618,13 @@ class App extends Component {
                 </div>
                 {/* <!-- /.pro-img --> */}
                 <a href="#" id="sixtext" />
+                <Example />,
                 <a href="#" className="addtocart">
                   + Add to cart
                 </a>
                 <div className="price" id="sixcost" />
               </div>
+
               {/* <!-- /.pro-text --> */}
             </div>
             <div className="col-md-3">
@@ -653,6 +666,7 @@ class App extends Component {
                 </div>
                 {/* <!-- /.pro-img --> */}
                 <a href="#" id="seventext" />
+                <Example />,
                 <a href="#" className="addtocart">
                   + Add to cart
                 </a>
@@ -698,6 +712,7 @@ class App extends Component {
                 </div>
                 {/* <!-- /.pro-img --> */}
                 <a href="#" id="eighttext" />
+                <Example />,
                 <a href="#" className="addtocart">
                   + Add to cart
                 </a>
@@ -1039,6 +1054,7 @@ class App extends Component {
         </div>
         {/* <!-- /copayright --> */}
       </footer>
+
       // <Scart />
       // <Second />
     ];

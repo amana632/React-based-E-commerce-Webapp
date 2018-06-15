@@ -20,6 +20,9 @@ import icon3 from "./images/Products/13.jpg";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Scart } from "./scart";
 var myelement;
+var toshowcounter = localStorage.setItem("counter", 0);
+
+toshowcounter = localStorage.getItem("counter");
 
 function funcbarcode() {
   myelement =
@@ -948,7 +951,8 @@ export class Navbar extends Component {
             </li>
             <li className="nav-item dropdown">
               <a href="#" className="nav-link dropdown-toggle">
-                <img src={icon1} alt="top-ico3" /> <span>Cart (0)</span>{" "}
+                <img src={icon1} alt="top-ico3" />{" "}
+                <span>Cart ({toshowcounter})</span>{" "}
               </a>
               <div className="dropdown-content">
                 <div className="cart-content">

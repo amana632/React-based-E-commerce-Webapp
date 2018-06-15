@@ -26,7 +26,66 @@ var imgurl5c;
 var imgurl6c;
 var imgurl7c;
 var imgurl8c;
-
+var conet;
+var conec;
+var ctwoc;
+var ctwot;
+var cthreet;
+var cthreec;
+var cfourc;
+var cfourt;
+var cfivec;
+var cfivet;
+var csixt;
+var csixc;
+var csevenc;
+var csevent;
+var ceightc;
+var ceightt;
+var toshowcounter = localStorage.setItem("counter", 0);
+function funci() {
+  toshowcounter = localStorage.getItem("counter");
+  toshowcounter = parseInt(toshowcounter) + 1;
+  localStorage.setItem("counter", toshowcounter);
+}
+// function funcaddtoCart1() {
+//   localStorage.setItem(
+//     "counter",
+//     parseInt(localStorage.getItem("counter")) + 1
+//   );
+//   console.log(localStorage.getItem("counter"));
+// }
+// function funcaddtoCart2() {
+//   localStorage.setItem(
+//     "counter",
+//     parseInt(localStorage.getItem("counter")) + 1
+//   );
+//   console.log(myCartCounter);
+// }
+// function funcaddtoCart3() {
+//   myCartCounter += 1;
+//   console.log(myCartCounter);
+// }
+// function funcaddtoCart4() {
+//   myCartCounter += 1;
+//   console.log(myCartCounter);
+// }
+// function funcaddtoCart5() {
+//   myCartCounter += 1;
+//   console.log(myCartCounter);
+// }
+// function funcaddtoCart6() {
+//   myCartCounter += 1;
+//   console.log(myCartCounter);
+// }
+// function funcaddtoCart7() {
+//   myCartCounter += 1;
+//   console.log(myCartCounter);
+// }
+// function funcaddtoCart8() {
+//   myCartCounter += 1;
+//   console.log(myCartCounter);
+// }
 var links = localStorage.getItem("linktohit");
 
 function reqListenerq() {
@@ -36,73 +95,71 @@ function reqListenerq() {
   imgurlc = z[0].imageUrlStr.split(";");
   imgurlc = imgurlc[1];
   document.getElementById("one").src = imgurlc;
-  let onet = z[0].title.slice(0, 80);
-  let onec = z[0].mrp;
-  document.getElementById("onetext").innerText = onet;
-  document.getElementById("onecost").innerText = onec;
-  console.log(onec, onet);
+  conet = z[0].title.slice(0, 80);
+  conec = z[0].mrp;
+  // document.getElementById("onetext").innerText = conet;
+  // document.getElementById("onecost").innerText = conec;
 
   imgurl2c = z[1].imageUrlStr.split(";");
   imgurl2c = imgurl2c[1];
   document.getElementById("two").src = imgurl2c;
-  let twot = z[1].title.slice(0, 80);
-  let twoc = z[1].mrp;
-  document.getElementById("twotext").innerText = twot;
-  document.getElementById("twocost").innerText = twoc;
+  ctwot = z[1].title.slice(0, 80);
+  ctwoc = z[1].mrp;
+  // document.getElementById("twotext").innerText = twot;
+  // document.getElementById("twocost").innerText = twoc;
 
   imgurl3c = z[2].imageUrlStr.split(";");
   imgurl3c = imgurl3c[1];
   document.getElementById("three").src = imgurl3c;
-  let threet = z[2].title.slice(0, 80);
-  let threec = z[2].mrp;
-  document.getElementById("threetext").innerText = threet;
-  document.getElementById("threecost").innerText = threec;
+  cthreet = z[2].title.slice(0, 80);
+  cthreec = z[2].mrp;
+  // document.getElementById("threetext").innerText = threet;
+  // document.getElementById("threecost").innerText = threec;
 
   imgurl4c = z[3].imageUrlStr.split(";");
   imgurl4c = imgurl4c[1];
   document.getElementById("four").src = imgurl4c;
-  let fourt = z[3].title.slice(0, 80);
-  let fourc = z[3].mrp;
-  document.getElementById("fourtext").innerText = fourt;
-  document.getElementById("fourcost").innerText = fourc;
+  cfourt = z[3].title.slice(0, 80);
+  cfourc = z[3].mrp;
+  // document.getElementById("fourtext").innerText = fourt;
+  // document.getElementById("fourcost").innerText = fourc;
 
   imgurl5c = z[4].imageUrlStr.split(";");
   imgurl5c = imgurl5c[1];
   document.getElementById("five").src = imgurl5c;
-  let fivet = z[4].title.slice(0, 80);
-  let fivec = z[4].mrp;
-  document.getElementById("fivetext").innerText = fivet;
-  document.getElementById("fivecost").innerText = fivec;
+  cfivet = z[4].title.slice(0, 80);
+  cfivec = z[4].mrp;
+  // document.getElementById("fivetext").innerText = fivet;
+  // document.getElementById("fivecost").innerText = fivec;
 
   imgurl6c = z[5].imageUrlStr.split(";");
   imgurl6c = imgurl6c[2];
   document.getElementById("six").src = imgurl6c;
-  let sixt = z[5].title.slice(0, 80);
-  let sixc = z[5].mrp;
-  document.getElementById("sixtext").innerText = sixt;
-  document.getElementById("sixcost").innerText = sixc;
+  csixt = z[5].title.slice(0, 80);
+  csixc = z[5].mrp;
+  // document.getElementById("sixtext").innerText = sixt;
+  // document.getElementById("sixcost").innerText = sixc;
 
   imgurl7c = z[6].imageUrlStr.split(";");
   imgurl7c = imgurl7c[1];
   document.getElementById("seven").src = imgurl7c;
-  let sevent = z[6].title.slice(0, 80);
-  let sevenc = z[6].mrp;
-  document.getElementById("sixtext").innerText = sevent;
-  document.getElementById("sixcost").innerText = sevenc;
+  csevent = z[6].title.slice(0, 80);
+  csevenc = z[6].mrp;
+  // document.getElementById("sixtext").innerText = sevent;
+  // document.getElementById("sixcost").innerText = sevenc;
 
   imgurl8c = z[7].imageUrlStr.split(";");
   imgurl8c = imgurl8c[1];
   document.getElementById("eight").src = imgurl8c;
-  let eightt = z[7].title.slice(0, 80);
-  let eightc = z[7].mrp;
-  document.getElementById("fivetext").innerText = eightt;
-  document.getElementById("fivecost").innerText = eightc;
+  ceightt = z[7].title.slice(0, 80);
+  ceightc = z[7].mrp;
+  // document.getElementById("fivetext").innerText = eightt;
+  // document.getElementById("fivecost").innerText = eightc;
 }
 
 var o = new XMLHttpRequest();
 o.addEventListener("load", reqListenerq);
 o.open("GET", localStorage.getItem("linktohit"));
-
 o.send();
 
 export class Second extends Component {
@@ -475,7 +532,8 @@ export class Second extends Component {
             </li>
             <li className="nav-item dropdown">
               <a href="#" className="nav-link dropdown-toggle">
-                <img src={icon1} alt="top-ico3" /> <span>Cart (0)</span>{" "}
+                <img src={icon1} alt="top-ico3" />{" "}
+                <span id="cartshow">Cart ({toshowcounter})</span>{" "}
               </a>
               <div className="dropdown-content">
                 <div className="cart-content">
@@ -604,11 +662,13 @@ export class Second extends Component {
                   {/* <!-- /.hover-img --> */}
                 </div>
                 {/* <!-- /.pro-img --> */}
-                <a href="#" id="onetext" />
-                <a href="#" className="addtocart">
+                <a id="onetext"> {conet}</a>
+                <a href="#" className="addtocart" id="addone" onClick={funci()}>
                   + Add to cart
                 </a>
-                <div className="price" id="onecost" />
+                <div className="price" id="onecost">
+                  {conec}
+                </div>
               </div>
               {/* <!-- /.pro-text --> */}
             </div>
@@ -646,11 +706,15 @@ export class Second extends Component {
                   {/* <!-- /.hover-img --> */}
                 </div>
                 {/* <!-- /.pro-img --> */}
-                <a href="#" id="twotext" />
-                <a href="#" className="addtocart">
+                <a href="#" id="twotext">
+                  {ctwot}
+                </a>
+                <a href="#" className="addtocart" id="addtwo">
                   + Add to cart
                 </a>
-                <div className="price" id="twocost" />
+                <div className="price" id="twocost">
+                  {ctwoc}
+                </div>
               </div>
               {/* <!-- /.pro-text --> */}
             </div>
@@ -688,11 +752,15 @@ export class Second extends Component {
                   {/* <!-- /.hover-img --> */}
                 </div>
                 {/* <!-- /.pro-img --> */}
-                <a href="#" id="threetext" />
-                <a href="#" className="addtocart">
+                <a href="#" id="threetext">
+                  {cthreet}
+                </a>
+                <a href="#" className="addtocart" id="addthree">
                   + Add to cart
                 </a>
-                <div className="price" id="threecost" />
+                <div className="price" id="threecost">
+                  {cthreec}
+                </div>
               </div>
               {/* <!-- /.pro-text --> */}
             </div>
@@ -734,11 +802,15 @@ export class Second extends Component {
                   {/* <!-- /.hover-img --> */}
                 </div>
                 {/* <!-- /.pro-img --> */}
-                <a href="#" id="fourtext" />
-                <a href="#" className="addtocart">
+                <a href="#" id="fourtext">
+                  {cfourt}
+                </a>
+                <a href="#" className="addtocart" id="addfour">
                   + Add to cart
                 </a>
-                <div className="price" id="fourcost" />
+                <div className="price" id="fourcost">
+                  {cfourc}
+                </div>
               </div>
               {/* <!-- /.pro-text --> */}
             </div>
@@ -780,11 +852,15 @@ export class Second extends Component {
                   {/* <!-- /.hover-img --> */}
                 </div>
                 {/* <!-- /.pro-img --> */}
-                <a href="#" id="fivetext" />
-                <a href="#" className="addtocart">
+                <a href="#" id="fivetext">
+                  {cfivet}
+                </a>
+                <a href="#" className="addtocart" id="addfive">
                   + Add to cart
                 </a>
-                <div className="price" id="fivecost" />
+                <div className="price" id="fivecost">
+                  {cfivec}
+                </div>
               </div>
               {/* <!-- /.pro-text --> */}
             </div>
@@ -822,11 +898,15 @@ export class Second extends Component {
                   {/* <!-- /.hover-img --> */}
                 </div>
                 {/* <!-- /.pro-img --> */}
-                <a href="#" id="sixtext" />
-                <a href="#" className="addtocart">
+                <a href="#" id="sixtext">
+                  {csixt}
+                </a>
+                <a href="#" className="addtocart" id="addsix">
                   + Add to cart
                 </a>
-                <div className="price" id="sixcost" />
+                <div className="price" id="sixcost">
+                  {csixc}
+                </div>
               </div>
               {/* <!-- /.pro-text --> */}
             </div>
@@ -868,11 +948,15 @@ export class Second extends Component {
                   {/* <!-- /.hover-img --> */}
                 </div>
                 {/* <!-- /.pro-img --> */}
-                <a href="#" id="seventext" />
-                <a href="#" className="addtocart">
+                <a href="#" id="seventext">
+                  {csevent}
+                </a>
+                <a href="#" className="addtocart" id="addseven">
                   + Add to cart
                 </a>
-                <div className="price" id="sevencost" />
+                <div className="price" id="sevencost">
+                  {csevenc}
+                </div>
               </div>
               {/* <!-- /.pro-text --> */}
             </div>
@@ -913,11 +997,15 @@ export class Second extends Component {
                   {/* <!-- /.hover-img --> */}
                 </div>
                 {/* <!-- /.pro-img --> */}
-                <a href="#" id="eighttext" />
-                <a href="#" className="addtocart">
+                <a href="#" id="eighttext">
+                  {ceightt}
+                </a>
+                <a href="#" className="addtocart" id="addeight">
                   + Add to cart
                 </a>
-                <div className="price" id="eightcost" />
+                <div className="price" id="eightcost">
+                  {ceightc}
+                </div>
               </div>
               {/* <!-- /.pro-text --> */}
             </div>
