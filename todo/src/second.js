@@ -102,6 +102,7 @@ function reqListenerq() {
 var o = new XMLHttpRequest();
 o.addEventListener("load", reqListenerq);
 o.open("GET", localStorage.getItem("linktohit"));
+
 o.send();
 
 export class Second extends Component {
