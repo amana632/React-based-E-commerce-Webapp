@@ -1086,9 +1086,9 @@ export class Main extends Component {
         launched. */}
               {/* </p> */}
               <p>
-                <a href="#">
+                <a href="/second.js">
                   Buy now /
-                  <span>$196.98</span>
+                  <span>Rs.49999</span>
                 </a>
               </p>
             </div>
@@ -1109,9 +1109,9 @@ export class Main extends Component {
         launched. */}
               {/* </p> */}
               <p>
-                <a href="#">
+                <a href="/second.js">
                   Buy now /
-                  <span>$196.98</span>
+                  <span>Rs.30000</span>
                 </a>
               </p>
             </div>
