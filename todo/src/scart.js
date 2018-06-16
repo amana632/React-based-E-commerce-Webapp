@@ -1,70 +1,148 @@
-// import React, { Component } from "react";
-// import ReactDOM from "react-dom";
-
-// class Login extends Component {
-//   render() {
-//     return (
-//       <div>
-//         <h2>Login</h2>
-//       </div>
-//     );
-//   }
-// }
-// export default Login;
-
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
-
-import "./App.css";
-import "./css/bootstrap.min.css";
-import "./css/animate.min.css";
-import "./css/baguetteBox.css";
-import "./css/bootstrap-dropdownhover.min.css";
-import "./font/css/font-awesome.min.css";
-import "./simple-line-icon/css/simple-line-icons.css";
-import "./css/style.css";
-import "./css/slider.css";
-import "./css/ourcss.css";
-import logo from "./images/logo.png";
-import hover from "./images/Hover-menu-img.jpg";
+import { browserHistory } from "react-router/lib/browserHistory";
+import { Link } from "react-router-dom";
 import icon1 from "./images/top-icon1.png";
 import icon3 from "./images/top-icon3.png";
-import thirteen from "./images/Products/13.jpg";
-import eleven from "./images/Products/11.jpg";
+import flik from "./images/fli.png";
+
 import icon2 from "./images/top-icon2.png";
-import hover1 from "./images/Hover-menu-img.jpg";
-import banner1 from "./images/banner1.jpg";
-import banner2 from "./images/banner2.jpg";
-import banner3 from "./images/banner3.jpg";
-import twenty_one from "./images/Products/21.jpg";
-import tsix from "./images/Products/26.jpg";
-import tfour from "./images/Products/24.jpg";
-import seventeen from "./images/Products/17.jpg";
-import ttwo from "./images/Products/22.jpg";
-import seven from "./images/Products/7.jpg";
-import nineteen from "./images/Products/19.jpg";
-import six from "./images/Products/6.jpg";
-import bg_banner from "./images/bg-banner.jpg";
-import bg_banner2 from "./images/bg-banner2.jpg";
-import tone from "./images/Products/21.jpg";
-import clogo1 from "./images/client-logo1.png";
-import clogo2 from "./images/client-logo2.png";
-import clogo3 from "./images/client-logo3.png";
-import clogo4 from "./images/client-logo4.png";
-import clogo5 from "./images/client-logo5.png";
-
-import blogimg1 from "./images/blog-img1.jpg";
-import blogimg2 from "./images/blog-img2.jpg";
-
-import blogimg3 from "./images/blog-img03.jpg";
-
-import flogo from "./images/flogo.png";
-import header1 from "./images/header-1.jpg";
-import header2 from "./images/header-2.jpg";
-import { Navbar } from "./navbar";
+var toshowcounter = localStorage.setItem("counter", 0);
 var m = JSON.parse(localStorage.getItem("mycart"));
+var total = 0;
+
+const Product = ({
+  mrp,
+  title,
+  image,
+  prodId,
+  description,
+  sellingPrice,
+  specialPrice,
+  productURL,
+  categories,
+  Brand,
+  sellerName,
+  selleravgRating,
+  norating,
+  noreview,
+  Remove
+}) => (
+  <tr>
+    <td className="product">
+      <div className="product-img">
+        <img src={image} />
+      </div>
+      <div className="product-name">
+        <a href="#">{title}</a>
+        <br />
+        <span>Brand- {Brand}</span>
+        <br />
+        <span>Category- {categories}</span>
+        <br />
+        <span>Distributor- {sellerName}</span>
+        <br />
+        <span>Rating- {selleravgRating}</span>
+        <br />
+        <span>Reviews- {noreview}</span>
+        <br />
+      </div>
+    </td>
+    <td className="price">
+      <span id="mrp">Rs. {mrp}</span>
+      {/* &nbsp;&nbsp; Rs. {sellingPrice} */}
+      <br />
+    </td>
+    <td className="quantity">1</td>
+    <td className="price">Rs. {mrp}</td>
+    <td className="link">
+      <Link to="scart" onClick={Remove}>
+        <button type="button" class="btn btn-outline-info">
+          {" "}
+          REMOVE{" "}
+        </button>
+      </Link>
+    </td>
+    <td>
+      <a href={productURL}>
+        {" "}
+        <button type="button" className="btn btn-outline-warning">
+          VIEW IN FLIPKART
+        </button>
+        <img src={flik} style={{ height: "50px", width: "50px" }} />
+      </a>
+    </td>
+  </tr>
+);
 
 export class Scart extends Component {
+  RemoveFromCart = prodId => {
+    var items = JSON.parse(localStorage.getItem("mycart"));
+    for (var i = 0; i < items.length; i++) {
+      if (items[i]["productId"] == prodId) {
+        items.splice(i, 1);
+        break;
+      }
+    }
+    var item = JSON.stringify(items);
+    localStorage.setItem("mycart", item);
+  };
+
+  renderProductsInCart = () => {
+    const elements = [];
+
+    var obj = JSON.parse(localStorage.getItem("mycart"));
+    for (let index in obj) {
+      total = total + obj[index][1];
+      elements.push(
+        <Product
+          mrp={obj[index][1]}
+          title={obj[index][2]}
+          image={obj[index][0]}
+          prodId={obj[index][3]}
+          description={obj[index][4]}
+          sellingPrice={obj[index][5]}
+          specialPrice={obj[index][6]}
+          productURL={obj[index][7]}
+          categories={obj[index][8]}
+          Brand={obj[index][9]}
+          sellerName={obj[index][10]}
+          selleravgRating={obj[index][11]}
+          norating={obj[index][12]}
+          noreview={obj[index][13]}
+          Remove={() => this.RemoveFromCart(obj[index]["productId"])}
+        />
+      );
+    }
+    elements.push(
+      <tr class="totals">
+        <td colspan="2">
+          <input type="submit" name="submit" value="Update cart" hidden />
+        </td>
+        <td class="quantity-span" colspan="2">
+          Total Value of Cart Items-
+        </td>
+        <td class="price">Rs. {total}</td>
+      </tr>
+    );
+    return elements;
+  };
+
+  checkCart = () => {
+    console.log("SAxs)");
+    var o = localStorage.getItem("mycart");
+    if (o != null) {
+      var obj = JSON.parse(o);
+      if (obj.length == 0) {
+        alert("Cart empty!");
+        browserHistory.push("/");
+      } else {
+        document.getElementById("checkout1").setAttribute("to", "checkout");
+      }
+    } else {
+      document.getElementById("checkout1").setAttribute("to", "checkout");
+    }
+  };
+
   render() {
     return [
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -437,8 +515,10 @@ export class Scart extends Component {
             </li>
             <li className="nav-item dropdown">
               <a href="#" className="nav-link dropdown-toggle">
-                <img src={icon1} alt="top-ico3" /> <span>Cart (0)</span>{" "}
+                <img src={icon1} alt="top-ico3" />{" "}
+                <span>Cart ({toshowcounter})</span>{" "}
               </a>
+
               <div className="dropdown-content">
                 <div className="cart-content">
                   <div className="col-sm-4 col-md-4">
@@ -504,161 +584,101 @@ export class Scart extends Component {
           </div>
         </div>
       </header>,
+
+      <table cellspacing="0" className="shopping-cart">
+        <thead>
+          <tr className="headings">
+            <th className="link">Item</th>
+            <th className="product">Price</th>
+            <th className="price">Quantity</th>
+            <th className="price">Total</th>
+            <th className="quantity">Remove</th>
+            <th className="price">View in FLIPKART</th>
+          </tr>
+        </thead>
+        <tbody>{this.renderProductsInCart()}</tbody>
+      </table>,
       <section className="shopping-cart">
-        <div className="container">
-          <div className="col-md-12">
-            <h2>You cart items</h2>
-            <table>
-              <tr>
-                <th />
-                <th>Product name</th>
-                <th>Description</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Total Price</th>
-                <th />
-              </tr>
-              <tr id="mydiv">
-                <td>
-                  <img src={m[0][0]} alt="13" />
-                </td>
-                <td>{m[0][2]}</td>
-                <td>
-                  Lorem Ipsum is simply dummy text of the printing<br /> and
-                  typesetting industry.
-                </td>
-                <td>
-                  <strong>{m[0][1]}</strong>
-                </td>
-                <td>
-                  <input
-                    type="number"
-                    id="onein"
-                    placeholder="quantity"
-                    min="1"
-                    max="500"
-                  />
-                </td>
-                <td>
-                  <strong>{m[0][1]}*tot</strong>
-                </td>
-                <td>
-                  <button
-                    style={{ backgroundColor: "#ff2323" }}
-                    onClick={() => {
-                      document.getElementById("mydiv").innerHTML = (
-                        <span>"you removed it"</span>
-                      );
-                    }}
-                  >
-                    REMOVE
-                  </button>
-                </td>
-              </tr>
-            </table>
-            <div className="col-sm-6 col-md-6">
-              <a href="#" className="button red">
-                CONTINUE SHOPPING
-              </a>
-            </div>
-            <div className="col-sm-6 col-md-6 text-right">
-              <a href="#" className="button">
-                UPDATE SHOPPING CART
-              </a>
-              <a href="#" className="button">
-                CLEAR SHOPPING CART
-              </a>
-            </div>
-            <div className="col-sm-4 col-md-4">
-              <div className="shipping-outer">
-                <h2>Calculate shipping</h2>
-                <div className="row">
-                  <ul>
-                    <li>
-                      <div className="col-md-12 counttry">
-                        <div className="lable">Select your Counttry:</div>
-                        <input
-                          name="counttry"
-                          placeholder="United States (USA)"
-                          type="text"
-                        />
+        <div className="col-sm-4 col-md-4">
+          <div className="shipping-outer">
+            <h2>Calculate shipping</h2>
+            <div className="row">
+              <ul>
+                <li>
+                  <div className="col-md-12 counttry">
+                    <div className="lable">Select your Counttry:</div>
+                    <input name="country" placeholder="India" type="text" />
+                  </div>
+                  <div className="col-sm-6 col-md-6">
+                    <div className="lable">Select your State:</div>
+                    <div className="size State">
+                      <div className="select-option">
+                        <select>
+                          <option value="28">28</option>
+                          <option value="32">32</option>
+                          <option value="34">34</option>
+                          <option value="36">36</option>
+                          <option value="Featured Pots">State / City</option>
+                        </select>
                       </div>
-                      <div className="col-sm-6 col-md-6">
-                        <div className="lable">Select your State:</div>
-                        <div className="size State">
-                          <div className="select-option">
-                            <select>
-                              <option value="28">28</option>
-                              <option value="32">32</option>
-                              <option value="34">34</option>
-                              <option value="36">36</option>
-                              <option value="Featured Pots">
-                                State / City
-                              </option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-sm-6 col-md-6">
-                        <div className="lable">Zip Code:</div>
-                        <input
-                          name="counttry"
-                          placeholder="Zip Code"
-                          type="text"
-                        />
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <a href="#" className="button2">
-                  Update Shipping
-                </a>
-              </div>
-            </div>
-            <div className="col-sm-4 col-md-4">
-              <div className="shipping-outer">
-                <h2>Coupon code</h2>
-                <ul>
-                  <li>
-                    <div className="col-md-12">
-                      <div className="lable">Coupon Code:</div>
-                      <input
-                        name="Coupon Code"
-                        placeholder="Coupon Code"
-                        type="text"
-                      />
                     </div>
-                  </li>
-                </ul>
-                <a href="#" className="button2">
-                  REdeem code
-                </a>
-              </div>
+                  </div>
+                  <div className="col-sm-6 col-md-6">
+                    <div className="lable">Zip Code:</div>
+                    <input name="counttry" placeholder="Zip Code" type="text" />
+                  </div>
+                </li>
+              </ul>
             </div>
-            <div className="col-sm-4 col-md-4">
-              <div className="shipping-outer">
-                <h2>Cart totals</h2>
-                <ul>
-                  <li>
-                    Cart Subtotal: <strong>$640.00</strong>
-                  </li>
-                  <li>
-                    Shipping and Handling: <strong>$10.00</strong>
-                  </li>
-                  <li>
-                    Cart Totals: <strong>$650.00</strong>
-                  </li>
-                </ul>
-                <div className="text-center">
-                  <a href="#" className="redbutton">
-                    Proceed to checkout
-                  </a>
-                </div>
+            <a href="#" className="button2">
+              Update Shipping
+            </a>
+          </div>
+
+          <div className="col-sm-4 col-md-4">
+            <div className="shipping-outer">
+              <h2>Coupon code</h2>
+              <ul>
+                <li>
+                  <div className="col-md-12">
+                    <div className="lable">Coupon Code:</div>
+                    <input
+                      name="Coupon Code"
+                      placeholder="Coupon Code"
+                      type="text"
+                    />
+                  </div>
+                </li>
+              </ul>
+              <a href="#" className="button2">
+                Redeem code
+              </a>
+            </div>
+          </div>
+          <div className="col-sm-4 col-md-4">
+            <div className="shipping-outer">
+              <h2>Cart totals</h2>
+              <ul>
+                <li>
+                  Cart Subtotal: <strong>Rs.{total}</strong>
+                </li>
+                <li>
+                  Shipping and Handling: <strong>Rs.100.00</strong>
+                </li>
+                <li>
+                  Cart Totals: <strong>Rs.{total + 100}</strong>
+                </li>
+              </ul>
+              <div className="text-center">
+                <a href="#" className="redbutton">
+                  Proceed to checkout
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>,
+
       <section className="subscribe text-center">
         <div className="container">
           <h2>Get Discount Info</h2>

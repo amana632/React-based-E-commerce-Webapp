@@ -3,6 +3,10 @@ import { withRouter } from "react-router-dom";
 import { render } from "react-dom";
 import ReactDOM from "react-dom";
 
+// function AutoRefresh(t) {
+//   setTimeout("location.reload(true);", 1);
+// }
+
 var Alert = require("react-bootstrap").Alert;
 var Modal = require("react-bootstrap/lib/Modal");
 var Popover = require("react-bootstrap/lib/Popover");
@@ -12,7 +16,14 @@ var OverlayTrigger = require("react-bootstrap/lib/OverlayTrigger");
 var Button = require("react-bootstrap/lib/Button");
 
 var Tooltip = require("react-bootstrap/lib/Tooltip");
+var clk = localStorage.getItem("clicked");
 
+console.log(clk);
+console.log(localStorage.getItem(clk));
+var z = JSON.parse(localStorage.getItem(clk));
+console.log(z);
+var clickedrandom = localStorage.getItem("rc");
+console.log(clickedrandom);
 export class Example extends React.Component {
   constructor(props, context) {
     super(props, context);
@@ -35,8 +46,8 @@ export class Example extends React.Component {
 
   render() {
     const popover = (
-      <Popover id="modal-popover" title="popover">
-        very popover. such engagement
+      <Popover id="modal-popover" title="THE CHOSEN PRODUCT">
+        {z[clickedrandom].categories}
       </Popover>
     );
     const tooltip = <Tooltip id="modal-tooltip">wow.</Tooltip>;
@@ -50,23 +61,25 @@ export class Example extends React.Component {
 
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
+            <Modal.Title />
           </Modal.Header>
           <Modal.Body>
-            <h4>Text in a modal</h4>
+            <img src={z[clickedrandom].imageUrlStr.split(";")[2]} />
+            <h4>Product code</h4>
+            <p> {z[clickedrandom].productId}</p>
+            <p> {z[clickedrandom].productBrand}</p>
+            <p> {z[clickedrandom].title}</p>
+            <s>
+              <em> MRP : {z[clickedrandom].mrp} </em>
+            </s>&nbsp;
+            <strong> Special Price : {z[clickedrandom].specialPrice} </strong>
             <p>
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-            </p>
-
-            <h4>Popover in a modal</h4>
-            <p>
-              there is a{" "}
               <OverlayTrigger overlay={popover}>
-                <a href="#popover">popover</a>
+                <a href="#popover">Category</a>
               </OverlayTrigger>{" "}
-              here
+              .
             </p>
-
+            {/*
             <h4>Tooltips in a modal</h4>
             <p>
               there is a{" "}
@@ -74,56 +87,16 @@ export class Example extends React.Component {
                 <a href="#tooltip">tooltip</a>
               </OverlayTrigger>{" "}
               here
-            </p>
-
+            </p> */}
             <hr />
-
-            <h4>Overflowing text to show scroll behavior</h4>
-            <p>
-              Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-              dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-              ac consectetur ac, vestibulum at eros.
-            </p>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur
-              et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-              auctor.
-            </p>
-            <p>
-              Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
-              cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
-              dui. Donec ullamcorper nulla non metus auctor fringilla.
-            </p>
-            <p>
-              Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-              dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-              ac consectetur ac, vestibulum at eros.
-            </p>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur
-              et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-              auctor.
-            </p>
-            <p>
-              Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
-              cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
-              dui. Donec ullamcorper nulla non metus auctor fringilla.
-            </p>
-            <p>
-              Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-              dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-              ac consectetur ac, vestibulum at eros.
-            </p>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur
-              et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-              auctor.
-            </p>
-            <p>
-              Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
-              cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
-              dui. Donec ullamcorper nulla non metus auctor fringilla.
-            </p>
+            <h4>DESCRIPTION</h4>
+            <p> {z[clickedrandom].description}</p>
+            <hr />
+            <h4>OTHER INFO</h4>
+            <p>sellerName: {z[clickedrandom].sellerName}</p>
+            <p>sellerNoOfRatings: {z[clickedrandom].sellerNoOfRatings}</p>
+            <p>sellerNoOfReviews: {z[clickedrandom].sellerNoOfReviews}</p>
+            <p>sellerAverageRating: {z[clickedrandom].sellerAverageRating}</p>
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.handleClose}>Close</Button>

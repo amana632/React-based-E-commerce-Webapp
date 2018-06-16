@@ -43,19 +43,21 @@ var csevent;
 var ceightc;
 var ceightt;
 var toshowcounter = localStorage.setItem("counter", 0);
-// localStorage.setItem("mycart", JSON.stringify([]));
 
 var links = localStorage.getItem("linktohit");
+var z;
 
 function reqListenerq() {
   localStorage.setItem("keyonload1", this.responseText);
-  var z = JSON.parse(localStorage.getItem("keyonload1"));
+  z = JSON.parse(localStorage.getItem("keyonload1"));
 
-  imgurlc = z[0].imageUrlStr.split(";");
-  imgurlc = imgurlc[1];
-  document.getElementById("one").src = imgurlc;
-  conet = z[0].title.slice(0, 80);
-  conec = z[0].mrp;
+  for (let i = 0; i < 8; i++) {
+    imgurlc = z[0].imageUrlStr.split(";");
+    imgurlc = imgurlc[1];
+    document.getElementById("one").src = imgurlc;
+    conet = z[0].title.slice(0, 80);
+    conec = z[0].mrp;
+  }
   // document.getElementById("onetext").innerText = conet;
   // document.getElementById("onecost").innerText = conec;
 
@@ -492,30 +494,37 @@ export class Second extends Component {
             <li className="nav-item dropdown">
               <a href="#" className="nav-link dropdown-toggle">
                 <img src={icon1} alt="top-ico3" />{" "}
-                <span id="cartshow">Cart ({toshowcounter})</span>{" "}
+                <span>Cart ({toshowcounter})</span>{" "}
+              </a>
+            </li>
+
+            {/* <li className="nav-item dropdown">
+              <a href="#" className="nav-link dropdown-toggle">
+                <img src={icon1} alt="top-ico3" />{" "}
+                <span>Cart ({toshowcounter})</span>{" "}
               </a>
               <div className="dropdown-content">
                 <div className="cart-content">
                   <div className="col-sm-4 col-md-4">
-                    <img src={icon3} alt="13" />
+                    <img src={m1[0][0]} alt="13" />
                   </div>
                   <div className="col-sm-8 col-md-8">
                     <div className="pro-text">
                       {" "}
-                      <a href="#">Pellentesque Habitant</a>
-                      <div className="close">x</div> <strong>$160.00</strong>{" "}
+                      <a href="#">{m1[0][2]}</a>
+                      <div className="close">x</div> <strong>{m1[0][1]}</strong>{" "}
                     </div>
                   </div>
                 </div>
                 <div className="cart-content">
                   <div className="col-sm-4 col-md-4">
-                    <img src={icon2} alt="13" />
+                    <img src={m1[1][0]} alt="13" />
                   </div>
                   <div className="col-sm-8 col-md-8">
                     <div className="pro-text">
                       {" "}
-                      <a href="#">Pellentesque Habitant</a>
-                      <div className="close">x</div> <strong>$160.00</strong>{" "}
+                      <a href="#">{m1[1][2]}</a>
+                      <div className="close">x</div> <strong>{m1[1][1]}</strong>{" "}
                     </div>
                   </div>
                 </div>
@@ -527,16 +536,13 @@ export class Second extends Component {
                   </div>
                   <div className="col-sm-6 col-md-6 text-right">
                     {" "}
-                    <strong>$0.00</strong>
-                    <br /> <strong>$160.00</strong>{" "}
+                    <strong>Rs.10.00</strong>
+                    <br /> <strong>{m1[0][1] + m1[1][1] + 10}</strong>{" "}
                   </div>
                 </div>{" "}
                 <Router>
                   <div>
                     <ul>
-                      {/* <li>
-          <Link to={"/"}>Home</Link>
-        </li> */}
                       <li>
                         <Link to={"/scart"}>
                           <button className="cart-btn"> VIEW CART </button>
@@ -546,7 +552,6 @@ export class Second extends Component {
                     <hr />
 
                     <Switch>
-                      {/* <Route exact path="/" component={Home} /> */}
                       <Route exact path="/scart" component={Scart} />
                     </Switch>
                   </div>
@@ -555,7 +560,7 @@ export class Second extends Component {
                   CHECKOUT
                 </a>
               </div>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>,
@@ -632,7 +637,23 @@ export class Second extends Component {
                     var existingEntries = JSON.parse(
                       localStorage.getItem("mycart")
                     );
-                    var entry = [imgurlc, conec, conet];
+                    if (existingEntries == null) existingEntries = [];
+                    var entry = [
+                      imgurlc,
+                      conec,
+                      conet,
+                      z[0].productId,
+                      z[0].description,
+                      z[0].sellingPrice,
+                      z[0].specialPrice,
+                      z[0].productUrl,
+                      z[0].categories,
+                      z[0].productBrand,
+                      z[0].sellerName,
+                      z[0].sellerAverageRating,
+                      z[0].sellerNoOfRatings,
+                      z[0].sellerNoOfReviews
+                    ];
                     localStorage.setItem("entry", JSON.stringify(entry));
                     existingEntries.push(entry);
                     localStorage.setItem(
@@ -697,7 +718,23 @@ export class Second extends Component {
                     var existingEntries = JSON.parse(
                       localStorage.getItem("mycart")
                     );
-                    var entry = [imgurl2c, ctwoc, ctwot];
+                    if (existingEntries == null) existingEntries = [];
+                    var entry = [
+                      imgurl2c,
+                      ctwoc,
+                      ctwot,
+                      z[1].productId,
+                      z[1].description,
+                      z[1].sellingPrice,
+                      z[1].specialPrice,
+                      z[1].productUrl,
+                      z[1].categories,
+                      z[1].productBrand,
+                      z[1].sellerName,
+                      z[1].sellerAverageRating,
+                      z[1].sellerNoOfRatings,
+                      z[1].sellerNoOfReviews
+                    ];
                     localStorage.setItem("entry", JSON.stringify(entry));
                     existingEntries.push(entry);
                     localStorage.setItem(
@@ -756,12 +793,29 @@ export class Second extends Component {
                   id="addone"
                   onClick={() => {
                     toshowcounter = localStorage.getItem("counter");
+                    if (existingEntries == null) existingEntries = [];
                     toshowcounter = parseInt(toshowcounter) + 1;
                     localStorage.setItem("counter", toshowcounter);
                     var existingEntries = JSON.parse(
                       localStorage.getItem("mycart")
                     );
-                    var entry = [imgurl3c, cthreec, cthreet];
+                    if (existingEntries == null) existingEntries = [];
+                    var entry = [
+                      imgurl3c,
+                      cthreec,
+                      cthreet,
+                      z[2].productId,
+                      z[2].description,
+                      z[2].sellingPrice,
+                      z[2].specialPrice,
+                      z[2].productUrl,
+                      z[2].categories,
+                      z[2].productBrand,
+                      z[2].sellerName,
+                      z[2].sellerAverageRating,
+                      z[2].sellerNoOfRatings,
+                      z[2].sellerNoOfReviews
+                    ];
                     localStorage.setItem("entry", JSON.stringify(entry));
                     existingEntries.push(entry);
                     localStorage.setItem(
@@ -829,7 +883,23 @@ export class Second extends Component {
                     var existingEntries = JSON.parse(
                       localStorage.getItem("mycart")
                     );
-                    var entry = [imgurl4c, cfourc, cfourt];
+                    if (existingEntries == null) existingEntries = [];
+                    var entry = [
+                      imgurl4c,
+                      cfourc,
+                      cfourt,
+                      z[3].productId,
+                      z[3].description,
+                      z[3].sellingPrice,
+                      z[3].specialPrice,
+                      z[3].productUrl,
+                      z[3].categories,
+                      z[3].productBrand,
+                      z[3].sellerName,
+                      z[3].sellerAverageRating,
+                      z[3].sellerNoOfRatings,
+                      z[3].sellerNoOfReviews
+                    ];
                     localStorage.setItem("entry", JSON.stringify(entry));
                     existingEntries.push(entry);
                     localStorage.setItem(
@@ -897,7 +967,23 @@ export class Second extends Component {
                     var existingEntries = JSON.parse(
                       localStorage.getItem("mycart")
                     );
-                    var entry = [imgurl5c, cfivec, cfivet];
+                    if (existingEntries == null) existingEntries = [];
+                    var entry = [
+                      imgurl5c,
+                      cfivec,
+                      cfivet,
+                      z[4].productId,
+                      z[4].description,
+                      z[4].sellingPrice,
+                      z[4].specialPrice,
+                      z[4].productUrl,
+                      z[4].categories,
+                      z[4].productBrand,
+                      z[4].sellerName,
+                      z[4].sellerAverageRating,
+                      z[4].sellerNoOfRatings,
+                      z[4].sellerNoOfReviews
+                    ];
                     localStorage.setItem("entry", JSON.stringify(entry));
                     existingEntries.push(entry);
                     localStorage.setItem(
@@ -961,7 +1047,23 @@ export class Second extends Component {
                     var existingEntries = JSON.parse(
                       localStorage.getItem("mycart")
                     );
-                    var entry = [imgurl6c, csixc, csixt];
+                    if (existingEntries == null) existingEntries = [];
+                    var entry = [
+                      imgurl6c,
+                      csixc,
+                      csixt,
+                      z[5].productId,
+                      z[5].description,
+                      z[5].sellingPrice,
+                      z[5].specialPrice,
+                      z[5].productUrl,
+                      z[5].categories,
+                      z[5].productBrand,
+                      z[5].sellerName,
+                      z[5].sellerAverageRating,
+                      z[5].sellerNoOfRatings,
+                      z[5].sellerNoOfReviews
+                    ];
                     localStorage.setItem("entry", JSON.stringify(entry));
                     existingEntries.push(entry);
                     localStorage.setItem(
@@ -1029,7 +1131,23 @@ export class Second extends Component {
                     var existingEntries = JSON.parse(
                       localStorage.getItem("mycart")
                     );
-                    var entry = [imgurl7c, csevenc, csevent];
+                    if (existingEntries == null) existingEntries = [];
+                    var entry = [
+                      imgurl7c,
+                      csevenc,
+                      csevent,
+                      z[6].productId,
+                      z[6].description,
+                      z[6].sellingPrice,
+                      z[6].specialPrice,
+                      z[6].productUrl,
+                      z[6].categories,
+                      z[6].productBrand,
+                      z[6].sellerName,
+                      z[6].sellerAverageRating,
+                      z[6].sellerNoOfRatings,
+                      z[6].sellerNoOfReviews
+                    ];
                     localStorage.setItem("entry", JSON.stringify(entry));
                     existingEntries.push(entry);
                     localStorage.setItem(
@@ -1096,7 +1214,23 @@ export class Second extends Component {
                     var existingEntries = JSON.parse(
                       localStorage.getItem("mycart")
                     );
-                    var entry = [imgurl8c, ceightc, ceightt];
+                    if (existingEntries == null) existingEntries = [];
+                    var entry = [
+                      imgurl8c,
+                      ceightc,
+                      ceightt,
+                      z[7].productId,
+                      z[7].description,
+                      z[7].sellingPrice,
+                      z[7].specialPrice,
+                      z[7].productUrl,
+                      z[7].categories,
+                      z[7].productBrand,
+                      z[7].sellerName,
+                      z[7].sellerAverageRating,
+                      z[7].sellerNoOfRatings,
+                      z[7].sellerNoOfReviews
+                    ];
                     localStorage.setItem("entry", JSON.stringify(entry));
                     existingEntries.push(entry);
                     localStorage.setItem(

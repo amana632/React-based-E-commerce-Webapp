@@ -48,13 +48,14 @@ import blogimg1 from "./images/blog-img1.jpg";
 import blogimg2 from "./images/blog-img2.jpg";
 
 import blogimg3 from "./images/blog-img03.jpg";
-
+import { Table } from "./table";
 import flogo from "./images/flogo.png";
 import header1 from "./images/header-1.jpg";
 import header2 from "./images/header-2.jpg";
 import { Navbar } from "./navbar";
 import { Scart } from "./scart";
 import { Second } from "./second";
+import { Example } from "./Modal";
 // import { Aman } from "./carousel";
 //requests
 var toshowcounter = localStorage.setItem("counter", 0);
@@ -63,6 +64,16 @@ function funci() {
   toshowcounter = parseInt(toshowcounter) + 1;
   localStorage.setItem("counter", toshowcounter);
 }
+var z;
+var randomNO;
+var randomNO1;
+var randomNO2;
+var randomNO3;
+var randomNO4;
+var randomNO5;
+var randomNO6;
+var randomNO7;
+var randomNO8;
 
 var imgurl;
 var imgurl2;
@@ -72,49 +83,21 @@ var imgurl5;
 var imgurl6;
 var imgurl7;
 var imgurl8;
-var arr = [
-  "str1",
-  "str2",
-  "str3",
-  "str4",
-  "str5",
-  "str6",
-  "str7",
-  "str8",
-  "str9",
-  "str10",
-  "str11",
-  "str12",
-  "str13",
-  "str14",
-  "str15",
-  "str16",
-  "str17",
-  "str18",
-  "str19",
-  "str20",
-  "str21",
-  "str22",
-  "str23",
-  "str24"
-];
-var i = 0;
-for (i = 0; i < 24; i++) {
-  if (localStorage.getItem(arr[i])) {
-    localStorage.setItem(arr[i], 0);
-  }
-}
+var onec;
+var onet;
 
 function reqListener() {
-  var a;
   localStorage.setItem("key1", this.responseText);
-  var randomNO = Math.floor(Math.random() * 1 + 1);
-  var z = JSON.parse(localStorage.getItem("key1"));
-  imgurl = z[randomNO].imageUrlStr.split(";");
+  randomNO1 = Math.floor(Math.random() * 1 + 1);
+  localStorage.setItem("r1", randomNO1);
+
+  console.log("r", randomNO1);
+  z = JSON.parse(localStorage.getItem("key1"));
+  imgurl = z[randomNO1].imageUrlStr.split(";");
   imgurl = imgurl[1];
   document.getElementById("one").src = imgurl;
-  let onet = z[randomNO].title.slice(0, 80);
-  let onec = z[randomNO].mrp;
+  onet = z[randomNO1].title.slice(0, 80);
+  onec = z[randomNO1].mrp;
   console.log(onec, onet);
   document.getElementById("onetext").innerText = onet;
   document.getElementById("onecost").innerText = onec;
@@ -132,13 +115,15 @@ o.send();
 function reqListener2() {
   var a;
   localStorage.setItem("key2", this.responseText);
-  var randomNO = Math.floor(Math.random() * 3 + 1);
-  var z = JSON.parse(localStorage.getItem("key2"));
-  imgurl2 = z[randomNO].imageUrlStr.split(";");
+
+  randomNO2 = Math.floor(Math.random() * 2 + 1);
+  localStorage.setItem("r2", randomNO2);
+  z = JSON.parse(localStorage.getItem("key2"));
+  imgurl2 = z[randomNO2].imageUrlStr.split(";");
   imgurl2 = imgurl2[1];
   document.getElementById("two").src = imgurl2;
-  let onet = z[randomNO].title.slice(0, 80);
-  let onec = z[randomNO].mrp;
+  onet = z[randomNO2].title.slice(0, 80);
+  onec = z[randomNO2].mrp;
   document.getElementById("twotext").innerText = onet;
   document.getElementById("twocost").innerText = onec;
 }
@@ -152,15 +137,15 @@ o.open(
 o.send();
 //three
 function reqListener3() {
-  var a;
   localStorage.setItem("key3", this.responseText);
-  var randomNO = Math.floor(Math.random() * 3 + 1);
-  var z = JSON.parse(localStorage.getItem("key3"));
-  imgurl3 = z[randomNO].imageUrlStr.split(";");
+  randomNO3 = Math.floor(Math.random() * 3 + 1);
+  localStorage.setItem("r3", randomNO3);
+  z = JSON.parse(localStorage.getItem("key3"));
+  imgurl3 = z[randomNO3].imageUrlStr.split(";");
   imgurl3 = imgurl3[1];
   document.getElementById("three").src = imgurl3;
-  let onet = z[randomNO].title.slice(0, 80);
-  let onec = z[randomNO].mrp;
+  onet = z[randomNO3].title.slice(0, 80);
+  onec = z[randomNO3].mrp;
   document.getElementById("threetext").innerText = onet;
   document.getElementById("threecost").innerText = onec;
 }
@@ -174,15 +159,15 @@ o.open(
 o.send();
 //four
 function reqListener4() {
-  var a;
   localStorage.setItem("key4", this.responseText);
-  var randomNO = Math.floor(Math.random() * 3 + 1);
-  var z = JSON.parse(localStorage.getItem("key4"));
-  imgurl4 = z[randomNO].imageUrlStr.split(";");
+  randomNO4 = Math.floor(Math.random() * 3 + 1);
+  localStorage.setItem("r4", randomNO4);
+  z = JSON.parse(localStorage.getItem("key4"));
+  imgurl4 = z[randomNO4].imageUrlStr.split(";");
   imgurl4 = imgurl4[1];
   document.getElementById("four").src = imgurl4;
-  let onet = z[randomNO].title.slice(0, 80);
-  let onec = z[randomNO].mrp;
+  onet = z[randomNO4].title.slice(0, 80);
+  onec = z[randomNO4].mrp;
   document.getElementById("fourtext").innerText = onet;
   document.getElementById("fourcost").innerText = onec;
 }
@@ -196,15 +181,15 @@ o.open(
 o.send();
 //five
 function reqListener5() {
-  var a;
   localStorage.setItem("key5", this.responseText);
-  var randomNO = Math.floor(Math.random() * 3 + 1);
-  var z = JSON.parse(localStorage.getItem("key5"));
-  imgurl5 = z[randomNO].imageUrlStr.split(";");
+  randomNO5 = Math.floor(Math.random() * 3 + 1);
+  localStorage.setItem("r5", randomNO5);
+  z = JSON.parse(localStorage.getItem("key5"));
+  imgurl5 = z[randomNO5].imageUrlStr.split(";");
   imgurl5 = imgurl5[1];
   document.getElementById("five").src = imgurl5;
-  let onet = z[randomNO].title.slice(0, 80);
-  let onec = z[randomNO].mrp;
+  onet = z[randomNO5].title.slice(0, 80);
+  onec = z[randomNO5].mrp;
   document.getElementById("fivetext").innerText = onet;
   document.getElementById("fivecost").innerText = onec;
 }
@@ -218,15 +203,15 @@ o.open(
 o.send();
 //six
 function reqListener6() {
-  var a;
   localStorage.setItem("key6", this.responseText);
-  var randomNO = Math.floor(Math.random() * 3 + 1);
-  var z = JSON.parse(localStorage.getItem("key6"));
-  imgurl6 = z[randomNO].imageUrlStr.split(";");
+  randomNO6 = Math.floor(Math.random() * 3 + 1);
+  localStorage.setItem("r6", randomNO6);
+  z = JSON.parse(localStorage.getItem("key6"));
+  imgurl6 = z[randomNO6].imageUrlStr.split(";");
   imgurl6 = imgurl6[1];
   document.getElementById("six").src = imgurl6;
-  let onet = z[randomNO].title.slice(0, 80);
-  let onec = z[randomNO].mrp;
+  onet = z[randomNO6].title.slice(0, 80);
+  onec = z[randomNO6].mrp;
   document.getElementById("sixtext").innerText = onet;
   document.getElementById("sixcost").innerText = onec;
 }
@@ -240,15 +225,15 @@ o.open(
 o.send();
 //seven
 function reqListener7() {
-  var a;
   localStorage.setItem("key7", this.responseText);
-  var randomNO = Math.floor(Math.random() * 3 + 1);
-  var z = JSON.parse(localStorage.getItem("key7"));
-  imgurl7 = z[randomNO].imageUrlStr.split(";");
+  randomNO7 = Math.floor(Math.random() * 3 + 1);
+  localStorage.setItem("r7", randomNO7);
+  z = JSON.parse(localStorage.getItem("key7"));
+  imgurl7 = z[randomNO7].imageUrlStr.split(";");
   imgurl7 = imgurl7[1];
   document.getElementById("seven").src = imgurl7;
-  let onet = z[randomNO].title.slice(0, 80);
-  let onec = z[randomNO].mrp;
+  onet = z[randomNO7].title.slice(0, 80);
+  onec = z[randomNO7].mrp;
   document.getElementById("seventext").innerText = onet;
   document.getElementById("sevencost").innerText = onec;
 }
@@ -262,15 +247,15 @@ o.open(
 o.send();
 //eight
 function reqListener8() {
-  var a;
   localStorage.setItem("key8", this.responseText);
-  var randomNO = Math.floor(Math.random() * 3 + 1);
-  var z = JSON.parse(localStorage.getItem("key8"));
-  imgurl8 = z[randomNO].imageUrlStr.split(";");
+  randomNO8 = Math.floor(Math.random() * 3 + 1);
+  localStorage.setItem("r8", randomNO8);
+  z = JSON.parse(localStorage.getItem("key8"));
+  imgurl8 = z[randomNO8].imageUrlStr.split(";");
   imgurl8 = imgurl8[1];
   document.getElementById("eight").src = imgurl8;
-  let onet = z[randomNO].title.slice(0, 80);
-  let onec = z[randomNO].mrp;
+  onet = z[randomNO8].title.slice(0, 80);
+  onec = z[randomNO8].mrp;
   document.getElementById("eighttext").innerText = onet;
   document.getElementById("eightcost").innerText = onec;
 }
@@ -309,6 +294,7 @@ class App extends Component {
         </div>
       </Router>,
       <Navbar />,
+      // <Table />,
 
       <section className="banner-outer">
         {/* <!-- .banner-outer --> */}
@@ -377,9 +363,15 @@ class App extends Component {
             data-wow-duration=".5s"
             data-wow-delay=".2s"
           >
-            <div className="col-md-3">
+            <div className="col-md-3" style={{ height: "600px" }}>
               {/* <!-- .pro-text --> */}
-              <div className="pro-text">
+              <div
+                className="pro-text"
+                onClick={() => {
+                  localStorage.setItem("clicked", "key1");
+                  localStorage.setItem("rc", randomNO1);
+                }}
+              >
                 {/* <!-- .pro-img --> */}
                 <div className="pro-img">
                   <img id="one" src={imgurl} alt="2" />
@@ -411,17 +403,64 @@ class App extends Component {
                   {/* <!-- /.hover-img --> */}
                 </div>
                 {/* <!-- /.pro-img --> */}
-                `<a href="#" id="onetext" />
-                <a href="#" className="addtocart">
+                <a href="#" id="onetext" />
+                <Example />
+                <a id="onetext" />
+                <button
+                  className="addtocart"
+                  id="addone"
+                  onClick={() => {
+                    toshowcounter = localStorage.getItem("counter");
+                    toshowcounter = parseInt(toshowcounter) + 1;
+                    localStorage.setItem("counter", toshowcounter);
+                    var existingEntries = JSON.parse(
+                      localStorage.getItem("mycart")
+                    );
+                    z = JSON.parse(localStorage.getItem("key1"));
+
+                    var entry = [
+                      imgurl,
+                      z[randomNO1].mrp,
+                      z[randomNO1].title,
+                      z[randomNO1].productId,
+                      z[randomNO1].description,
+                      z[randomNO1].sellingPrice,
+                      z[randomNO1].specialPrice,
+                      z[randomNO1].productUrl,
+                      z[randomNO1].categories,
+                      z[randomNO1].productBrand,
+                      z[randomNO1].sellerName,
+                      z[randomNO1].sellerAverageRating,
+                      z[randomNO1].sellerNoOfRatings,
+                      z[randomNO1].sellerNoOfReviews
+                    ];
+                    localStorage.setItem("entry1", JSON.stringify(entry));
+                    console.log(entry);
+                    localStorage.setItem("entry", JSON.stringify(entry));
+                    existingEntries.push(entry);
+                    console.log(entry);
+                    localStorage.setItem(
+                      "mycart",
+                      JSON.stringify(existingEntries)
+                    );
+                    console.log(entry);
+                  }}
+                >
                   + Add to cart
-                </a>
+                </button>
                 <div className="price" id="onecost" />
-              </div>`
+              </div>
               {/* <!-- /.pro-text --> */}
             </div>
-            <div className="col-md-3">
+            <div className="col-md-3" style={{ height: "600px" }}>
               {/* <!-- .pro-text --> */}
-              <div className="pro-text">
+              <div
+                className="pro-text"
+                onClick={() => {
+                  localStorage.setItem("clicked", "key2");
+                  localStorage.setItem("rc", randomNO2);
+                }}
+              >
                 {/* <!-- .pro-img --> */}
                 <div className="pro-img">
                   <img src={imgurl2} alt="2" id="two" />
@@ -454,16 +493,62 @@ class App extends Component {
                 </div>
                 {/* <!-- /.pro-img --> */}
                 <a href="#" id="twotext" />
-                <a href="#" className="addtocart">
+                <Example />
+                <a id="onetext" />
+                <button
+                  className="addtocart"
+                  id="addone"
+                  onClick={() => {
+                    toshowcounter = localStorage.getItem("counter");
+                    toshowcounter = parseInt(toshowcounter) + 1;
+                    localStorage.setItem("counter", toshowcounter);
+                    var existingEntries = JSON.parse(
+                      localStorage.getItem("mycart")
+                    );
+                    z = JSON.parse(localStorage.getItem("key2"));
+
+                    var entry = [
+                      imgurl,
+                      z[randomNO2].mrp,
+                      z[randomNO2].title,
+                      z[randomNO2].productId,
+                      z[randomNO2].description,
+                      z[randomNO2].sellingPrice,
+                      z[randomNO2].specialPrice,
+                      z[randomNO2].productUrl,
+                      z[randomNO2].categories,
+                      z[randomNO2].productBrand,
+                      z[randomNO2].sellerName,
+                      z[randomNO2].sellerAverageRating,
+                      z[randomNO2].sellerNoOfRatings,
+                      z[randomNO2].sellerNoOfReviews
+                    ];
+                    console.log(entry);
+                    localStorage.setItem("entry", JSON.stringify(entry));
+                    existingEntries.push(entry);
+                    console.log(entry);
+                    localStorage.setItem(
+                      "mycart",
+                      JSON.stringify(existingEntries)
+                    );
+                    console.log(entry);
+                  }}
+                >
                   + Add to cart
-                </a>
+                </button>
                 <div className="price" id="twocost" />
               </div>
               {/* <!-- /.pro-text --> */}
             </div>
-            <div className="col-md-3">
+            <div className="col-md-3" style={{ height: "600px" }}>
               {/* <!-- .pro-text --> */}
-              <div className="pro-text">
+              <div
+                className="pro-text"
+                onClick={() => {
+                  localStorage.setItem("clicked", "key3");
+                  localStorage.setItem("rc", randomNO3);
+                }}
+              >
                 {/* <!-- .pro-img --> */}
                 <div className="pro-img">
                   <img src={imgurl3} alt="2" id="three" />
@@ -496,16 +581,63 @@ class App extends Component {
                 </div>
                 {/* <!-- /.pro-img --> */}
                 <a href="#" id="threetext" />
-                <a href="#" className="addtocart">
+                <Example />
+                <button
+                  className="addtocart"
+                  id="addone"
+                  onClick={() => {
+                    toshowcounter = localStorage.getItem("counter");
+                    toshowcounter = parseInt(toshowcounter) + 1;
+                    localStorage.setItem("counter", toshowcounter);
+                    var existingEntries = JSON.parse(
+                      localStorage.getItem("mycart")
+                    );
+                    z = JSON.parse(localStorage.getItem("key3"));
+                    console.log(z);
+                    console.log(randomNO3);
+
+                    var entry = [
+                      imgurl,
+                      z[randomNO3].mrp,
+                      z[randomNO3].title,
+                      z[randomNO3].productId,
+                      z[randomNO3].description,
+                      z[randomNO3].sellingPrice,
+                      z[randomNO3].specialPrice,
+                      z[randomNO3].productUrl,
+                      z[randomNO3].categories,
+                      z[randomNO3].productBrand,
+                      z[randomNO3].sellerName,
+                      z[randomNO3].sellerAverageRating,
+                      z[randomNO3].sellerNoOfRatings,
+                      z[randomNO3].sellerNoOfReviews
+                    ];
+                    console.log(entry);
+                    localStorage.setItem("entry", JSON.stringify(entry));
+                    existingEntries.push(entry);
+                    console.log(entry);
+                    localStorage.setItem(
+                      "mycart",
+                      JSON.stringify(existingEntries)
+                    );
+                    console.log(entry);
+                  }}
+                >
                   + Add to cart
-                </a>
+                </button>
                 <div className="price" id="threecost" />
               </div>
               {/* <!-- /.pro-text --> */}
             </div>
-            <div className="col-md-3">
+            <div className="col-md-3" style={{ height: "600px" }}>
               {/* <!-- .pro-text --> */}
-              <div className="pro-text">
+              <div
+                className="pro-text"
+                onClick={() => {
+                  localStorage.setItem("clicked", "key4");
+                  localStorage.setItem("rc", randomNO4);
+                }}
+              >
                 {/* <!-- .pro-img --> */}
                 <div className="pro-img">
                   <img src={imgurl4} alt="2" id="four" />
@@ -542,16 +674,64 @@ class App extends Component {
                 </div>
                 {/* <!-- /.pro-img --> */}
                 <a href="#" id="fourtext" />
-                <a href="#" className="addtocart">
+                <Example />
+                <a id="onetext" />
+                <button
+                  className="addtocart"
+                  id="addone"
+                  onClick={() => {
+                    toshowcounter = localStorage.getItem("counter");
+                    toshowcounter = parseInt(toshowcounter) + 1;
+                    localStorage.setItem("counter", toshowcounter);
+                    var existingEntries = JSON.parse(
+                      localStorage.getItem("mycart")
+                    );
+                    z = JSON.parse(localStorage.getItem("key4"));
+                    console.log(z);
+                    console.log(randomNO4);
+                    console.log(z[randomNO4].mrp);
+                    var entry = [
+                      imgurl,
+                      z[randomNO4].mrp,
+                      z[randomNO4].title,
+                      z[randomNO4].productId,
+                      z[randomNO4].description,
+                      z[randomNO4].sellingPrice,
+                      z[randomNO4].specialPrice,
+                      z[randomNO4].productUrl,
+                      z[randomNO4].categories,
+                      z[randomNO4].productBrand,
+                      z[randomNO4].sellerName,
+                      z[randomNO4].sellerAverageRating,
+                      z[randomNO4].sellerNoOfRatings,
+                      z[randomNO4].sellerNoOfReviews
+                    ];
+                    console.log(entry);
+                    localStorage.setItem("entry", JSON.stringify(entry));
+                    existingEntries.push(entry);
+                    console.log(entry);
+                    localStorage.setItem(
+                      "mycart",
+                      JSON.stringify(existingEntries)
+                    );
+                    console.log(entry);
+                  }}
+                >
                   + Add to cart
-                </a>
+                </button>
                 <div className="price" id="fourcost" />
               </div>
               {/* <!-- /.pro-text --> */}
             </div>
-            <div className="col-md-3">
+            <div className="col-md-3" style={{ height: "600px" }}>
               {/* <!-- .pro-text --> */}
-              <div className="pro-text">
+              <div
+                className="pro-text"
+                onClick={() => {
+                  localStorage.setItem("clicked", "key5");
+                  localStorage.setItem("rc", randomNO5);
+                }}
+              >
                 {/* <!-- .pro-img --> */}
                 <div className="pro-img">
                   <img src={imgurl5} alt="2" id="five" />
@@ -588,16 +768,64 @@ class App extends Component {
                 </div>
                 {/* <!-- /.pro-img --> */}
                 <a href="#" id="fivetext" />
-                <a href="#" className="addtocart">
+                <Example />
+                <a id="onetext" />
+                <button
+                  className="addtocart"
+                  id="addone"
+                  onClick={() => {
+                    toshowcounter = localStorage.getItem("counter");
+                    toshowcounter = parseInt(toshowcounter) + 1;
+                    localStorage.setItem("counter", toshowcounter);
+                    var existingEntries = JSON.parse(
+                      localStorage.getItem("mycart")
+                    );
+                    z = JSON.parse(localStorage.getItem("key5"));
+                    console.log(z);
+                    console.log(randomNO5);
+                    console.log(z[randomNO5].mrp);
+                    var entry = [
+                      imgurl,
+                      z[randomNO5].mrp,
+                      z[randomNO5].title,
+                      z[randomNO5].productId,
+                      z[randomNO5].description,
+                      z[randomNO5].sellingPrice,
+                      z[randomNO5].specialPrice,
+                      z[randomNO5].productUrl,
+                      z[randomNO5].categories,
+                      z[randomNO5].productBrand,
+                      z[randomNO5].sellerName,
+                      z[randomNO5].sellerAverageRating,
+                      z[randomNO5].sellerNoOfRatings,
+                      z[randomNO5].sellerNoOfReviews
+                    ];
+                    console.log(entry);
+                    localStorage.setItem("entry", JSON.stringify(entry));
+                    existingEntries.push(entry);
+                    console.log(entry);
+                    localStorage.setItem(
+                      "mycart",
+                      JSON.stringify(existingEntries)
+                    );
+                    console.log(entry);
+                  }}
+                >
                   + Add to cart
-                </a>
+                </button>
                 <div className="price" id="fivecost" />
               </div>
               {/* <!-- /.pro-text --> */}
             </div>
-            <div className="col-md-3">
+            <div className="col-md-3" style={{ height: "600px" }}>
               {/* <!-- .pro-text --> */}
-              <div className="pro-text">
+              <div
+                className="pro-text"
+                onClick={() => {
+                  localStorage.setItem("clicked", "key6");
+                  localStorage.setItem("rc", randomNO6);
+                }}
+              >
                 {/* <!-- .pro-img --> */}
                 <div className="pro-img">
                   <img src={imgurl6} alt="2" id="six" />
@@ -630,16 +858,64 @@ class App extends Component {
                 </div>
                 {/* <!-- /.pro-img --> */}
                 <a href="#" id="sixtext" />
-                <a href="#" className="addtocart">
+                <Example />
+                <a id="onetext" />
+                <button
+                  className="addtocart"
+                  id="addone"
+                  onClick={() => {
+                    toshowcounter = localStorage.getItem("counter");
+                    toshowcounter = parseInt(toshowcounter) + 1;
+                    localStorage.setItem("counter", toshowcounter);
+                    var existingEntries = JSON.parse(
+                      localStorage.getItem("mycart")
+                    );
+                    z = JSON.parse(localStorage.getItem("key6"));
+                    console.log(z);
+                    console.log(randomNO6);
+                    console.log(z[randomNO6].mrp);
+                    var entry = [
+                      imgurl,
+                      z[randomNO6].mrp,
+                      z[randomNO6].title,
+                      z[randomNO6].productId,
+                      z[randomNO6].description,
+                      z[randomNO6].sellingPrice,
+                      z[randomNO6].specialPrice,
+                      z[randomNO6].productUrl,
+                      z[randomNO6].categories,
+                      z[randomNO6].productBrand,
+                      z[randomNO6].sellerName,
+                      z[randomNO6].sellerAverageRating,
+                      z[randomNO6].sellerNoOfRatings,
+                      z[randomNO6].sellerNoOfReviews
+                    ];
+                    console.log(entry);
+                    localStorage.setItem("entry", JSON.stringify(entry));
+                    existingEntries.push(entry);
+                    console.log(entry);
+                    localStorage.setItem(
+                      "mycart",
+                      JSON.stringify(existingEntries)
+                    );
+                    console.log(entry);
+                  }}
+                >
                   + Add to cart
-                </a>
+                </button>
                 <div className="price" id="sixcost" />
               </div>
               {/* <!-- /.pro-text --> */}
             </div>
-            <div className="col-md-3">
+            <div className="col-md-3" style={{ height: "600px" }}>
               {/* <!-- .pro-text --> */}
-              <div className="pro-text">
+              <div
+                className="pro-text"
+                onClick={() => {
+                  localStorage.setItem("clicked", "key7");
+                  localStorage.setItem("rc", randomNO7);
+                }}
+              >
                 {/* <!-- .pro-img --> */}
                 <div className="pro-img">
                   <img src={imgurl7} alt="2" id="seven" />
@@ -675,17 +951,66 @@ class App extends Component {
                   {/* <!-- /.hover-img --> */}
                 </div>
                 {/* <!-- /.pro-img --> */}
+
                 <a href="#" id="seventext" />
-                <a href="#" className="addtocart">
+                <Example />
+                <a id="onetext" />
+                <button
+                  className="addtocart"
+                  id="addone"
+                  onClick={() => {
+                    toshowcounter = localStorage.getItem("counter");
+                    toshowcounter = parseInt(toshowcounter) + 1;
+                    localStorage.setItem("counter", toshowcounter);
+                    var existingEntries = JSON.parse(
+                      localStorage.getItem("mycart")
+                    );
+                    z = JSON.parse(localStorage.getItem("key7"));
+                    console.log(z);
+                    console.log(randomNO7);
+                    console.log(z[randomNO7].mrp);
+                    var entry = [
+                      imgurl,
+                      z[randomNO7].mrp,
+                      z[randomNO7].title,
+                      z[randomNO7].productId,
+                      z[randomNO7].description,
+                      z[randomNO7].sellingPrice,
+                      z[randomNO7].specialPrice,
+                      z[randomNO7].productUrl,
+                      z[randomNO7].categories,
+                      z[randomNO7].productBrand,
+                      z[randomNO7].sellerName,
+                      z[randomNO7].sellerAverageRating,
+                      z[randomNO7].sellerNoOfRatings,
+                      z[randomNO7].sellerNoOfReviews
+                    ];
+                    console.log(entry);
+                    localStorage.setItem("entry", JSON.stringify(entry));
+                    existingEntries.push(entry);
+                    console.log(entry);
+                    localStorage.setItem(
+                      "mycart",
+                      JSON.stringify(existingEntries)
+                    );
+                    console.log(entry);
+                  }}
+                >
                   + Add to cart
-                </a>
+                </button>
                 <div className="price" id="sevencost" />
               </div>
               {/* <!-- /.pro-text --> */}
             </div>
             <div className="col-md-3">
               {/* <!-- .pro-text --> */}
-              <div className="pro-text">
+              <div
+                className="pro-text"
+                onClick={() => {
+                  localStorage.setItem("clicked", "key8");
+                  localStorage.setItem("rc", randomNO8);
+                }}
+              >
                 {/* <!-- .pro-img --> */}
                 <div className="pro-img">
                   <img src={imgurl8} alt="2" id="eight" />
@@ -721,9 +1046,49 @@ class App extends Component {
                 </div>
                 {/* <!-- /.pro-img --> */}
                 <a href="#" id="eighttext" />
-                <a href="#" className="addtocart">
+                <Example />
+                <a id="onetext" />
+                <button
+                  className="addtocart"
+                  id="addone"
+                  onClick={() => {
+                    toshowcounter = localStorage.getItem("counter");
+                    toshowcounter = parseInt(toshowcounter) + 1;
+                    localStorage.setItem("counter", toshowcounter);
+                    var existingEntries = JSON.parse(
+                      localStorage.getItem("mycart")
+                    );
+                    z = JSON.parse(localStorage.getItem("key8"));
+
+                    var entry = [
+                      imgurl,
+                      z[randomNO8].mrp,
+                      z[randomNO8].title,
+                      z[randomNO8].productId,
+                      z[randomNO8].description,
+                      z[randomNO8].sellingPrice,
+                      z[randomNO8].specialPrice,
+                      z[randomNO8].productUrl,
+                      z[randomNO8].categories,
+                      z[randomNO8].productBrand,
+                      z[randomNO8].sellerName,
+                      z[randomNO8].sellerAverageRating,
+                      z[randomNO8].sellerNoOfRatings,
+                      z[randomNO8].sellerNoOfReviews
+                    ];
+                    console.log(entry);
+                    localStorage.setItem("entry", JSON.stringify(entry));
+                    existingEntries.push(entry);
+                    console.log(entry);
+                    localStorage.setItem(
+                      "mycart",
+                      JSON.stringify(existingEntries)
+                    );
+                    console.log(entry);
+                  }}
+                >
                   + Add to cart
-                </a>
+                </button>
                 <div className="price" id="eightcost" />
               </div>
               {/* <!-- /.pro-text --> */}
@@ -821,97 +1186,97 @@ class App extends Component {
         </div>
       </section>,
 
-      <section className="section-padding">
-        {/* <!-- Latest News --> */}
-        <div className="container">
-          <div className="tittle text-center">
-            {/* <h2>Our Blog Posts</h2>
-            <p>
-              Mirum est notare quam littera gothica quam nunc putamus parum
-              claram!
-            </p> */}
-          </div>
-          <div
-            className="col-sm-4 col-md-4 wow fadeIn"
-            data-wow-duration=".2s"
-            data-wow-delay=".1s"
-          >
-            <div className="news-box">
-              <div className="news-img">
-                <img src={blogimg1} alt="news-img1" />
-              </div>
-              <div className="news-text">
-                <a href="#">Anteposuerit litterarum formas.</a>
-                <p>
-                  By
-                  <span>Zcubedesign</span> / September 11, 2017
-                </p>
-                <div className="news-text-content">
-                  {" "}
-                  Mirum est notare quam littera gothica, quam nunc putamus parum
-                  claram, anteposuerit litterarum.{" "}
-                </div>
-                <a href="#" className="readbtn">
-                  Read More
-                </a>
-              </div>
-            </div>
-          </div>
-          <div
-            className="col-sm-4 col-md-4 wow fadeIn"
-            data-wow-duration=".2s"
-            data-wow-delay=".1s"
-          >
-            <div className="news-box">
-              <div className="news-img">
-                <img src={blogimg2} alt="news-img1" />
-              </div>
-              <div className="news-text">
-                <a href="#">Anteposuerit litterarum formas.</a>
-                <p>
-                  By
-                  <span>Zcubedesign</span> / September 11, 2017
-                </p>
-                <div className="news-text-content">
-                  {" "}
-                  Mirum est notare quam littera gothica, quam nunc putamus parum
-                  claram, anteposuerit litterarum.{" "}
-                </div>
-                <a href="#" className="readbtn">
-                  Read More
-                </a>
-              </div>
-            </div>
-          </div>
-          <div
-            className="col-sm-4 col-md-4 wow fadeIn"
-            data-wow-duration=".4s"
-            data-wow-delay=".3s"
-          >
-            <div className="news-box">
-              <div className="news-img">
-                <img src={blogimg3} alt="news-img1" />
-              </div>
-              <div className="news-text">
-                <a href="#">Anteposuerit litterarum formas.</a>
-                <p>
-                  By
-                  <span>Zcubedesign</span> / September 11, 2017
-                </p>
-                <div className="news-text-content">
-                  {" "}
-                  Mirum est notare quam littera gothica, quam nunc putamus parum
-                  claram, anteposuerit litterarum.{" "}
-                </div>
-                <a href="#" className="readbtn">
-                  Read More
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* <!-- /Latest News --> */}
-      </section>,
+      // <section className="section-padding">
+      //   {/* <!-- Latest News --> */}
+      //   <div className="container">
+      //     <div className="tittle text-center">
+      //       {/* <h2>Our Blog Posts</h2>
+      //       <p>
+      //         Mirum est notare quam littera gothica quam nunc putamus parum
+      //         claram!
+      //       </p> */}
+      //     </div>
+      //     <div
+      //       className="col-sm-4 col-md-4 wow fadeIn"
+      //       data-wow-duration=".2s"
+      //       data-wow-delay=".1s"
+      //     >
+      //       <div className="news-box">
+      //         <div className="news-img">
+      //           <img src={blogimg1} alt="news-img1" />
+      //         </div>
+      //         <div className="news-text">
+      //           <a href="#">Anteposuerit litterarum formas.</a>
+      //           <p>
+      //             By
+      //             <span>Zcubedesign</span> / September 11, 2017
+      //           </p>
+      //           <div className="news-text-content">
+      //             {" "}
+      //             Mirum est notare quam littera gothica, quam nunc putamus parum
+      //             claram, anteposuerit litterarum.{" "}
+      //           </div>
+      //           <a href="#" className="readbtn">
+      //             Read More
+      //           </a>
+      //         </div>
+      //       </div>
+      //     </div>
+      //     <div
+      //       className="col-sm-4 col-md-4 wow fadeIn"
+      //       data-wow-duration=".2s"
+      //       data-wow-delay=".1s"
+      //     >
+      //       <div className="news-box">
+      //         <div className="news-img">
+      //           <img src={blogimg2} alt="news-img1" />
+      //         </div>
+      //         <div className="news-text">
+      //           <a href="#">Anteposuerit litterarum formas.</a>
+      //           <p>
+      //             By
+      //             <span>Zcubedesign</span> / September 11, 2017
+      //           </p>
+      //           <div className="news-text-content">
+      //             {" "}
+      //             Mirum est notare quam littera gothica, quam nunc putamus parum
+      //             claram, anteposuerit litterarum.{" "}
+      //           </div>
+      //           <a href="#" className="readbtn">
+      //             Read More
+      //           </a>
+      //         </div>
+      //       </div>
+      //     </div>
+      //     <div
+      //       className="col-sm-4 col-md-4 wow fadeIn"
+      //       data-wow-duration=".4s"
+      //       data-wow-delay=".3s"
+      //     >
+      //       <div className="news-box">
+      //         <div className="news-img">
+      //           <img src={blogimg3} alt="news-img1" />
+      //         </div>
+      //         <div className="news-text">
+      //           <a href="#">Anteposuerit litterarum formas.</a>
+      //           <p>
+      //             By
+      //             <span>Zcubedesign</span> / September 11, 2017
+      //           </p>
+      //           <div className="news-text-content">
+      //             {" "}
+      //             Mirum est notare quam littera gothica, quam nunc putamus parum
+      //             claram, anteposuerit litterarum.{" "}
+      //           </div>
+      //           <a href="#" className="readbtn">
+      //             Read More
+      //           </a>
+      //         </div>
+      //       </div>
+      //     </div>
+      //   </div>
+      //   {/* <!-- /Latest News --> */}
+      // </section>,
       <section className="subscribe text-center">
         {/* <!-- .subscribe --> */}
         <div className="container">

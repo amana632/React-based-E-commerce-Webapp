@@ -21,12 +21,9 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Scart } from "./scart";
 import { second } from "./second";
 var myelement;
-var toshowcounter = localStorage.setItem("counter", 0);
-function funci() {
-  toshowcounter = localStorage.getItem("counter");
-  toshowcounter = parseInt(toshowcounter) + 1;
-  localStorage.setItem("counter", toshowcounter);
-}
+var toshowcounter = localStorage.setItem("counter", 3);
+// var m1 = JSON.parse(localStorage.getItem("mycart"));
+// var sum = m1[0][1] + m1[1][1] + m1[2][1];
 
 function funcbarcode() {
   myelement =
@@ -958,28 +955,30 @@ export class Navbar extends Component {
                 <img src={icon1} alt="top-ico3" />{" "}
                 <span>Cart ({toshowcounter})</span>{" "}
               </a>
+            </li>
+            {/*
               <div className="dropdown-content">
                 <div className="cart-content">
                   <div className="col-sm-4 col-md-4">
-                    <img src={icon3} alt="13" />
+                    <img src={m1[0][0]} alt="13" />
                   </div>
                   <div className="col-sm-8 col-md-8">
                     <div className="pro-text">
                       {" "}
-                      <a href="#">Pellentesque Habitant</a>
-                      <div className="close">x</div> <strong>$160.00</strong>{" "}
+                      <a href="#">{m1[0][2]}</a>
+                      <div className="close">x</div> <strong>{m1[0][1]}</strong>{" "}
                     </div>
                   </div>
                 </div>
                 <div className="cart-content">
                   <div className="col-sm-4 col-md-4">
-                    <img src={icon2} alt="13" />
+                    <img src={m1[1][0]} alt="13" />
                   </div>
                   <div className="col-sm-8 col-md-8">
                     <div className="pro-text">
                       {" "}
-                      <a href="#">Pellentesque Habitant</a>
-                      <div className="close">x</div> <strong>$160.00</strong>{" "}
+                      <a href="#">{m1[1][2]}</a>
+                      <div className="close">x</div> <strong>{m1[1][1]}</strong>{" "}
                     </div>
                   </div>
                 </div>
@@ -991,17 +990,17 @@ export class Navbar extends Component {
                   </div>
                   <div className="col-sm-6 col-md-6 text-right">
                     {" "}
-                    <strong>$0.00</strong>
-                    <br /> <strong>$160.00</strong>{" "}
+                    <strong>Rs.10.00</strong>
+                    <br /> <strong>{m1[0][1] + m1[1][1] + 10}</strong>{" "}
                   </div>
                 </div>{" "}
                 <Router>
                   <div>
                     <ul>
-                      {/* <li>
-              <Link to={"/"}>Home</Link>
-            </li> */}
-                      <li>
+                      {/* <li> */}
+            {/* <Link to={"/"}>Home</Link> */}
+            {/* </li> */}
+            {/* <li>
                         <Link to={"/scart"}>
                           <button className="cart-btn"> VIEW CART </button>
                         </Link>
@@ -1010,16 +1009,16 @@ export class Navbar extends Component {
                     <hr />
 
                     <Switch>
-                      {/* <Route exact path="/" component={Home} /> */}
+                     
                       <Route exact path="/scart" component={Scart} />
                     </Switch>
-                  </div>
-                </Router>,
-                <a href="checkout.html" className="cart-btn">
-                  CHECKOUT
-                </a>
-              </div>
-            </li>
+                  </div> */}{" "}
+            {/* //     </Router>,
+            //     <a href="checkout.html" className="cart-btn">
+            //       CHECKOUT
+            //     </a>
+            //   </div>
+            // </li> */}
           </ul>
         </div>
       </nav>,
