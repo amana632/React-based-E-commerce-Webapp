@@ -361,7 +361,7 @@ export class Navbar extends Component {
   render() {
     return [
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="http://localhost:3000/">
           Tech__Giant
         </a>
 
@@ -382,10 +382,16 @@ export class Navbar extends Component {
                 className="dropdown-menu"
                 aria-labelledby="navbarDropdownMenuLink"
               >
-                <a className="dropdown-item" id="barcode" onClick={funcbarcode}>
+                <a
+                  href="/second.js"
+                  className="dropdown-item"
+                  id="barcode"
+                  onClick={funcbarcode}
+                >
                   Barcode_scanner
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="cpuholder"
                   onClick={funccpuholder}
@@ -393,6 +399,7 @@ export class Navbar extends Component {
                   CPU Holder
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="cardreader"
                   onClick={funccardreader}
@@ -400,6 +407,7 @@ export class Navbar extends Component {
                   Card Reader
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="cleaningkit"
                   onClick={funccleaningkit}
@@ -407,10 +415,16 @@ export class Navbar extends Component {
                   Cleaning Kit
                 </a>
 
-                <a className="dropdown-item" id="combos" onClick={funccombos}>
+                <a
+                  href="/second.js"
+                  className="dropdown-item"
+                  id="combos"
+                  onClick={funccombos}
+                >
                   Combos
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="hdenclosues"
                   onClick={funchdenclosures}
@@ -418,6 +432,7 @@ export class Navbar extends Component {
                   HD Enclosures
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="laptopaccesssoriescombo"
                   onClick={funclaptopcombo}
@@ -425,6 +440,7 @@ export class Navbar extends Component {
                   Laptop Accessories Combos
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="skindecals"
                   onClick={funcskindecals}
@@ -432,6 +448,7 @@ export class Navbar extends Component {
                   Laptop Skin Decals
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="monitortvcover"
                   onClick={funcmonitor}
@@ -439,6 +456,7 @@ export class Navbar extends Component {
                   Monitor TV Cover
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="monitorarms"
                   onClick={funcmonitorarms}
@@ -446,6 +464,7 @@ export class Navbar extends Component {
                   Monitor Arms
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="pentablets"
                   onClick={funcpentab}
@@ -453,6 +472,7 @@ export class Navbar extends Component {
                   Pen Tablets
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="printercovers"
                   onClick={funcprintercovers}
@@ -460,6 +480,7 @@ export class Navbar extends Component {
                   Printer Covers
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="usbgadgets"
                   onClick={funcusbgadgets}
@@ -476,7 +497,6 @@ export class Navbar extends Component {
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
-                href="#"
                 id="navbarDropdownMenuLink"
                 data-toggle="dropdown"
                 aria-haspopup="true"
@@ -489,6 +509,7 @@ export class Navbar extends Component {
                 aria-labelledby="navbarDropdownMenuLink"
               >
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="portableprojector"
                   onClick={funcpprojectors}
@@ -496,6 +517,7 @@ export class Navbar extends Component {
                   Portable projector
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="portablescanners"
                   onClick={funcpscanners}
@@ -504,6 +526,7 @@ export class Navbar extends Component {
                 </a>
 
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="pocketprinters"
                   onClick={funcpocketprinters}
@@ -511,6 +534,7 @@ export class Navbar extends Component {
                   Printer/Scanner Pocket Printer
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="printerfilaments"
                   onClick={funcprinterfilaments}
@@ -518,6 +542,7 @@ export class Navbar extends Component {
                   Printer/Scanner Printer Filaments
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="printermultif"
                   onClick={funclprintermultif}
@@ -525,6 +550,7 @@ export class Navbar extends Component {
                   Printer/Scanner Printer MultiF
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="printersingle"
                   onClick={funcprintersingle}
@@ -532,6 +558,7 @@ export class Navbar extends Component {
                   Printer/Scanner Printer Single
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="receiptprinter"
                   onClick={funcreceiptprinters}
@@ -539,6 +566,7 @@ export class Navbar extends Component {
                   Printer/Scanner Receipt printer
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="periscanners"
                   onClick={funcperiscanners}
@@ -563,16 +591,27 @@ export class Navbar extends Component {
                 aria-labelledby="navbarDropdownMenuLink"
               >
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="allinone"
                   onClick={funcdeskall}
                 >
                   All in One PCs
                 </a>
-                <a className="dropdown-item" id="towerpc" onClick={functowerpc}>
+                <a
+                  href="/second.js"
+                  className="dropdown-item"
+                  id="towerpc"
+                  onClick={functowerpc}
+                >
                   Tower PCs
                 </a>
-                <a className="dropdown-item" id="laptops" onClick={funclaptop}>
+                <a
+                  href="/second.js"
+                  className="dropdown-item"
+                  id="laptops"
+                  onClick={funclaptop}
+                >
                   Laptops
                 </a>
               </div>
@@ -593,6 +632,7 @@ export class Navbar extends Component {
                 aria-labelledby="navbarDropdownMenuLink"
               >
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="lpbatteries"
                   onClick={funcllabatteries}
@@ -600,6 +640,7 @@ export class Navbar extends Component {
                   Batteries
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="lpcleaning"
                   onClick={funclacleaning}
@@ -607,6 +648,7 @@ export class Navbar extends Component {
                   Cleaning Kits
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="lpcooling"
                   onClick={funclacooling}
@@ -614,16 +656,23 @@ export class Navbar extends Component {
                   Cooling Pads/stands
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="lpheadphones"
                   onClick={funclaheadphones}
                 >
                   Headphones
                 </a>
-                <a className="dropdown-item" id="lpotg" onClick={funclaotg}>
+                <a
+                  href="/second.js"
+                  className="dropdown-item"
+                  id="lpotg"
+                  onClick={funclaotg}
+                >
                   OTG Adapters
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="lppower"
                   onClick={funclapowerbank}
@@ -631,6 +680,7 @@ export class Navbar extends Component {
                   PowerBanks
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="lpworlld"
                   onClick={funclaworldwide}
@@ -655,6 +705,7 @@ export class Navbar extends Component {
                 aria-labelledby="navbarDropdownMenuLink"
               >
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="networkkaccess"
                   onClick={funcncaccesspoints}
@@ -662,6 +713,7 @@ export class Navbar extends Component {
                   Access Points
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="networkantenna"
                   onClick={funcncantenna}
@@ -669,6 +721,7 @@ export class Navbar extends Component {
                   Antenna Amplifiers
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="networkcables"
                   onClick={funcnccables}
@@ -676,6 +729,7 @@ export class Navbar extends Component {
                   Cables
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="networkdaracards"
                   onClick={funcncdatacards}
@@ -683,6 +737,7 @@ export class Navbar extends Component {
                   Data Cards
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="networklanadapters"
                   onClick={funcnclanadapters}
@@ -690,6 +745,7 @@ export class Navbar extends Component {
                   LAN Adapters
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="networkinterface"
                   onClick={funcncinterfacecards}
@@ -697,6 +753,7 @@ export class Navbar extends Component {
                   Network Interface Cards
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="networkservers"
                   onClick={funcncservers}
@@ -704,6 +761,7 @@ export class Navbar extends Component {
                   Network Servers
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="networkrouterantenna"
                   onClick={funcncrouterantenna}
@@ -711,6 +769,7 @@ export class Navbar extends Component {
                   Routers Antenna Boosters
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="networkrouters"
                   onClick={funcncrouters}
@@ -718,6 +777,7 @@ export class Navbar extends Component {
                   Routers
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="networkswitches"
                   onClick={funcncswitches}
@@ -725,6 +785,7 @@ export class Navbar extends Component {
                   Switches
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="networkwirelessusb"
                   onClick={funcncwirelessusb}
@@ -749,6 +810,7 @@ export class Navbar extends Component {
                 aria-labelledby="navbarDropdownMenuLink"
               >
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="softwarebusiness"
                   onClick={funcsoftbusiness}
@@ -756,6 +818,7 @@ export class Navbar extends Component {
                   Business Productivity
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="softwareeducational"
                   onClick={funcsofteducation}
@@ -763,6 +826,7 @@ export class Navbar extends Component {
                   Educational Media Physical
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="softwaremulti"
                   onClick={funcsoftmulti}
@@ -770,6 +834,7 @@ export class Navbar extends Component {
                   Multimedia
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="softwaremultiphy"
                   onClick={funcsoftmultiphysical}
@@ -777,6 +842,7 @@ export class Navbar extends Component {
                   Multimedia Physical
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="softwareofficetoolsphy"
                   onClick={funcsoftofficephy}
@@ -784,6 +850,7 @@ export class Navbar extends Component {
                   Office Tools Physical
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="softwareofficetoolsphykeycards"
                   onClick={funcsoftofficekeycards}
@@ -791,16 +858,23 @@ export class Navbar extends Component {
                   Office Tools Physical Key Cards
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="softwareofficetoolsphyperpetual"
                   onClick={funcofficetools}
                 >
                   Office Tools Physical Perpetual License
                 </a>
-                <a className="dropdown-item" id="softos" onClick={funcos}>
+                <a
+                  href="/second.js"
+                  className="dropdown-item"
+                  id="softos"
+                  onClick={funcos}
+                >
                   Operating Systems
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="softosdigi"
                   onClick={funcosdigital}
@@ -808,6 +882,7 @@ export class Navbar extends Component {
                   Operating Systems Digital
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="softosphy"
                   onClick={funcoscphy}
@@ -815,6 +890,7 @@ export class Navbar extends Component {
                   Operating Systems Physical
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="secuanti"
                   onClick={funcsecurityanti}
@@ -822,6 +898,7 @@ export class Navbar extends Component {
                   Security Software Antivirus
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="secudigi"
                   onClick={funcsecuritydigi}
@@ -829,6 +906,7 @@ export class Navbar extends Component {
                   Security Software Digital
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="secuinternet"
                   onClick={funcsecurityinternet}
@@ -836,6 +914,7 @@ export class Navbar extends Component {
                   Security Software Internet Security
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="secutotal"
                   onClick={funcsecuritytotal}
@@ -843,6 +922,7 @@ export class Navbar extends Component {
                   Security Software Total Security
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="softutidigi"
                   onClick={funcutidigi}
@@ -850,6 +930,7 @@ export class Navbar extends Component {
                   Utilities Digital
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="softutiphy"
                   onClick={funcutiphy}
@@ -874,6 +955,7 @@ export class Navbar extends Component {
                 aria-labelledby="navbarDropdownMenuLink"
               >
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="storageext"
                   onClick={funcstext}
@@ -881,13 +963,19 @@ export class Navbar extends Component {
                   External HDD
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="storageint"
                   onClick={funcstinternal}
                 >
                   Internal HDD
                 </a>
-                <a className="dropdown-item" id="storagepd" onClick={funcstpd}>
+                <a
+                  href="/second.js"
+                  className="dropdown-item"
+                  id="storagepd"
+                  onClick={funcstpd}
+                >
                   Pendrives
                 </a>
               </div>
@@ -907,10 +995,16 @@ export class Navbar extends Component {
                 className="dropdown-menu"
                 aria-labelledby="navbarDropdownMenuLink"
               >
-                <a className="dropdown-item" id="suppink" onClick={funcsuppink}>
+                <a
+                  href="/second.js"
+                  className="dropdown-item"
+                  id="suppink"
+                  onClick={funcsuppink}
+                >
                   Inks
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="supptoners"
                   onClick={funcsupptoners}
@@ -935,6 +1029,7 @@ export class Navbar extends Component {
                 aria-labelledby="navbarDropdownMenuLink"
               >
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="tabcables"
                   onClick={functabcable}
@@ -942,6 +1037,7 @@ export class Navbar extends Component {
                   Cables
                 </a>
                 <a
+                  href="/second.js"
                   className="dropdown-item"
                   id="tabmemory"
                   onClick={functabmem}
